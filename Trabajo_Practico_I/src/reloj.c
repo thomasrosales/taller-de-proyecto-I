@@ -1,7 +1,7 @@
 #include "reloj.h"       /* <= own header */
 
 unsigned int seg=0, min=0, h=0, count=0;
-static unsigned char hora[]="HH:MM:SS";
+static char hora[]="HH:MM:SS";
 void RELOJ_count(){
 	count++;
 	if (count==TICK){
