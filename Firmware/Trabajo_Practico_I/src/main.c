@@ -125,8 +125,6 @@ void boardInit(void) {
 
 	/* Config Core */
 	coreInit();
-	/* Initializes GPIO */
-	Chip_GPIO_Init(LPC_GPIO_PORT);
 	/* Initializes LCD */
 	LCD_init(DISPLAY_8X5 | _2_LINES, DISPLAY_ON);
 }
