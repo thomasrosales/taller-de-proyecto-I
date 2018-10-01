@@ -123,10 +123,10 @@ void SysTick_Handler(void) {
 /* Set up and initialize board hardware */
 void boardInit(void) {
 
-	/* Config Core */
-	coreInit();
 	/* Initializes LCD */
 	LCD_init(DISPLAY_8X5 | _2_LINES, DISPLAY_ON);
+	/* Config Core */
+	coreInit();
 }
 
 /** \brief Main function
@@ -143,10 +143,12 @@ int main(void) {
 
 	boardInit();
 	delay_ms = 500;
+	LCD_pos_xy(0, 0);
 	while (1) {
 		if (tiempoCumplido) {
 			tiempoCumplido = 0;
-			LCD_pos_xy(0,0);
+			LCD_pos_xy(0, 0);
+			LCD_write_string("    ");
 			LCD_write_string(RELOJ_get_hora());
 		}
 	}

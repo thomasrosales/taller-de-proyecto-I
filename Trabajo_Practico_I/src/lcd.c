@@ -59,10 +59,10 @@ void LCD_send_nibble(char data) {
 	union ubyte my_union;
 	my_union._byte = data;
 	// Output the four data bits
-	Chip_GPIO_SetPinState( LPC_GPIO_PORT, LCD1_GPIO, LCD1_PIN, my_union.bit.b0);
-	Chip_GPIO_SetPinState( LPC_GPIO_PORT, LCD2_GPIO, LCD2_PIN, my_union.bit.b1);
-	Chip_GPIO_SetPinState( LPC_GPIO_PORT, LCD3_GPIO, LCD3_PIN, my_union.bit.b2);
-	Chip_GPIO_SetPinState( LPC_GPIO_PORT, LCD4_GPIO, LCD4_PIN, my_union.bit.b3);
+	Chip_GPIO_SetPinState( LPC_GPIO_PORT, LCD1_GPIO, LCD1_PIN, my_union.bit.b3);
+	Chip_GPIO_SetPinState( LPC_GPIO_PORT, LCD2_GPIO, LCD2_PIN, my_union.bit.b2);
+	Chip_GPIO_SetPinState( LPC_GPIO_PORT, LCD3_GPIO, LCD3_PIN, my_union.bit.b1);
+	Chip_GPIO_SetPinState( LPC_GPIO_PORT, LCD4_GPIO, LCD4_PIN, my_union.bit.b0);
 	// pulse the LCD enable line
 	Chip_GPIO_SetPinState( LPC_GPIO_PORT, LCD_EN_GPIO, LCD_EN_PIN, 1);
 	for (data = 20; data; data--);
