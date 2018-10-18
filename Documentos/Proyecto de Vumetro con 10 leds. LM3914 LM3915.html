@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!-- saved from url=(0061)https://www.proyectoelectronico.com/leds/vumetro-10-leds.html -->
+<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Proyecto de Vumetro con 10 leds. LM3914 LM3915</title><meta name="author" content="Carlos Javier Vindas Fallas Ti2-CAW"><meta name="copyright" content="© 2010 2017 Ti2-CAW."><meta name="keywords" content="vumetro,leds,indicador,volumen,nivel,audio,VU,proyecto,sonido,electronica,LM3914,LM3915"><meta name="date" content="2017-08-26T16:49:00-06:00"><meta content="Construir vumetro de 10 leds con LM3914, nivel de sonido con LM3915, hacer audio VU electronico." name="description"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style type="text/css">
+body{background:#181C24;min-width:320px;max-width:1300px;font-family: Arial, Helvetica, sans-serif;font-size: 1em;margin:0 auto;color:#fff;overflow:auto}.Toda{background:#fff url(fondo3.png) repeat;top:2px;position:relative;margin-top:0;margin-right:auto;bottom:15px;text-align:left;color:#fff}.Contenido{padding: 5px;top: 2px;position:relative;margin-right:auto;margin-left:5px;color:#000}.Encabeza{color:#254075;font-size:23px;background-color:#050550;margin:0px;height:53px;background:url(../imagenes/electronico-4.jpg) repeat}h1{font-size:20px}h2{font-size:16px}.Estilo2{margin:4px;font-weight:bold;text-align:center;background-color:#254075;color:#ffffff}a{color:#157057}a:hover{color:red}a:visited {color:#639}p{margin-top:4px;margin-bottom:8px}p.derecha{text-align:right;color:#001}.linea-menu{background:#f0f0ff;position:relative;margin:3px;min-width:314px;max-width:970px}.menu2{border-top:solid 1px #A0D0F0;font:90% "Lucida Sans Unicode","Bitstream Vera Sans","Trebuchet Unicode MS","Lucida Grande",Verdana,Helvetica,sans-serif;display:inline-block}.menu2 ul{height:37px;list-style:none;margin:0;	padding:0;}.menu2 li{float:left}.menu2 ul li a{background: url("../menu/seperator-4.png") bottom right no-repeat;color:#112;display:block;line-height:35px;padding:0px 20px;text-decoration:none}.menu2 ul li:hover a{background: #355085;color:#fff;text-decoration:none}.menu2 a:visited{color:#507}td.row{background-color:#F6F6F5} th{color:#F6F6F5;background:#3583c6;border-color:#1036e5}
+.banerSup{width:99%;margin:0.5%;position:relative;float:left}
+.banerGD{margin:1.5%;position:relative;width:300px;float:right;height:600px}
+@media screen and (max-width:952px){.banerGD{max-width:344px;height:284px}}
+</style>
+
+<script async="" src="./Proyecto de Vumetro con 10 leds. LM3914 LM3915_files/f.txt"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-1221864520436369",
+    enable_page_level_ads: true
+  });
+</script>
+
+</head><body><div class="Toda"><p class="Encabeza"><br>Proyecto Electronico .com<br></p> <img src="./Proyecto de Vumetro con 10 leds. LM3914 LM3915_files/vumetro-10-leds.gif" align="right" alt="vumetro 10 leds" width="102" height="12"><p style="color:#001">Diseño de proyectos de electrónica. Leds, amplificadores y más...</p><br><div class="linea-menu"><div class="menu2"><ul><li><a href="https://www.proyectoelectronico.com/" title="Proyectos de electronica">Inicio</a></li><li><a href="https://www.proyectoelectronico.com/leds/proyectos-con-leds.html" title="Proyectos con leds y luces">Leds y luces</a></li><li><a href="https://www.proyectoelectronico.com/amplificadores-audio/hacer-amplificadores-sonido.html" title="Amplificadores de audio">Amplificadores de audio</a></li><li><a href="https://www.proyectoelectronico.com/varios/varios-proyectos-electronica.html" title="Proyectos variados">Varios</a></li><li><a href="https://www.proyectoelectronico.com/alarmas/alarmas-sensores.html" title="Alarmas">Alarmas</a></li><li><a href="https://www.proyectoelectronico.com/cb/proyectos-para-radioaficionados.html" title="Radioaficionados y 11 metros">Radioaficion - CB</a></li></ul></div></div><p class="Estilo2" id="inicio">Vúmetro electrónico de 10 leds con LM3914 o LM3915</p><div class="Contenido">
+
+<div class="banerSup">
+<script async="" src="./Proyecto de Vumetro con 10 leds. LM3914 LM3915_files/f.txt"></script>
+<!-- Adaptable arriba -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1221864520436369" data-ad-slot="5043984843" data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h1>Proyecto: Vumetro con leds.</h1><p>Para este proyecto estudiaremos los circuitos integrados LM3914 y el LM3915 que aunque las conexiones son iguales, el comportamiento no, debido a que la escala de LM3914 es lineal y la escala del LM3915 es logarítmica.</p><p>Con una escala lineal podemos hacer que los leds se enciendan cada voltio, con la logarítmica no, ya que está diseñada para audio, en decíbeles.</p><p>Utilizando alguno de estos integrados en la conexión más básica obtenemos las diferencias mostradas en la tabla.<br>
+
+</p><div class="banerGD">
+<script async="" src="./Proyecto de Vumetro con 10 leds. LM3914 LM3915_files/f.txt"></script>
+<!-- Adaptable medio -->
+<ins class="adsbygoogle" style="display:block;width:100%;height:100%" data-ad-client="ca-pub-1221864520436369" data-ad-slot="9584615644" data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<br>Voltaje&nbsp;necesario&nbsp;en&nbsp;la&nbsp;entrada&nbsp;para encender cada led<br><table width="306" height="27" border="2" cellpadding="3" cellspacing="2"><tbody><tr><th align="center" width="100">LED</th><th align="center" width="100">LM3914</th><th align="center" width="100">LM3915</th></tr><tr><td valign="middle" class="row" align="center" width="96">1</td><td valign="middle" class="row" align="center" width="96">125mV</td><td valign="middle" class="row" align="center" width="96">60mV</td></tr><tr><td valign="middle" class="row" align="center" width="96">2</td><td valign="middle" class="row" align="center" width="96">250mV</td><td valign="middle" class="row" align="center" width="96">80mV</td></tr><tr><td valign="middle" class="row" align="center" width="96">3</td><td valign="middle" class="row" align="center" width="96">375mV</td><td valign="middle" class="row" align="center" width="96">110mV</td></tr><tr><td valign="middle" class="row" align="center" width="96">4</td><td valign="middle" class="row" align="center" width="96">500mV</td><td valign="middle" class="row" align="center" width="96">160mV</td></tr><tr><td valign="middle" class="row" align="center" width="96">5</td><td valign="middle" class="row" align="center" width="96">625mV</td><td valign="middle" class="row" align="center" width="96">220mV</td></tr><tr><td valign="middle" class="row" align="center" width="96">6</td><td valign="middle" class="row" align="center" width="96">750mV</td><td valign="middle" class="row" align="center" width="96">320mV</td></tr><tr><td valign="middle" class="row" align="center" width="96">7</td><td valign="middle" class="row" align="center" width="96">875mV</td><td valign="middle" class="row" align="center" width="96">440mV</td></tr><tr><td valign="middle" class="row" align="center" width="96">8</td><td valign="middle" class="row" align="center" width="96">1V</td><td valign="middle" class="row" align="center" width="96">630mV</td></tr><tr><td valign="middle" class="row" align="center" width="96">9</td><td valign="middle" class="row" align="center" width="96">1.125V</td><td valign="middle" class="row" align="center" width="96">890mV</td></tr><tr><td valign="middle" class="row" align="center" width="96">10</td><td valign="middle" class="row" align="center" width="96">1.25V</td><td valign="middle" class="row" align="center" width="96">1.25V</td></tr></tbody></table><br><br><p></p><p>Conexión básica del LM3914 y el LM3915:<br></p><div style="max-width:397px">
+<img src="./Proyecto de Vumetro con 10 leds. LM3914 LM3915_files/conexiones-lm3914-lm3915.png" alt="Vumetro con leds LM3914" style="max-width:100%;height:auto;width:auto/9"></div><br><br>Si es para equipo de medición es mejor el LM3914, pero si es como "Vumetro" se vé mejor el LM3915 aunque los dos funcionan.<br><br>El pin 9 es el que determina el modo, conectado al positivo trabaja en el modo tradicional o "Barra",<br> si el pin 9 se conecta al pin 11 se activa el modo "Punto", o sea led por led.<br><br>Estos circuitos integrados pueden operar de 3 a 20 voltios.<br>Para ayudar a la estabilidad se puede colocar un capacitor electrolítico entre positivo y negativo, cerca del circuito integrado, según el fabricante con 2.2 microfaradios es suficiente, puede ser mayor (en el ejemplo 10 microfaradios 25 Voltios).<br><br>Para aplicaciones <a href="http://www.proyectoelectronico.com/" title="proyectos de electronica" style="text-decoration:none;color:#002">electrónicas</a> prácticas, donde se debe ajustar podemos agregar una resistencia variable o potenciómetro en la entrada.<br>Y&nbsp;si&nbsp;es&nbsp;con&nbsp;audio mejor colocar un capacitor de 1 microfaradio o un poco más.<br>Conecciones del potenciómetro o resistencia variable:<br><img src="./Proyecto de Vumetro con 10 leds. LM3914 LM3915_files/potenciometro-lm3915.png" alt="potenciometro para LM3915" width="159" height="207"><br><br>Cada salida de estos circuitos integrados controla la corriente, por ello no es necesario colocar alguna resistencia limitando la corriente,<br> además se pueden conectar leds en serie en cada salida para lograr un efecto de mejor presencia.<p></p>El LM3914 es equivalente al NTE1508 y el LM3915 al NTE1509.<br>&nbsp;<p>Estos circuitos integrados son muy rápidos para responder al sonido por ello en modo punto puede ser que paresca que no funciona como debiera, para que el efecto sea más agradable hay que rectificar el audio, y si lo usamos con audio puro hay que amplificarlo con algún amplificador operacional.<br><br>Ejemplo de amplificador y rectificador de audio:<br></p><div style="max-width:637px"><img src="./Proyecto de Vumetro con 10 leds. LM3914 LM3915_files/lm3515-modo-punto.png" alt="Modo punto en LM3915 o LM3914" style="max-width:100%;height:auto;width:auto/9"></div><br><br>Los diodos (D1 y D2) son mejor de germanio (bigote de gato), pero se puede usar 1n4148.<br>
+
+<script async="" src="./Proyecto de Vumetro con 10 leds. LM3914 LM3915_files/f.txt"></script>
+<!-- Adaptable abajo -->
+<ins class="adsbygoogle" style="display:block;min-width:200px;max-width:340px;width:100%;height:auto;float:right" data-ad-client="ca-pub-1221864520436369" data-ad-slot="4596012846" data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+Como&nbsp;el&nbsp;1N4148&nbsp;necesita&nbsp;más&nbsp;de medio voltio para polarizarse es bueno aplicar un voltaje de polarización de esta forma:<br><br><img src="./Proyecto de Vumetro con 10 leds. LM3914 LM3915_files/bias-1n4148.png" alt="polarizar 1N4148" width="237" height="143"><br><p></p><p>D3 y D4 mantienen el voltaje necesario para que D1 y D2 queden polarizados.<br>&nbsp;</p><p>Puede ver el proyecto de un Vúmetro más sencillo:<br> &nbsp; <a href="https://www.proyectoelectronico.com/leds/indicador-nivel-audio-leds.html"> Indicador de audio con 5 Leds </a><br><br>o un indicador analógo con aguja, "VU meter ":<br> &nbsp; <a href="https://www.proyectoelectronico.com/medidores/vumetro-analogico-vu-aguja.html"> Vumetro analogico </a><br>&nbsp;</p>Un vúmetro bien calibrado es una herramienta eficiente para medir el nivel de audio.<br><br>
+
+<div style="float:right;margin:6px;width:100%;min-height:90px">
+<script async="" src="./Proyecto de Vumetro con 10 leds. LM3914 LM3915_files/f.txt"></script>
+<!-- Enlaces adaptable -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1221864520436369" data-ad-slot="7858041242" data-ad-format="link"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+</div> <!-- Contenido --><p class="derecha">TI2-CAW</p><center><a href="https://www.proyectoelectronico.com/leds/vumetro-10-leds.html#inicio" title="vumetro con 10 Leds">inicio</a>.</center><br><br><center><p>.<a href="https://www.proyectoelectronico.com/index.html" title="proyectos de electronica">Menú de Proyectos Electronicos</a>.</p></center><br><p style="color:#7590ff">Tema: Vumetro con leds, Plano del diseño para construir VU electronico.<br>Proyectos electronicos con leds</p></div><!-- Toda -->
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script src="./Proyecto de Vumetro con 10 leds. LM3914 LM3915_files/ga.js.descarga" type="text/javascript"></script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-8776295-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+
+</body></html>
