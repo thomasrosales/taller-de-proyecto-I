@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:Vumetro-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
@@ -14,14 +15,113 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Connector:AudioJack3_Ground_Switch J?
-U 1 1 5BD06EAA
-P 2000 1850
-F 0 "J?" H 2004 2192 50  0000 C CNN
-F 1 "AudioJack3_Ground_Switch" H 2004 2101 50  0000 C CNN
-F 2 "" H 2000 1850 50  0001 C CNN
-F 3 "~" H 2000 1850 50  0001 C CNN
-	1    2000 1850
+L Device:R R?
+U 1 1 5BD08240
+P 1700 2950
+F 0 "R?" H 1770 2996 50  0000 L CNN
+F 1 "R" H 1770 2905 50  0000 L CNN
+F 2 "" V 1630 2950 50  0001 C CNN
+F 3 "~" H 1700 2950 50  0001 C CNN
+	1    1700 2950
 	1    0    0    -1  
 $EndComp
+$Comp
+L Device:R R?
+U 1 1 5BD082FA
+P 1700 3400
+F 0 "R?" H 1770 3446 50  0000 L CNN
+F 1 "R" H 1770 3355 50  0000 L CNN
+F 2 "" V 1630 3400 50  0001 C CNN
+F 3 "~" H 1700 3400 50  0001 C CNN
+	1    1700 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDA #PWR?
+U 1 1 5BD08356
+P 1700 3700
+F 0 "#PWR?" H 1700 3450 50  0001 C CNN
+F 1 "GNDA" H 1705 3527 50  0000 C CNN
+F 2 "" H 1700 3700 50  0001 C CNN
+F 3 "" H 1700 3700 50  0001 C CNN
+	1    1700 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1700 3700 1700 3550
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5BD083BF
+P 1700 2600
+F 0 "#PWR?" H 1700 2450 50  0001 C CNN
+F 1 "+3.3V" H 1715 2773 50  0000 C CNN
+F 2 "" H 1700 2600 50  0001 C CNN
+F 3 "" H 1700 2600 50  0001 C CNN
+	1    1700 2600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1700 2600 1700 2800
+$Comp
+L Connector:AudioJack3_Ground J?
+U 1 1 5BD08A54
+P 1800 1800
+F 0 "J?" H 1804 2142 50  0000 C CNN
+F 1 "AudioJack3_Ground" H 1804 2051 50  0000 C CNN
+F 2 "" H 1800 1800 50  0001 C CNN
+F 3 "~" H 1800 1800 50  0001 C CNN
+	1    1800 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDA #PWR?
+U 1 1 5BD08B01
+P 3650 1700
+F 0 "#PWR?" H 3650 1450 50  0001 C CNN
+F 1 "GNDA" H 3655 1527 50  0000 C CNN
+F 2 "" H 3650 1700 50  0001 C CNN
+F 3 "" H 3650 1700 50  0001 C CNN
+	1    3650 1700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2000 1700 3450 1700
+Wire Wire Line
+	2450 1900 2000 1900
+Wire Wire Line
+	2000 1800 2450 1800
+Wire Wire Line
+	2450 1800 2450 1900
+Wire Wire Line
+	1700 3100 1700 3150
+$Comp
+L Device:R_POT RV?
+U 1 1 5BD09203
+P 2850 2150
+F 0 "RV?" H 2780 2196 50  0000 R CNN
+F 1 "R_POT" H 2780 2105 50  0000 R CNN
+F 2 "" H 2850 2150 50  0001 C CNN
+F 3 "~" H 2850 2150 50  0001 C CNN
+	1    2850 2150
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2450 1900 2450 2150
+Wire Wire Line
+	2450 2150 2700 2150
+Connection ~ 2450 1900
+Wire Wire Line
+	3000 2150 3450 2150
+Wire Wire Line
+	3450 2150 3450 1700
+Connection ~ 3450 1700
+Wire Wire Line
+	3450 1700 3650 1700
+Wire Wire Line
+	2850 3150 2850 2300
+Connection ~ 1700 3150
+Wire Wire Line
+	1700 3150 1700 3250
+Wire Wire Line
+	1700 3150 2850 3150
 $EndSCHEMATC
