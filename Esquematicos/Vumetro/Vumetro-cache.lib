@@ -1,11 +1,11 @@
 EESchema-LIBRARY Version 2.4
 #encoding utf-8
 #
-# Connector:AudioJack5_Ground
+# Connector_AudioJack5_Ground
 #
-DEF Connector:AudioJack5_Ground J 0 40 Y Y 1 F N
+DEF Connector_AudioJack5_Ground J 0 40 Y Y 1 F N
 F0 "J" 0 450 50 H V C CNN
-F1 "Connector:AudioJack5_Ground" 0 350 50 H V C CNN
+F1 "Connector_AudioJack5_Ground" 0 350 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -24,11 +24,11 @@ X ~ T 200 -200 100 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Device:C
+# Device_C
 #
-DEF Device:C C 0 10 N Y 1 F N
+DEF Device_C C 0 10 N Y 1 F N
 F0 "C" 25 100 50 H V L CNN
-F1 "Device:C" 25 -100 50 H V L CNN
+F1 "Device_C" 25 -100 50 H V L CNN
 F2 "" 38 -150 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -42,11 +42,11 @@ X ~ 2 0 -150 110 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Device:R
+# Device_R
 #
-DEF Device:R R 0 0 N Y 1 F N
+DEF Device_R R 0 0 N Y 1 F N
 F0 "R" 80 0 50 V V C CNN
-F1 "Device:R" 0 0 50 V V C CNN
+F1 "Device_R" 0 0 50 V V C CNN
 F2 "" -70 0 50 V I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -59,11 +59,11 @@ X ~ 2 0 -150 50 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Device:R_POT
+# Device_R_POT
 #
-DEF Device:R_POT RV 0 40 Y N 1 F N
+DEF Device_R_POT RV 0 40 Y N 1 F N
 F0 "RV" -175 0 50 V V C CNN
-F1 "Device:R_POT" -100 0 50 V V C CNN
+F1 "Device_R_POT" -100 0 50 V V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -72,18 +72,158 @@ $ENDFPLIST
 DRAW
 S 40 100 -40 -100 0 1 10 N
 P 2 0 1 0 100 0 60 0 N
-P 3 0 1 0 45 0 90 20 90 -20 F
+P 4 0 1 0 45 0 90 20 90 -20 45 0 F
 X 1 1 0 150 50 D 50 50 1 1 P
 X 2 2 150 0 50 L 50 50 1 1 P
 X 3 3 0 -150 50 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Vumetro-rescue:MAX7219-vumetro
+# Vumetro-rescue_conn_pin8-vumetro-Vumetro-rescue
 #
-DEF Vumetro-rescue:MAX7219-vumetro U 0 40 Y Y 1 F N
+DEF Vumetro-rescue_conn_pin8-vumetro-Vumetro-rescue U 0 40 Y Y 1 F N
+F0 "U" 0 0 50 H V C CNN
+F1 "Vumetro-rescue_conn_pin8-vumetro-Vumetro-rescue" 0 -50 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+S -100 -100 50 -950 0 1 0 N
+X 1 1 -200 -200 100 R 50 50 1 1 P
+X 2 2 -200 -300 100 R 50 50 1 1 P
+X 3 3 -200 -400 100 R 50 50 1 1 P
+X 4 4 -200 -500 100 R 50 50 1 1 P
+X 5 5 -200 -600 100 R 50 50 1 1 P
+X 6 6 -200 -700 100 R 50 50 1 1 P
+X 7 7 -200 -800 100 R 50 50 1 1 P
+X 8 8 -200 -900 100 R 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Vumetro-rescue_opa2350pa-vumetro-Vumetro-rescue
+#
+DEF Vumetro-rescue_opa2350pa-vumetro-Vumetro-rescue U 0 40 Y Y 1 F N
+F0 "U" 0 50 50 H V C CNN
+F1 "Vumetro-rescue_opa2350pa-vumetro-Vumetro-rescue" 0 -50 50 H V C CNN
+F2 "" 0 50 50 H I C CNN
+F3 "" 0 50 50 H I C CNN
+DRAW
+S -300 -100 300 -550 0 1 0 N
+X OUT_A 1 -400 -200 100 R 50 50 1 1 O
+X -IN_A 2 -400 -300 100 R 50 50 1 1 I
+X +IN_A 3 -400 -400 100 R 50 50 1 1 I
+X V- 4 -400 -500 100 R 50 50 1 1 W
+X V+ 5 400 -200 100 L 50 50 1 1 W
+X OUT_B 6 400 -300 100 L 50 50 1 1 O
+X -IN_B 7 400 -400 100 L 50 50 1 1 I
+X +IN_B 8 400 -500 100 L 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+# power_+3.3V
+#
+DEF power_+3.3V #PWR 0 0 Y Y 1 F P
+F0 "#PWR" 0 -150 50 H I C CNN
+F1 "power_+3.3V" 0 140 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+ALIAS +3.3V
+DRAW
+P 2 0 1 0 -30 50 0 100 N
+P 2 0 1 0 0 0 0 100 N
+P 2 0 1 0 0 100 30 50 N
+X +3V3 1 0 0 0 U 50 50 1 1 W N
+ENDDRAW
+ENDDEF
+#
+# power_+5V
+#
+DEF power_+5V #PWR 0 0 Y Y 1 F P
+F0 "#PWR" 0 -150 50 H I C CNN
+F1 "power_+5V" 0 140 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+P 2 0 1 0 -30 50 0 100 N
+P 2 0 1 0 0 0 0 100 N
+P 2 0 1 0 0 100 30 50 N
+X +5V 1 0 0 0 U 50 50 1 1 W N
+ENDDRAW
+ENDDEF
+#
+# power_GND
+#
+DEF power_GND #PWR 0 0 Y Y 1 F P
+F0 "#PWR" 0 -250 50 H I C CNN
+F1 "power_GND" 0 -150 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+P 6 0 1 0 0 0 0 -50 50 -50 0 -100 -50 -50 0 -50 N
+X GND 1 0 0 0 D 50 50 1 1 W N
+ENDDRAW
+ENDDEF
+#
+# power_GNDA
+#
+DEF power_GNDA #PWR 0 0 Y Y 1 F P
+F0 "#PWR" 0 -250 50 H I C CNN
+F1 "power_GNDA" 0 -150 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+P 6 0 1 0 0 0 0 -50 50 -50 0 -100 -50 -50 0 -50 N
+X GNDA 1 0 0 0 D 50 50 1 1 W N
+ENDDRAW
+ENDDEF
+#
+# power_PWR_FLAG
+#
+DEF power_PWR_FLAG #FLG 0 0 N N 1 F P
+F0 "#FLG" 0 75 50 H I C CNN
+F1 "power_PWR_FLAG" 0 150 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+P 6 0 1 0 0 0 0 50 -40 75 0 100 40 75 0 50 N
+X pwr 1 0 0 0 U 50 50 0 0 w
+ENDDRAW
+ENDDEF
+#
+# power_VCC
+#
+DEF power_VCC #PWR 0 0 Y Y 1 F P
+F0 "#PWR" 0 -150 50 H I C CNN
+F1 "power_VCC" 0 150 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+C 0 75 25 0 1 0 N
+P 2 0 1 0 0 0 0 50 N
+X VCC 1 0 0 0 U 50 50 1 1 W N
+ENDDRAW
+ENDDEF
+#
+# pspice_CAP
+#
+DEF pspice_CAP C 0 10 Y Y 1 F N
+F0 "C" 100 150 50 V V C CNN
+F1 "pspice_CAP" 100 -150 50 V V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+ALIAS C
+DRAW
+P 2 0 1 0 -150 -50 150 -50 N
+P 2 0 1 0 -150 50 150 50 N
+X ~ 1 0 250 200 D 40 40 1 1 P
+X ~ 2 0 -250 200 U 40 40 1 1 P
+ENDDRAW
+ENDDEF
+#
+# vumetro_MAX7219
+#
+DEF vumetro_MAX7219 U 0 40 Y Y 1 F N
 F0 "U" 0 200 50 H V C CNN
-F1 "Vumetro-rescue:MAX7219-vumetro" 0 50 50 H V C CNN
+F1 "vumetro_MAX7219" 0 50 50 H V C CNN
 F2 "" 0 200 50 H I C CNN
 F3 "" 0 200 50 H I C CNN
 DRAW
@@ -115,103 +255,55 @@ X GND 9 -500 -900 100 R 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Vumetro-rescue:conn_pin8-vumetro
+# vumetro_conn_pin40
 #
-DEF Vumetro-rescue:conn_pin8-vumetro U 0 40 Y Y 1 F N
+DEF vumetro_conn_pin40 U 0 40 Y Y 1 F N
 F0 "U" 0 0 50 H V C CNN
-F1 "Vumetro-rescue:conn_pin8-vumetro" 0 -50 50 H V C CNN
+F1 "vumetro_conn_pin40" 0 -50 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
-S -100 -100 50 -950 0 1 0 N
-X 1 1 -200 -200 100 R 50 50 1 1 P
-X 2 2 -200 -300 100 R 50 50 1 1 P
-X 3 3 -200 -400 100 R 50 50 1 1 P
-X 4 4 -200 -500 100 R 50 50 1 1 P
-X 5 5 -200 -600 100 R 50 50 1 1 P
-X 6 6 -200 -700 100 R 50 50 1 1 P
-X 7 7 -200 -800 100 R 50 50 1 1 P
-X 8 8 -200 -900 100 R 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
-# Vumetro-rescue:opa2350pa-vumetro
-#
-DEF Vumetro-rescue:opa2350pa-vumetro U 0 40 Y Y 1 F N
-F0 "U" 0 50 50 H V C CNN
-F1 "Vumetro-rescue:opa2350pa-vumetro" 0 -50 50 H V C CNN
-F2 "" 0 50 50 H I C CNN
-F3 "" 0 50 50 H I C CNN
-DRAW
-S -300 -100 300 -550 0 1 0 N
-X OUT_A 1 -400 -200 100 R 50 50 1 1 O
-X -IN_A 2 -400 -300 100 R 50 50 1 1 I
-X +IN_A 3 -400 -400 100 R 50 50 1 1 I
-X V- 4 -400 -500 100 R 50 50 1 1 W
-X V+ 5 400 -200 100 L 50 50 1 1 W
-X OUT_B 6 400 -300 100 L 50 50 1 1 O
-X -IN_B 7 400 -400 100 L 50 50 1 1 I
-X +IN_B 8 400 -500 100 L 50 50 1 1 I
-ENDDRAW
-ENDDEF
-#
-# power:+3.3V
-#
-DEF power:+3.3V #PWR 0 0 Y Y 1 F P
-F0 "#PWR" 0 -150 50 H I C CNN
-F1 "power:+3.3V" 0 140 50 H V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-ALIAS +3.3V
-DRAW
-P 2 0 1 0 -30 50 0 100 N
-P 2 0 1 0 0 0 0 100 N
-P 2 0 1 0 0 100 30 50 N
-X +3V3 1 0 0 0 U 50 50 1 1 W N
-ENDDRAW
-ENDDEF
-#
-# power:+5V
-#
-DEF power:+5V #PWR 0 0 Y Y 1 F P
-F0 "#PWR" 0 -150 50 H I C CNN
-F1 "power:+5V" 0 140 50 H V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-DRAW
-P 2 0 1 0 -30 50 0 100 N
-P 2 0 1 0 0 0 0 100 N
-P 2 0 1 0 0 100 30 50 N
-X +5V 1 0 0 0 U 50 50 1 1 W N
-ENDDRAW
-ENDDEF
-#
-# power:GNDA
-#
-DEF power:GNDA #PWR 0 0 Y Y 1 F P
-F0 "#PWR" 0 -250 50 H I C CNN
-F1 "power:GNDA" 0 -150 50 H V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-DRAW
-P 6 0 1 0 0 0 0 -50 50 -50 0 -100 -50 -50 0 -50 N
-X GNDA 1 0 0 0 D 50 50 1 1 W N
-ENDDRAW
-ENDDEF
-#
-# pspice:CAP
-#
-DEF pspice:CAP C 0 10 Y Y 1 F N
-F0 "C" 100 150 50 V V C CNN
-F1 "pspice:CAP" 100 -150 50 V V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-ALIAS C
-DRAW
-P 2 0 1 0 -150 -50 150 -50 N
-P 2 0 1 0 -150 50 150 50 N
-X ~ 1 0 250 200 D 40 40 1 1 P
-X ~ 2 0 -250 200 U 40 40 1 1 P
+S -150 -100 150 -2150 0 1 0 N
+X 1 1 -250 -200 100 R 50 50 1 1 P
+X 10 10 250 -600 100 L 50 50 1 1 P
+X 11 11 -250 -700 100 R 50 50 1 1 P
+X 12 12 250 -700 100 L 50 50 1 1 P
+X 13 13 -250 -800 100 R 50 50 1 1 P
+X 14 14 250 -800 100 L 50 50 1 1 P
+X 15 15 -250 -900 100 R 50 50 1 1 P
+X 16 16 250 -900 100 L 50 50 1 1 P
+X 17 17 -250 -1000 100 R 50 50 1 1 P
+X 18 18 250 -1000 100 L 50 50 1 1 P
+X 19 19 -250 -1100 100 R 50 50 1 1 P
+X 2 2 250 -200 100 L 50 50 1 1 P
+X 20 20 250 -1100 100 L 50 50 1 1 P
+X 21 21 -250 -1200 100 R 50 50 1 1 P
+X 22 22 250 -1200 100 L 50 50 1 1 P
+X 23 23 -250 -1300 100 R 50 50 1 1 P
+X 24 24 250 -1300 100 L 50 50 1 1 P
+X 25 25 -250 -1400 100 R 50 50 1 1 P
+X 26 26 250 -1400 100 L 50 50 1 1 P
+X 27 27 -250 -1500 100 R 50 50 1 1 P
+X 28 28 250 -1500 100 L 50 50 1 1 P
+X 29 29 -250 -1600 100 R 50 50 1 1 P
+X 3 3 -250 -300 100 R 50 50 1 1 P
+X 30 30 250 -1600 100 L 50 50 1 1 P
+X 31 31 -250 -1700 100 R 50 50 1 1 P
+X 32 32 250 -1700 100 L 50 50 1 1 P
+X 33 33 -250 -1800 100 R 50 50 1 1 P
+X 34 34 250 -1800 100 L 50 50 1 1 P
+X 35 35 -250 -1900 100 R 50 50 1 1 P
+X 36 36 250 -1900 100 L 50 50 1 1 P
+X 37 37 -250 -2000 100 R 50 50 1 1 P
+X 38 38 250 -2000 100 L 50 50 1 1 P
+X 39 39 -250 -2100 100 R 50 50 1 1 P
+X 4 4 250 -300 100 L 50 50 1 1 P
+X 40 40 250 -2100 100 L 50 50 1 1 P
+X 5 5 -250 -400 100 R 50 50 1 1 P
+X 6 6 250 -400 100 L 50 50 1 1 P
+X 7 7 -250 -500 100 R 50 50 1 1 P
+X 8 8 250 -500 100 L 50 50 1 1 P
+X 9 9 -250 -600 100 R 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
