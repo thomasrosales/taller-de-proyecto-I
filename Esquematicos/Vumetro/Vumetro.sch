@@ -105,12 +105,12 @@ Wire Wire Line
 $Comp
 L vumetro:MAX7219 U?
 U 1 1 5BD0C6D8
-P 10150 1900
-F 0 "U?" H 10150 2065 50  0000 C CNN
-F 1 "MAX7219" H 10150 1974 50  0000 C CNN
-F 2 "" H 10150 2100 50  0001 C CNN
-F 3 "" H 10150 2100 50  0001 C CNN
-	1    10150 1900
+P 2100 5400
+F 0 "U?" H 2100 5565 50  0000 C CNN
+F 1 "MAX7219" H 2100 5474 50  0000 C CNN
+F 2 "" H 2100 5600 50  0001 C CNN
+F 3 "" H 2100 5600 50  0001 C CNN
+	1    2100 5400
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -172,39 +172,6 @@ Wire Wire Line
 	4300 3150 4300 3250
 Wire Wire Line
 	3400 3550 3400 3700
-$Comp
-L vumetro:MatrixLed8x8 U?
-U 1 1 5BD1C474
-P 10100 450
-F 0 "U?" H 10578 -229 50  0000 L CNN
-F 1 "MatrixLed8x8" H 10578 -320 50  0000 L CNN
-F 2 "" H 10000 450 50  0001 C CNN
-F 3 "" H 10000 450 50  0001 C CNN
-	1    10100 450 
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector_Generic:Conn_2Rows-39Pins J?
-U 1 1 5BD1C88D
-P 8200 2050
-F 0 "J?" H 8250 3167 50  0000 C CNN
-F 1 "Conn_2Rows-39Pins" H 8250 3076 50  0000 C CNN
-F 2 "" H 8200 2050 50  0001 C CNN
-F 3 "~" H 8200 2050 50  0001 C CNN
-	1    8200 2050
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector_Generic:Conn_2Rows-39Pins J?
-U 1 1 5BD1CE86
-P 9000 2000
-F 0 "J?" H 9050 3117 50  0000 C CNN
-F 1 "Conn_2Rows-39Pins" H 9050 3026 50  0000 C CNN
-F 2 "" H 9000 2000 50  0001 C CNN
-F 3 "~" H 9000 2000 50  0001 C CNN
-	1    9000 2000
-	1    0    0    -1  
-$EndComp
 $Comp
 L Amplifier_Operational:OPA2340 U?
 U 1 1 5BD1E25D
@@ -291,8 +258,26 @@ Wire Wire Line
 Connection ~ 5400 3250
 Text Label 5650 3250 0    50   ~ 0
 ADC
-Wire Wire Line
-	8000 1550 7750 1550
-Text Label 7750 1550 0    50   ~ 0
-ADC
+$Comp
+L vumetro:conn_pin8 U?
+U 1 1 5BD8D993
+P 4000 5450
+F 0 "U?" H 3900 5550 50  0000 L CNN
+F 1 "conn_pin8" H 3850 5450 50  0000 L CNN
+F 2 "" H 4000 5450 50  0001 C CNN
+F 3 "" H 4000 5450 50  0001 C CNN
+	1    4000 5450
+	1    0    0    -1  
+$EndComp
+$Comp
+L vumetro:conn_pin8 U?
+U 1 1 5BD8E115
+P 4750 5450
+F 0 "U?" H 4667 5515 50  0000 C CNN
+F 1 "conn_pin8" H 4667 5424 50  0000 C CNN
+F 2 "" H 4750 5450 50  0001 C CNN
+F 3 "" H 4750 5450 50  0001 C CNN
+	1    4750 5450
+	-1   0    0    -1  
+$EndComp
 $EndSCHEMATC
