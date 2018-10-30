@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:Vumetro-cache
-EELAYER 29 0
+EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -102,17 +102,6 @@ Wire Wire Line
 Connection ~ 3450 1700
 Wire Wire Line
 	3450 1700 3650 1700
-$Comp
-L vumetro:MAX7219 U?
-U 1 1 5BD0C6D8
-P 10150 1900
-F 0 "U?" H 10150 2065 50  0000 C CNN
-F 1 "MAX7219" H 10150 1974 50  0000 C CNN
-F 2 "" H 10150 2100 50  0001 C CNN
-F 3 "" H 10150 2100 50  0001 C CNN
-	1    10150 1900
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	3400 3050 3400 3150
 Wire Wire Line
@@ -172,39 +161,6 @@ Wire Wire Line
 	4300 3150 4300 3250
 Wire Wire Line
 	3400 3550 3400 3700
-$Comp
-L vumetro:MatrixLed8x8 U?
-U 1 1 5BD1C474
-P 10100 450
-F 0 "U?" H 10578 -229 50  0000 L CNN
-F 1 "MatrixLed8x8" H 10578 -320 50  0000 L CNN
-F 2 "" H 10000 450 50  0001 C CNN
-F 3 "" H 10000 450 50  0001 C CNN
-	1    10100 450 
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector_Generic:Conn_2Rows-39Pins J?
-U 1 1 5BD1C88D
-P 8200 2050
-F 0 "J?" H 8250 3167 50  0000 C CNN
-F 1 "Conn_2Rows-39Pins" H 8250 3076 50  0000 C CNN
-F 2 "" H 8200 2050 50  0001 C CNN
-F 3 "~" H 8200 2050 50  0001 C CNN
-	1    8200 2050
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector_Generic:Conn_2Rows-39Pins J?
-U 1 1 5BD1CE86
-P 9000 2000
-F 0 "J?" H 9050 3117 50  0000 C CNN
-F 1 "Conn_2Rows-39Pins" H 9050 3026 50  0000 C CNN
-F 2 "" H 9000 2000 50  0001 C CNN
-F 3 "~" H 9000 2000 50  0001 C CNN
-	1    9000 2000
-	1    0    0    -1  
-$EndComp
 $Comp
 L Amplifier_Operational:OPA2340 U?
 U 1 1 5BD1E25D
@@ -292,7 +248,165 @@ Connection ~ 5400 3250
 Text Label 5650 3250 0    50   ~ 0
 ADC
 Wire Wire Line
-	8000 1550 7750 1550
-Text Label 7750 1550 0    50   ~ 0
-ADC
+	8050 2400 7800 2400
+Text Label 7800 2400 0    50   ~ 0
+3V3
+Wire Wire Line
+	8050 2500 7800 2500
+Text Label 7800 2500 0    50   ~ 0
+GND
+NoConn ~ 8050 4300
+NoConn ~ 8050 4200
+NoConn ~ 8050 4100
+NoConn ~ 8050 4000
+NoConn ~ 8050 3900
+NoConn ~ 8050 3800
+NoConn ~ 8050 3700
+NoConn ~ 8050 3600
+NoConn ~ 8050 3500
+NoConn ~ 8050 3400
+NoConn ~ 8050 3300
+NoConn ~ 8050 3200
+NoConn ~ 8050 3100
+NoConn ~ 8050 3000
+NoConn ~ 8050 2900
+NoConn ~ 8550 4200
+Text Label 9300 3100 0    50   ~ 0
+DAC
+NoConn ~ 8050 2800
+NoConn ~ 8050 2700
+NoConn ~ 8050 2600
+Text Label 9300 3200 0    50   ~ 0
+VDDA
+Text Label 9300 2800 0    50   ~ 0
+ADC_CH3
+Text Label 9300 2900 0    50   ~ 0
+ADC_CH2
+Text Label 9300 3000 0    50   ~ 0
+ADC_CH1
+Wire Wire Line
+	9300 2800 9700 2800
+Wire Wire Line
+	9300 2900 9700 2900
+Wire Wire Line
+	9300 3000 9700 3000
+Wire Wire Line
+	9300 3100 9700 3100
+Wire Wire Line
+	9300 3200 9700 3200
+NoConn ~ 9700 2500
+NoConn ~ 9700 2400
+NoConn ~ 9700 2600
+NoConn ~ 9700 2700
+NoConn ~ 10200 2400
+NoConn ~ 10200 2500
+NoConn ~ 10200 2600
+NoConn ~ 10200 2700
+NoConn ~ 10200 2800
+NoConn ~ 10200 2900
+NoConn ~ 10200 3000
+NoConn ~ 10200 3100
+NoConn ~ 10200 3200
+NoConn ~ 10200 3300
+NoConn ~ 10200 3400
+NoConn ~ 10200 3500
+NoConn ~ 10200 3600
+NoConn ~ 10200 3700
+NoConn ~ 10200 3800
+NoConn ~ 10200 3900
+NoConn ~ 10200 4000
+NoConn ~ 10200 4100
+NoConn ~ 10200 4200
+NoConn ~ 9700 4300
+NoConn ~ 9700 4200
+NoConn ~ 9700 4100
+NoConn ~ 9700 4000
+NoConn ~ 9700 3900
+NoConn ~ 9700 3800
+NoConn ~ 9700 3700
+NoConn ~ 9700 3600
+NoConn ~ 9700 3500
+NoConn ~ 9700 3400
+NoConn ~ 9700 3300
+$Comp
+L Vumetro-rescue:MAX7219-vumetro U?
+U 1 1 5BD0C6D8
+P 2500 5900
+F 0 "U?" H 2500 6065 50  0000 C CNN
+F 1 "MAX7219" H 2500 5974 50  0000 C CNN
+F 2 "" H 2500 6100 50  0001 C CNN
+F 3 "" H 2500 6100 50  0001 C CNN
+	1    2500 5900
+	1    0    0    -1  
+$EndComp
+NoConn ~ 8550 2400
+NoConn ~ 8550 2500
+NoConn ~ 8550 2600
+NoConn ~ 8550 2700
+NoConn ~ 8550 2800
+NoConn ~ 8550 2900
+NoConn ~ 8550 3000
+NoConn ~ 8550 3100
+NoConn ~ 8550 3200
+NoConn ~ 8550 3300
+NoConn ~ 8550 3400
+NoConn ~ 8550 3500
+NoConn ~ 8550 3600
+NoConn ~ 8550 3700
+NoConn ~ 8550 3800
+NoConn ~ 8550 3900
+NoConn ~ 8550 4000
+NoConn ~ 8550 4100
+Wire Wire Line
+	2000 6100 1850 6100
+Wire Wire Line
+	1850 6100 1850 5400
+Wire Wire Line
+	1850 5400 3350 5400
+Wire Wire Line
+	2000 6200 1750 6200
+Wire Wire Line
+	1750 6200 1750 5300
+Wire Wire Line
+	1750 5300 3350 5300
+Wire Wire Line
+	2000 6400 1650 6400
+Wire Wire Line
+	1650 6400 1650 5200
+Wire Wire Line
+	1650 5200 3350 5200
+Wire Wire Line
+	2000 6500 1550 6500
+Wire Wire Line
+	1550 6500 1550 5100
+Wire Wire Line
+	1550 5100 3350 5100
+Wire Wire Line
+	2000 6600 1450 6600
+Wire Wire Line
+	1450 6600 1450 5000
+Wire Wire Line
+	1450 5000 3350 5000
+Wire Wire Line
+	2000 6700 1350 6700
+Wire Wire Line
+	1350 6700 1350 4900
+Wire Wire Line
+	1350 4900 3350 4900
+Wire Wire Line
+	2000 6900 1250 6900
+Wire Wire Line
+	1250 6900 1250 4800
+Wire Wire Line
+	1250 4800 3350 4800
+Wire Wire Line
+	2000 7000 1150 7000
+Wire Wire Line
+	1150 7000 1150 4700
+Wire Wire Line
+	1150 4700 3350 4700
+Wire Wire Line
+	2000 7100 1650 7100
+Text Label 1650 7100 0    50   ~ 0
+LOAD_CS
 $EndSCHEMATC
