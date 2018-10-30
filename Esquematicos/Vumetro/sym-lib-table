@@ -1,3 +1,4 @@
 (sym_lib_table
   (lib (name vumetro)(type Legacy)(uri /home/maxi/taller-de-proyecto-I/Esquematicos/Vumetro/lib/vumetro.lib)(options "")(descr ""))
+  (lib (name Vumetro-rescue)(type Legacy)(uri ${KIPRJMOD}/Vumetro-rescue.lib)(options "")(descr ""))
 )
