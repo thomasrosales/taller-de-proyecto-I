@@ -37,9 +37,8 @@
 
 /*==================[inclusions]=============================================*/
 
-//#include "keypad_7segment.h"   // <= own header (optional)
 #include "sapi.h"                // <= sAPI header
-
+#include "KEYPAD.h"
 /*==================[macros and definitions]=================================*/
 
 /*==================[internal data declaration]==============================*/
@@ -62,37 +61,15 @@ int main(void){
 
    /* Inicializar la placa */
    boardConfig();
-
-   /* Configuracion de pines para el Teclado Matricial*/
-
-   // Teclado
-   keypad_t keypad;
+   unsigned char tecla=0;
    int i;
-   // Filas --> Salidas
-   uint8_t keypadRowPins1[4] = {
-      RS232_TXD, // Row 0
-      CAN_RD,    // Row 1
-      CAN_TD,    // Row 2
-      T_COL1     // Row 3
-   };
+   KEYPAD_init();
 
-   // Columnas --> Entradas con pull-up (MODO = GPIO_INPUT_PULLUP)
-   uint8_t keypadColPins1[4] = {
-      T_FIL0,    // Column 0
-      T_FIL3,    // Column 1
-      T_FIL2,    // Column 2
-      T_COL0     // Column 3
-   };
-
-   keypadConfig( &keypad, keypadRowPins1, 4, keypadColPins1, 4 );
-
-   // Variable para guardar la tecla leida
-   uint16_t tecla = 0;
 
    /* ------------- REPETIR POR SIEMPRE ------------- */
    while(1) {
-      keypadRead(&keypad, &tecla);
-      for(i=0;i<0xffff;i++);
+      KEYPAD_get_key(&tecla);
+      for(i=0;i<0xff;i++);
    }
 
    /* NO DEBE LLEGAR NUNCA AQUI, debido a que a este programa no es llamado

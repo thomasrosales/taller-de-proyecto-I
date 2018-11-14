@@ -36,6 +36,9 @@
 
 #-------------------------------------------------------------------------------
 # current project
+
+PROJECT = projects/vumetro
+
 #-------------------------------------------------------------------------------
 
 #------------ examples -----------------------------------------
@@ -50,7 +53,7 @@
 #------------ Bare-metal examples ------------
 
 #PROJECT = sapi_examples/edu-ciaa-nxp/bare_metal/gpio/gpio_01_switches_leds
-PROJECT = sapi_examples/edu-ciaa-nxp/bare_metal/gpio/gpio_02_blinky
+#PROJECT = sapi_examples/edu-ciaa-nxp/bare_metal/gpio/gpio_02_blinky
 #PROJECT = sapi_examples/edu-ciaa-nxp/bare_metal/gpio/gpio_03_blinky_switch
 #PROJECT = sapi_examples/edu-ciaa-nxp/bare_metal/gpio/gpio_04_led_sequences
 
