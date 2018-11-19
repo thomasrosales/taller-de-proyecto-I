@@ -39,6 +39,8 @@
 
 #include "sapi.h"                // <= sAPI header
 #include "KEYPAD.h"
+#include "MAX7219.h"
+
 /*==================[macros and definitions]=================================*/
 
 /*==================[internal data declaration]==============================*/
@@ -58,18 +60,18 @@
 int main(void){
 
    /* ------------- INICIALIZACIONES ------------- */
-
+   int i=0;
    /* Inicializar la placa */
    boardConfig();
-   unsigned char tecla=0;
-   int i;
-   KEYPAD_init();
-
+   MAX7219_init();
 
    /* ------------- REPETIR POR SIEMPRE ------------- */
    while(1) {
-      KEYPAD_get_key(&tecla);
-      for(i=0;i<0xff;i++);
+
+	   MAX7219_write_data(0, 7);
+	   for(i=0;i<0xffffff;i++);
+	   MAX7219_write_data(0, 0);
+	   for(i=0;i<0xffffff;i++);
    }
 
    /* NO DEBE LLEGAR NUNCA AQUI, debido a que a este programa no es llamado
