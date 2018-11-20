@@ -39,6 +39,12 @@ void MAX7219_displaytest_mode(bool_t state);
 void MAX7219_set_scan_limit(uint8_t cantidad);
 /*
  * Escribe la fila pasada como parametro
+ * data -> parametro de 8 bits, cada bit representa la columna
+ * Ejemplo:
+ * Prender columnas 0, 1, 2 de la fila 0
+ * MAX7219_write_row(0, 0b00000111)
+ * MAX7219_write_row(0, 7)
+ * MAXX7219_write_row(0, 0x07)
 */
 void MAX7219_write_row(uint8_t row, uint8_t data);
 /*
