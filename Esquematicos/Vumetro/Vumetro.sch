@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:Vumetro-cache
-EELAYER 26 0
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -15,7 +15,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Vumetro-rescue:R-Device R1
+L Vumetro-rescue:R-Device-Vumetro-rescue R1
 U 1 1 5BD08240
 P 3350 2400
 F 0 "R1" H 3420 2446 50  0000 L CNN
@@ -26,7 +26,7 @@ F 3 "~" H 3350 2400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Vumetro-rescue:R-Device R2
+L Vumetro-rescue:R-Device-Vumetro-rescue R2
 U 1 1 5BD082FA
 P 3350 2900
 F 0 "R2" H 3420 2946 50  0000 L CNN
@@ -37,7 +37,7 @@ F 3 "~" H 3350 2900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Vumetro-rescue:GNDA-power #PWR0102
+L Vumetro-rescue:GNDA-power-Vumetro-rescue #PWR0102
 U 1 1 5BD08B01
 P 3600 1000
 F 0 "#PWR0102" H 3600 750 50  0001 C CNN
@@ -50,7 +50,7 @@ $EndComp
 Wire Wire Line
 	2400 1400 1950 1400
 $Comp
-L Vumetro-rescue:R_POT-Device RV1
+L Vumetro-rescue:R_POT-Device-Vumetro-rescue RV1
 U 1 1 5BD09203
 P 2800 1650
 F 0 "RV1" H 2730 1696 50  0000 R CNN
@@ -76,7 +76,7 @@ Wire Wire Line
 	3350 2650 3350 2750
 Connection ~ 3350 2650
 $Comp
-L Vumetro-rescue:GNDA-power #PWR0103
+L Vumetro-rescue:GNDA-power-Vumetro-rescue #PWR0103
 U 1 1 5BD0D7F2
 P 3350 3200
 F 0 "#PWR0103" H 3350 2950 50  0001 C CNN
@@ -87,18 +87,18 @@ F 3 "" H 3350 3200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Vumetro-rescue:C-Device C2
+L Vumetro-rescue:C-Device-Vumetro-rescue C2
 U 1 1 5BD1B29A
 P 4250 2900
 F 0 "C2" H 4365 2946 50  0000 L CNN
-F 1 "1.8 nF" H 4365 2855 50  0000 L CNN
+F 1 "2.2 nF" H 4365 2855 50  0000 L CNN
 F 2 "" H 4288 2750 50  0001 C CNN
 F 3 "~" H 4250 2900 50  0001 C CNN
 	1    4250 2900
 	1    0    0    -1  
 $EndComp
 $Comp
-L Vumetro-rescue:GNDA-power #PWR0104
+L Vumetro-rescue:GNDA-power-Vumetro-rescue #PWR0104
 U 1 1 5BD1B343
 P 4250 3200
 F 0 "#PWR0104" H 4250 2950 50  0001 C CNN
@@ -111,7 +111,7 @@ $EndComp
 Wire Wire Line
 	4250 3050 4250 3200
 $Comp
-L Vumetro-rescue:R-Device R4
+L Vumetro-rescue:R-Device-Vumetro-rescue R4
 U 1 1 5BD1B49E
 P 3750 2650
 F 0 "R4" V 3543 2650 50  0000 C CNN
@@ -131,7 +131,7 @@ Wire Wire Line
 	3350 2650 3600 2650
 Connection ~ 4250 2650
 $Comp
-L Vumetro-rescue:R-Device R5
+L Vumetro-rescue:R-Device-Vumetro-rescue R5
 U 1 1 5BD1FFCF
 P 4250 1800
 F 0 "R5" H 4320 1846 50  0000 L CNN
@@ -142,7 +142,7 @@ F 3 "~" H 4250 1800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Vumetro-rescue:R-Device R6
+L Vumetro-rescue:R-Device-Vumetro-rescue R6
 U 1 1 5BD204D6
 P 4700 1500
 F 0 "R6" V 4493 1500 50  0000 C CNN
@@ -158,7 +158,7 @@ Connection ~ 4250 1500
 Wire Wire Line
 	4250 1500 4250 1650
 $Comp
-L Vumetro-rescue:GNDA-power #PWR0105
+L Vumetro-rescue:GNDA-power-Vumetro-rescue #PWR0105
 U 1 1 5BD20C9D
 P 4250 2200
 F 0 "#PWR0105" H 4250 1950 50  0001 C CNN
@@ -171,7 +171,7 @@ $EndComp
 Wire Wire Line
 	4250 1950 4250 2200
 $Comp
-L Vumetro-rescue:C-Device C1
+L Vumetro-rescue:C-Device-Vumetro-rescue C1
 U 1 1 5BD214BE
 P 2800 2200
 F 0 "C1" H 2915 2246 50  0000 L CNN
@@ -188,7 +188,7 @@ Wire Wire Line
 Text Label 6900 1050 0    50   ~ 0
 CH1
 $Comp
-L Vumetro-rescue:conn_pin8-vumetro-Vumetro-rescue-Vumetro-rescue U2
+L Vumetro-rescue:conn_pin8-vumetro-Vumetro-rescue-Vumetro-rescue-Vumetro-rescue U2
 U 1 1 5BD8D993
 P 4200 3850
 F 0 "U2" H 4100 3950 50  0000 L CNN
@@ -199,7 +199,7 @@ F 3 "" H 4200 3850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Vumetro-rescue:conn_pin8-vumetro-Vumetro-rescue-Vumetro-rescue U3
+L Vumetro-rescue:conn_pin8-vumetro-Vumetro-rescue-Vumetro-rescue-Vumetro-rescue U3
 U 1 1 5BD8E115
 P 4650 3850
 F 0 "U3" H 4567 3915 50  0000 C CNN
@@ -210,7 +210,7 @@ F 3 "" H 4650 3850 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L Vumetro-rescue:opa2350pa-vumetro-Vumetro-rescue-Vumetro-rescue U4
+L Vumetro-rescue:opa2350pa-vumetro-Vumetro-rescue-Vumetro-rescue-Vumetro-rescue U4
 U 1 1 5BD9369A
 P 5350 2250
 F 0 "U4" H 5350 2315 50  0000 C CNN
@@ -233,7 +233,7 @@ Wire Wire Line
 Wire Wire Line
 	4250 1050 4250 1500
 $Comp
-L Vumetro-rescue:GNDA-power #PWR0106
+L Vumetro-rescue:GNDA-power-Vumetro-rescue #PWR0106
 U 1 1 5BD9D42A
 P 4850 2900
 F 0 "#PWR0106" H 4850 2650 50  0001 C CNN
@@ -285,9 +285,9 @@ Wire Wire Line
 Wire Wire Line
 	1300 4050 3250 4050
 Text Label 3250 4750 0    50   ~ 0
-DIC0
+ROW0
 Text Label 3800 4050 0    50   ~ 0
-DIC0
+ROW4
 Wire Wire Line
 	3800 4050 4000 4050
 Wire Wire Line
@@ -305,29 +305,29 @@ Wire Wire Line
 Wire Wire Line
 	4000 4750 3800 4750
 Text Label 3250 4550 0    50   ~ 0
-DIC6
+ROW6
 Text Label 3250 4450 0    50   ~ 0
-DIC2
+ROW2
 Text Label 3250 4350 0    50   ~ 0
-DIC3
+ROW3
 Text Label 3250 4150 0    50   ~ 0
-DIC5
+ROW5
 Text Label 3250 4050 0    50   ~ 0
-DIC1
+ROW1
 Text Label 3800 4150 0    50   ~ 0
-DIC1
+ROW6
 Text Label 3800 4250 0    50   ~ 0
-DIC2
+COL1
 Text Label 3800 4350 0    50   ~ 0
-DIC3
+COL2
 Text Label 3800 4450 0    50   ~ 0
-DIC4
+ROW7
 Text Label 3800 4550 0    50   ~ 0
-DIC5
+COL4
 Text Label 3800 4650 0    50   ~ 0
-DIC6
+ROW5
 Text Label 3800 4750 0    50   ~ 0
-DIC7
+ROW2
 Wire Wire Line
 	5300 5450 5300 4950
 Wire Wire Line
@@ -361,21 +361,21 @@ Wire Wire Line
 Wire Wire Line
 	3200 6250 6500 6250
 Text Label 5100 5150 1    50   ~ 0
-SEGD
+COL3
 Text Label 5300 5200 1    50   ~ 0
-SEGDP
+COL7
 Text Label 5500 5150 1    50   ~ 0
-SEGE
+COL2
 Text Label 5700 5150 1    50   ~ 0
-SEGC
+COL4
 Text Label 5900 5150 1    50   ~ 0
-SEGG
+COL0
 Text Label 6100 5150 1    50   ~ 0
-SEGB
+COL5
 Text Label 6300 5150 1    50   ~ 0
-SEGF
+COL1
 Text Label 6500 5150 1    50   ~ 0
-SEGA
+COL6
 Wire Wire Line
 	4850 4750 5100 4750
 Wire Wire Line
@@ -393,35 +393,33 @@ Wire Wire Line
 Wire Wire Line
 	4850 4050 5100 4050
 Text Label 5100 4050 0    50   ~ 0
-SEGDP
+COL7
 Text Label 5100 4150 0    50   ~ 0
-SEGA
+COL6
 Text Label 5100 4250 0    50   ~ 0
-SEGB
+ROW1
 Text Label 5100 4350 0    50   ~ 0
-SEGC
+COL0
 Text Label 5100 4450 0    50   ~ 0
-SEGD
+ROW3
 Text Label 5100 4550 0    50   ~ 0
-SEGE
+COL5
 Text Label 5100 4650 0    50   ~ 0
-SEGF
+COL3
 Text Label 5100 4750 0    50   ~ 0
-SEGG
+ROW0
 Wire Wire Line
 	2200 5550 1950 5550
 Wire Wire Line
 	2200 6050 1950 6050
-Text Label 1950 5550 0    50   ~ 0
-GND
 Text Label 1950 6050 0    50   ~ 0
-GND
+GNDA
 Wire Wire Line
 	3200 5850 3350 5850
 Text Label 3350 5850 0    50   ~ 0
 ISET
 $Comp
-L Vumetro-rescue:CAP-pspice C4
+L Vumetro-rescue:CAP-pspice-Vumetro-rescue C4
 U 1 1 5BDF9589
 P 4900 6800
 F 0 "C4" H 5078 6846 50  0000 L CNN
@@ -432,7 +430,7 @@ F 3 "" H 4900 6800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Vumetro-rescue:CAP-pspice C3
+L Vumetro-rescue:CAP-pspice-Vumetro-rescue C3
 U 1 1 5BDF96A7
 P 4300 6800
 F 0 "C3" H 4478 6846 50  0000 L CNN
@@ -443,7 +441,7 @@ F 3 "" H 4300 6800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Vumetro-rescue:R-Device R3
+L Vumetro-rescue:R-Device-Vumetro-rescue R3
 U 1 1 5BDF9744
 P 3600 7050
 F 0 "R3" V 3393 7050 50  0000 C CNN
@@ -454,7 +452,7 @@ F 3 "~" H 3600 7050 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Vumetro-rescue:GNDA-power #PWR0107
+L Vumetro-rescue:GNDA-power-Vumetro-rescue #PWR0107
 U 1 1 5BDF9885
 P 4300 7150
 F 0 "#PWR0107" H 4300 6900 50  0001 C CNN
@@ -465,7 +463,7 @@ F 3 "" H 4300 7150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Vumetro-rescue:+5V-power #PWR0108
+L Vumetro-rescue:+5V-power-Vumetro-rescue #PWR0108
 U 1 1 5BDFBFF0
 P 3800 6550
 F 0 "#PWR0108" H 3800 6400 50  0001 C CNN
@@ -476,7 +474,7 @@ F 3 "" H 3800 6550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Vumetro-rescue:GNDA-power #PWR0109
+L Vumetro-rescue:GNDA-power-Vumetro-rescue #PWR0109
 U 1 1 5BDFC0B2
 P 4900 7150
 F 0 "#PWR0109" H 4900 6900 50  0001 C CNN
@@ -515,7 +513,7 @@ V+
 Wire Wire Line
 	2200 6350 1950 6350
 Text Label 1950 6350 0    50   ~ 0
-GND
+GPIO0
 Wire Wire Line
 	2200 5250 2100 5250
 Wire Wire Line
@@ -532,7 +530,7 @@ Text Label 3400 6350 0    50   ~ 0
 SPI_SCK
 NoConn ~ 3200 5250
 $Comp
-L Vumetro-rescue:AudioJack5_Ground-Connector J1
+L Vumetro-rescue:AudioJack5_Ground-Connector-Vumetro-rescue J1
 U 1 1 5BE5F8BB
 P 1750 1200
 F 0 "J1" H 1679 1642 50  0000 C CNN
@@ -548,18 +546,7 @@ NoConn ~ 1950 1300
 NoConn ~ 1950 1200
 NoConn ~ 1950 1100
 $Comp
-L Vumetro-rescue:conn_pin40-vumetro P2
-U 1 1 5BD92927
-P 8250 2750
-F 0 "P2" H 8250 2815 50  0000 C CNN
-F 1 "conn_pin40" H 8250 2724 50  0000 C CNN
-F 2 "" H 8250 2750 50  0001 C CNN
-F 3 "" H 8250 2750 50  0001 C CNN
-	1    8250 2750
-	1    0    0    -1  
-$EndComp
-$Comp
-L Vumetro-rescue:conn_pin40-vumetro P1
+L Vumetro-rescue:conn_pin40-vumetro-Vumetro-rescue P1
 U 1 1 5BD936AB
 P 9700 2750
 F 0 "P1" H 9700 2815 50  0000 C CNN
@@ -574,7 +561,6 @@ NoConn ~ 8000 3650
 NoConn ~ 8000 3750
 NoConn ~ 8000 3850
 NoConn ~ 8000 4050
-NoConn ~ 8000 4350
 NoConn ~ 8000 4450
 NoConn ~ 8000 4550
 NoConn ~ 8000 4650
@@ -749,7 +735,7 @@ Connection ~ 4950 1050
 Wire Wire Line
 	4950 1050 4950 2450
 $Comp
-L Vumetro-rescue:PWR_FLAG-power #FLG0101
+L Vumetro-rescue:PWR_FLAG-power-Vumetro-rescue #FLG0101
 U 1 1 5C0A1FED
 P 1050 1900
 F 0 "#FLG0101" H 1050 1975 50  0001 C CNN
@@ -766,7 +752,7 @@ Wire Wire Line
 Wire Wire Line
 	1900 4650 3250 4650
 Text Label 3250 4650 0    50   ~ 0
-DIC4
+ROW4
 Wire Wire Line
 	2200 5950 1500 5950
 Wire Wire Line
@@ -774,9 +760,9 @@ Wire Wire Line
 Wire Wire Line
 	1500 4250 3250 4250
 Text Label 3250 4250 0    50   ~ 0
-DIC7
+ROW7
 $Comp
-L Vumetro-rescue:MAX7219-vumetro U1
+L Vumetro-rescue:MAX7219-vumetro-Vumetro-rescue U1
 U 1 1 5BD94EE9
 P 2700 5150
 F 0 "U1" H 2700 5315 50  0000 C CNN
@@ -787,7 +773,7 @@ F 3 "" H 2700 5350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Vumetro-rescue:PWR_FLAG-power #FLG0102
+L Vumetro-rescue:PWR_FLAG-power-Vumetro-rescue #FLG0102
 U 1 1 5BDCD5F1
 P 1050 3000
 F 0 "#FLG0102" H 1050 3075 50  0001 C CNN
@@ -798,7 +784,7 @@ F 3 "~" H 1050 3000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Vumetro-rescue:GNDA-power #PWR0110
+L Vumetro-rescue:GNDA-power-Vumetro-rescue #PWR0110
 U 1 1 5BE11156
 P 1050 1900
 F 0 "#PWR0110" H 1050 1650 50  0001 C CNN
@@ -809,7 +795,7 @@ F 3 "" H 1050 1900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Vumetro-rescue:PWR_FLAG-power #FLG0103
+L Vumetro-rescue:PWR_FLAG-power-Vumetro-rescue #FLG0103
 U 1 1 5BE11DF9
 P 1050 2450
 F 0 "#FLG0103" H 1050 2525 50  0001 C CNN
@@ -820,7 +806,7 @@ F 3 "~" H 1050 2450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Vumetro-rescue:+5V-power #PWR0111
+L Vumetro-rescue:+5V-power-Vumetro-rescue #PWR0111
 U 1 1 5BE126C5
 P 1050 2450
 F 0 "#PWR0111" H 1050 2300 50  0001 C CNN
@@ -833,7 +819,7 @@ $EndComp
 Wire Wire Line
 	3350 2250 3350 2050
 $Comp
-L Vumetro-rescue:+3V3-power #PWR0112
+L Vumetro-rescue:+3V3-power-Vumetro-rescue #PWR0112
 U 1 1 5BDC2B19
 P 3350 2050
 F 0 "#PWR0112" H 3350 1900 50  0001 C CNN
@@ -846,7 +832,7 @@ $EndComp
 Wire Wire Line
 	5750 2450 6050 2450
 $Comp
-L Vumetro-rescue:+3V3-power #PWR0101
+L Vumetro-rescue:+3V3-power-Vumetro-rescue #PWR0101
 U 1 1 5BDC0419
 P 1050 3000
 F 0 "#PWR0101" H 1050 2850 50  0001 C CNN
@@ -857,7 +843,7 @@ F 3 "" H 1050 3000 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Vumetro-rescue:+3V3-power #PWR0113
+L Vumetro-rescue:+3V3-power-Vumetro-rescue #PWR0113
 U 1 1 5BDD5FCB
 P 6050 2150
 F 0 "#PWR0113" H 6050 2000 50  0001 C CNN
@@ -944,4 +930,21 @@ Text Label 9250 4250 2    50   ~ 0
 CAN_RD
 Text Label 9250 4150 2    50   ~ 0
 232_TX
+$Comp
+L Vumetro-rescue:conn_pin40-vumetro-Vumetro-rescue P2
+U 1 1 5BD92927
+P 8250 2750
+F 0 "P2" H 8250 2815 50  0000 C CNN
+F 1 "conn_pin40" H 8250 2724 50  0000 C CNN
+F 2 "" H 8250 2750 50  0001 C CNN
+F 3 "" H 8250 2750 50  0001 C CNN
+	1    8250 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8000 4350 7650 4350
+Text Label 7650 4350 0    50   ~ 0
+GPIO0
+Text Label 1950 5550 0    50   ~ 0
+GNDA
 $EndSCHEMATC
