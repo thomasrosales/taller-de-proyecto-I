@@ -21,7 +21,7 @@ extern "C" {
  */
 void KEYPAD_init();
 /*
- * Retorna la tecla presionada a travez del parametro key
+ * Retorna la tecla presionada a traves del parametro key
  */
 void KEYPAD_get_key(unsigned char *key);
 

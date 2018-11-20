@@ -2,7 +2,6 @@
 #include "MAX7219.h"
 
 #define BYTES 2
-
 // The opcodes for MAX7219
 #define OP_NOOP         0
 #define OP_DIGIT0       1
@@ -19,23 +18,17 @@
 #define OP_SHUTDOWN    12
 #define OP_DISPLAYTEST 15
 
-void clear_display(){
-  int i;
-  for(i=OP_DIGIT0;i<=OP_DIGIT7;i++)
-    transfer_data(i, 0);
-}
-
 void transfer_data( uint8_t opcode,  uint8_t data) {
     uint8_t comando[BYTES];
     comando[0]=opcode;
     comando[1]=data;
+    //chip select
     gpioWrite( GPIO0, 0 );
-    spiWrite(SPI0, &comando, BYTES );
+    spiWrite(SPI0, comando, BYTES );
     delay(10);
-    //latch the data onto the display
+    //load data
     gpioWrite( GPIO0, 1 );
 }
-
 void MAX7219_init(){
 	  // SPI configuration
 	  spiConfig( SPI0 );
@@ -50,35 +43,46 @@ void MAX7219_init(){
 	   * Display 8 digits
 	  */
 	  transfer_data(OP_SCANLIMIT, 7);
-
-	  transfer_data(OP_DECODEMODE, 0);
-
-	  clear_display();
-
 	  /*
-	   * no shutdown mode
+	   * No decode mode
+	  */
+	  transfer_data(OP_DECODEMODE, 0);
+	  /*
+	   * Clear display
+	  */
+	  MAX7219_clear_display();
+	  /*
+	   * No shutdown mode
 	  */
 	  transfer_data(OP_SHUTDOWN, 1);
-
-	  transfer_data(OP_INTENSITY, 1);
-
+	  /*
+	   * Set intensity 8
+	  */
+	  transfer_data(OP_INTENSITY, 8);
 }
-
-void MAX7219_shutdown_mode(){
-	transfer_data(OP_SHUTDOWN, 0);
+void MAX7219_shutdown_mode(bool_t state){
+	if (state)
+	    transfer_data(OP_SHUTDOWN, 0);
+	else
+		transfer_data(OP_SHUTDOWN, 1);
 }
-
-
-
-void MAX7219_displaytest_mode(){
-	transfer_data(OP_DISPLAYTEST, 0);
+void MAX7219_displaytest_mode(bool_t state){
+	if (state)
+		transfer_data(OP_DISPLAYTEST, 1);
+	else
+		transfer_data(OP_DISPLAYTEST, 0);
 }
-
-
-void MAX7219_scan_limit(uint8_t cantidad){
+void MAX7219_set_scan_limit(uint8_t cantidad){
 	transfer_data(OP_SCANLIMIT, cantidad);
 }
-
-void MAX7219_write_data(uint8_t row, uint8_t data){
+void MAX7219_write_row(uint8_t row, uint8_t data){
 	transfer_data(row+1, data);
+}
+void MAX7219_clear_display(){
+  int i;
+  for(i=OP_DIGIT0;i<=OP_DIGIT7;i++)
+    transfer_data(i, 0);
+}
+void MAX7219_set_intensity(uint8_t intensity){
+	transfer_data(OP_INTENSITY, intensity);
 }

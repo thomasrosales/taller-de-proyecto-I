@@ -68,9 +68,9 @@ int main(void){
    /* ------------- REPETIR POR SIEMPRE ------------- */
    while(1) {
 
-	   MAX7219_write_data(0, 7);
+	   MAX7219_displaytest_mode(1);
 	   for(i=0;i<0xffffff;i++);
-	   MAX7219_write_data(0, 0);
+	   MAX7219_displaytest_mode(0);
 	   for(i=0;i<0xffffff;i++);
    }
 
