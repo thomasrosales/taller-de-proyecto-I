@@ -46,16 +46,16 @@ void ADC_IRQHandler(void)
 	if (cont == 4) {
 		cont = 0;
 #if(USAR_FUNCIONES_ASSEMBLER)
-		asm_fir_q31_put(&filtro, data);
+		//asm_fir_q31_put(&filtro, data);
 #else
-		fir_q31_put(&filtro, data);
+		//fir_q31_put(&filtro, data);
 #endif
 	}
 #else
 #if(USAR_FUNCIONES_ASSEMBLER)
-	asm_fir_q31_put(&filtro, data>>2);
+//asm_fir_q31_put(&filtro, data>>2);
 #else
-	fir_q31_put(&filtro, data>>2);
+	//fir_q31_put(&filtro, data>>2);
 #endif
 #endif
 	adcFlag=1;
