@@ -7,29 +7,29 @@
 
 /*
 
-FIR filter designed with
+ FIR filter designed with
  http://t-filter.appspot.com
 
-sampling frequency: 32000 Hz
+ sampling frequency: 32000 Hz
 
-fixed point precision: 31 bits
+ fixed point precision: 31 bits
 
-* 0 Hz - 2000 Hz
-  gain = 0
-  desired attenuation = -20 dB
-  actual attenuation = n/a
+ * 0 Hz - 2000 Hz
+ gain = 0
+ desired attenuation = -20 dB
+ actual attenuation = n/a
 
-* 2400 Hz - 5000 Hz
-  gain = 1
-  desired ripple = 5 dB
-  actual ripple = n/a
+ * 2400 Hz - 5000 Hz
+ gain = 1
+ desired ripple = 5 dB
+ actual ripple = n/a
 
-* 5400 Hz - 16000 Hz
-  gain = 0
-  desired attenuation = -20 dB
-  actual attenuation = n/a
+ * 5400 Hz - 16000 Hz
+ gain = 0
+ desired attenuation = -20 dB
+ actual attenuation = n/a
 
-*/
+ */
 
 #include "bandpass5.h"
 
@@ -41,4 +41,10 @@ const int bandpass_taps_5[BANDPASS_TAP_NUM_5] = { 34743088, -22414370, -772233,
 		-153544639, -120224231, -39417583, 30070560, 51832308, 31827605,
 		4161051, -1757161, 16206468, 35409614, 32083239, 2238819, -35691784,
 		-56742099, -49060695, -21043916, 7701466, 21411925, 16564418, -772233,
-		-22414370, 34743088 };
+		-22414370, 34743088, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+		0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+		0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+		0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+		0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+		0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+		0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };

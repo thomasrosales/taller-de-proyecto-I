@@ -8,7 +8,7 @@
 #include "bandpass6.h"
 #include "bandpass7.h"
 #include "fir_q31.h"
-//#include "MAX7219.h"
+#include "MAX7219.h"
 
 #define USAR_FUNCIONES_ASSEMBLER	0
 
@@ -281,7 +281,7 @@ int main(void) {
 				float pot = 0;
 				int k;
 				float ipass;
-				for (k = 0; k < LOWPASS_TAP_NUM; k++) {
+				for (k = 0; k < samples; k++) {
 					ipass = r[k] * r[k];
 					pot += ipass;
 				}
@@ -290,7 +290,7 @@ int main(void) {
 				 * potencia sobre cantidad de muestras procesadas
 				 * LOWPASS_TAP_NUM = cantidad de coeficientes
 				 */
-				pot = pot / LOWPASS_TAP_NUM;
+				pot = pot / samples;
 
 				/**
 				 * Caluclo del logaritmo
@@ -317,12 +317,12 @@ int main(void) {
 				float pot = 0;
 				int k;
 				float ipass;
-				for (k = 0; k < BANDPASS_TAP_NUM; k++) {
+				for (k = 0; k < samples; k++) {
 					ipass = r[k] * r[k];
 					pot += ipass;
 				}
 
-				pot = pot / BANDPASS_TAP_NUM;
+				pot = pot / samples;
 
 				double pot_db = 10 * log(10, pot) / 10;
 
@@ -346,12 +346,12 @@ int main(void) {
 				float pot = 0;
 				int k;
 				float ipass;
-				for (k = 0; k < BANDPASS_TAP_NUM_2; k++) {
+				for (k = 0; k < samples; k++) {
 					ipass = r[k] * r[k];
 					pot += ipass;
 				}
 
-				pot = pot / BANDPASS_TAP_NUM_2;
+				pot = pot / samples;
 
 				double pot_db = 10 * log(10, pot) / 10;
 
@@ -376,12 +376,12 @@ int main(void) {
 				float pot = 0;
 				int k;
 				float ipass;
-				for (k = 0; k < BANDPASS_TAP_NUM_3; k++) {
+				for (k = 0; k < samples; k++) {
 					ipass = r[k] * r[k];
 					pot += ipass;
 				}
 
-				pot = pot / BANDPASS_TAP_NUM_3;
+				pot = pot / samples;
 
 				double pot_db = 10 * log(10, pot) / 10;
 
@@ -406,12 +406,12 @@ int main(void) {
 				float pot = 0;
 				int k;
 				float ipass;
-				for (k = 0; k < BANDPASS_TAP_NUM_4; k++) {
+				for (k = 0; k < samples; k++) {
 					ipass = r[k] * r[k];
 					pot += ipass;
 				}
 
-				pot = pot / BANDPASS_TAP_NUM_4;
+				pot = pot / samples;
 
 				double pot_db = 10 * log(10, pot) / 10;
 
@@ -436,12 +436,12 @@ int main(void) {
 				float pot = 0;
 				int k;
 				float ipass;
-				for (k = 0; k < BANDPASS_TAP_NUM_5; k++) {
+				for (k = 0; k < samples; k++) {
 					ipass = r[k] * r[k];
 					pot += ipass;
 				}
 
-				pot = pot / BANDPASS_TAP_NUM_5;
+				pot = pot / samples;
 
 				double pot_db = 10 * log(10, pot) / 10;
 
@@ -466,12 +466,12 @@ int main(void) {
 				float pot = 0;
 				int k;
 				float ipass;
-				for (k = 0; k < BANDPASS_TAP_NUM_6; k++) {
+				for (k = 0; k < samples; k++) {
 					ipass = r[k] * r[k];
 					pot += ipass;
 				}
 
-				pot = pot / BANDPASS_TAP_NUM_6;
+				pot = pot / samples;
 
 				double pot_db = 10 * log(10, pot) / 10;
 
@@ -496,12 +496,12 @@ int main(void) {
 				float pot = 0;
 				int k;
 				float ipass;
-				for (k = 0; k < BANDPASS_TAP_NUM_7; k++) {
+				for (k = 0; k < samples; k++) {
 					ipass = r[k] * r[k];
 					pot += ipass;
 				}
 
-				pot = pot / BANDPASS_TAP_NUM_7;
+				pot = pot / samples;
 
 				double pot_db = 10 * log(10, pot) / 10;
 

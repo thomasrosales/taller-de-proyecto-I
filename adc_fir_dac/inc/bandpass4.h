@@ -32,7 +32,8 @@ fixed point precision: 31 bits
 #ifndef BANDPASS4_H_
 #define BANDPASS4_H_
 
-#define BANDPASS_TAP_NUM_4 89
+//num taps 89
+#define BANDPASS_TAP_NUM_4 200
 extern const int bandpass_taps_4[BANDPASS_TAP_NUM_4];
 
 #endif /* BANDPASS4_H_ */

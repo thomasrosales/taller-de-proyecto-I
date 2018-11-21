@@ -8,7 +8,9 @@
 #ifndef LOWPASS_H_
 #define LOWPASS_H_
 
-#define LOWPASS_TAP_NUM 195
+//195 origin
+
+#define LOWPASS_TAP_NUM 200
 extern const float lowpass_taps[];
 
 #endif /* LOWPASS_H_ */
