@@ -102,6 +102,11 @@ static void load_history(float * hist, float * buff) {
 	}
 }
 
+/**
+ * Eleva numeros a exponente entero
+ * @param x valor
+ * @param i exponente
+ */
 static float p(float x, int i) {
 	float r = 1.0;
 	for (i; i > 0; i--)
