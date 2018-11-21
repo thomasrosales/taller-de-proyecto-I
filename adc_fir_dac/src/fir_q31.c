@@ -1,5 +1,7 @@
 #include "fir_q31.h"
 
+extern int * history;
+
 void fir_q31_init(fir_q31_t * f, int * history, const int * kernel, int num_taps)
 {
 	int i;
@@ -27,9 +29,18 @@ int fir_q31_get(fir_q31_t * f)
 	for(i = 0; i < f->num_taps; ++i)
 	{
 		index = index != 0 ? index-1 : f->num_taps-1;
-		acc += (long long)f->history[index] * f->kernel[i];
+		//acc += (long long)f->history[index] * f->kernel[i];
+		acc += (long long)history[index] * f->kernel[i];
 	};
 	return acc >> 31;
+}
+
+void set_history(fir_q31_t * f,int * history){
+	f->history = history;
+}
+
+int get_history(fir_q31_t * f){
+	return f->history;
 }
 
 
