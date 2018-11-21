@@ -23,42 +23,48 @@ fir_q31_t filtro_fbp_b5;
 fir_q31_t filtro_fbp_b6;
 fir_q31_t filtro_fbp_b7;
 
-int history[samples];
-int historyBanda0[samples];
-int historyBanda1[samples];
-int historyBanda2[samples];
-int historyBanda3[samples];
-int historyBanda4[samples];
-int historyBanda5[samples];
-int historyBanda6[samples];
-int historyBanda7[samples];
+/**
+ * Variable gloabl extern desde fir_q31
+ */
+float history[samples];
 
-int buffer_1[samples] = { 0, 0, -3265, 3265, -3265, 0, 0, 0, /* 0-7 */
--3265, 3265, -3265, 0, 0, 0, -3265, 3265, /* 8-15 */
--3265, 0, 0, 0, -3265, 3265, -3265, 0, /* 16-23 */
-0, 0, -3265, 3265, -3265, 0, 0, 0, /* 24-31 */
--3265, 3265, -3265, 0, 0, 0, -3265, 3265, /* 32-39 */
--3265, 0, 0, 0, -3265, 3265, -3265, 0, /* 40-47 */
-0, 0, -3265, 3265, -3265, 0, 0, 0, /* 48-55 */
--3265, 3265, -3265, 0, 0, 0, -3265, 3265, /* 56-63 */
--3265, 0, 0, 0, -3265, 3265, -3265, 0, /* 64-71 */
-0, 0, -3265, 3265, -3265, 0, 0, 0, /* 72-79 */
--3265, 3265, -3265, 0, 0, 0, -3265, 3265, /* 80-87 */
--3265, 0, 0, 0, -3265, 3265, -3265, 0, /* 88-95 */
-0, 0, -3265, 3265, -3265, 0, 0, 0, /* 96-103 */
--3265, 3265, -3265, 0, 0, 0, -3265, 3265, /* 104-111 */
--3265, 0, 0, 0, -3265, 3265, -3265, 0, /* 112-119 */
-0, 0, -3265, 3265, -3265, 0, 0, 0, /* 120-127 */
--3265, 3265, -3265, 0, 0, 0, -3265, 3265, /* 128-135 */
--3265, 0, 0, 0, -3265, 3265, -3265, 0, /* 136-143 */
-0, 0, -3265, 3265, -3265, 0, 0, 0, /* 144-151 */
--3265, 3265, -3265, 0, 0, 0, -3265, 3265, /* 152-159 */
--3265, 0, 0, 0, -3265, 3265, -3265, 0, /* 160-167 */
-0, 0, -3265, 3265, -3265, 0, 0, 0, /* 168-175 */
--3265, 3265, -3265, 0, 0, 0, -3265, 3265, /* 176-183 */
--3265, 0, 0, 0, -3265, 3265, -3265, 0, /* 184-191 */
-0, 0, -3265, 3265, -3265, 0, 0, 0, /* 192-199 */
--3265 };
+float historyBand[samples];
+
+/**
+ * Buffer de muestras con resolucion 10 bits.
+ * http://electronicaestudiofacil.blogspot.com/2014/12/adc-dac-pic16f877.html
+ */
+float buffer_1[samples] = { 0.000000, 0.078459, 0.156434, 0.233445, 0.309017,
+		0.382683, 0.453990, 0.522499, 0.587785, 0.649448, 0.707107, 0.760406,
+		0.809017, 0.852640, 0.891007, 0.923880, 0.951057, 0.972370, 0.987688,
+		0.996917, 1.000000, 0.996917, 0.987688, 0.972370, 0.951057, 0.923880,
+		0.891007, 0.852640, 0.809017, 0.760406, 0.707107, 0.649448, 0.587785,
+		0.522499, 0.453990, 0.382683, 0.309017, 0.233445, 0.156434, 0.078459,
+		0.000000, -0.078459, -0.156434, -0.233445, -0.309017, -0.382683,
+		-0.453990, -0.522499, -0.587785, -0.649448, -0.707107, -0.760406,
+		-0.809017, -0.852640, -0.891007, -0.923880, -0.951057, -0.972370,
+		-0.987688, -0.996917, -1.000000, -0.996917, -0.987688, -0.972370,
+		-0.951057, -0.923880, -0.891007, -0.852640, -0.809017, -0.760406,
+		-0.707107, -0.649448, -0.587785, -0.522499, -0.453990, -0.382683,
+		-0.309017, -0.233445, -0.156434, -0.078459, -0.000000, 0.078459,
+		0.156434, 0.233445, 0.309017, 0.382683, 0.453990, 0.522499, 0.587785,
+		0.649448, 0.707107, 0.760406, 0.809017, 0.852640, 0.891007, 0.923880,
+		0.951057, 0.972370, 0.987688, 0.996917, 1.000000, 0.996917, 0.987688,
+		0.972370, 0.951057, 0.923880, 0.891007, 0.852640, 0.809017, 0.760406,
+		0.707107, 0.649448, 0.587785, 0.522499, 0.453990, 0.382683, 0.309017,
+		0.233445, 0.156434, 0.078459, 0.000000, -0.078459, -0.156434, -0.233445,
+		-0.309017, -0.382683, -0.453990, -0.522499, -0.587785, -0.649448,
+		-0.707107, -0.760406, -0.809017, -0.852640, -0.891007, -0.923880,
+		-0.951057, -0.972370, -0.987688, -0.996917, -1.000000, -0.996917,
+		-0.987688, -0.972370, -0.951057, -0.923880, -0.891007, -0.852640,
+		-0.809017, -0.760406, -0.707107, -0.649448, -0.587785, -0.522499,
+		-0.453990, -0.382683, -0.309017, -0.233445, -0.156434, -0.078459,
+		-0.000000, 0.078459, 0.156434, 0.233445, 0.309017, 0.382683, 0.453990,
+		0.522499, 0.587785, 0.649448, 0.707107, 0.760406, 0.809017, 0.852640,
+		0.891007, 0.923880, 0.951057, 0.972370, 0.987688, 0.996917, 1.000000,
+		0.996917, 0.987688, 0.972370, 0.951057, 0.923880, 0.891007, 0.852640,
+		0.809017, 0.760406, 0.707107, 0.649448, 0.587785, 0.522499, 0.453990,
+		0.382683, 0.309017, 0.233445, 0.156434, 0.078459 };
 
 static void initHardware(void) {
 #if defined (__USE_LPCOPEN)
@@ -77,7 +83,7 @@ static void initHardware(void) {
 #if(USAR_FUNCIONES_ASSEMBLER)
 	asm_fir_q31_put(&filtro_flp, y);
 #else
-	//unsigned int k;
+	//nothing
 #endif
 
 #endif
@@ -85,15 +91,31 @@ static void initHardware(void) {
 
 }
 
-static double p(double x, int i) {
-	double r = 1.0;
+/**
+ * @param hist puntero al buffer de muestas
+ * @param buff puntero al buffer con las muestras de ejemplo
+ */
+static void load_history(float * hist, float * buff) {
+	unsigned char k = 0;
+	for (k = 0; k < samples; k++) {
+		hist[k] = buff[k];
+	}
+}
+
+static float p(float x, int i) {
+	float r = 1.0;
 	for (i; i > 0; i--)
 		r *= x;
 	return r;
 }
 
-static double log(int b, double n) {
-	double val = 0;
+/**
+ * @param b base del logaritmo
+ * @param n varible a aplicarle el logatirmo
+ * @return logaritmo en base b de n
+ */
+static float log(int b, float n) {
+	float val = 0;
 	int i, accurate = 10, reps = 0;
 	while (n != 1 && accurate >= 0) {
 		for (i = 0; n >= b; i++)
@@ -103,9 +125,13 @@ static double log(int b, double n) {
 		accurate--;
 		reps++;
 	}
-	return (double) val / p(10, reps);
+	return (float) val / p(10, reps);
 }
 
+/**
+ * @param row fila
+ * @param value valor de potencia
+ */
 static void vumeter(uint8_t row, double value) {
 	uint8_t data = 0b00000000;
 	if (value >= 100) {
@@ -129,11 +155,13 @@ static void vumeter(uint8_t row, double value) {
 							if (value < 40 && value >= 30) {
 								data = 0b00000111;
 							} else {
-								if (value < 30 && value >= 10) {
+								if (value < 30 && value >= 20) {
 									data = 0b00000011;
 								} else {
-									if (value < 10 && value >= 0) {
+									if (value < 20 && value >= 10) {
 										data = 0b00000001;
+									} else {
+										data = 0b00000000;
 									}
 								}
 							}
@@ -159,55 +187,55 @@ int main(void) {
 	 * @param num_taps cantidad de coeficientes
 	 */
 
-	fir_q31_init(&filtro_flp, historyBanda0, lowpass_taps, LOWPASS_TAP_NUM);
+	fir_q31_init(&filtro_flp, historyBand, lowpass_taps, LOWPASS_TAP_NUM);
 
 	/**
 	 * Banda correspondiente a 160 Hz a 300 Hz
 	 */
-	fir_q31_init(&filtro_fbp_b1, historyBanda1, bandpass_taps,
+	fir_q31_init(&filtro_fbp_b1, historyBand, bandpass_taps,
 	BANDPASS_TAP_NUM);
 
 	/**
 	 * Banda correspondiente a 300 Hz a 600 Hz
 	 */
-	fir_q31_init(&filtro_fbp_b2, historyBanda2, bandpass_taps_2,
+	fir_q31_init(&filtro_fbp_b2, historyBand, bandpass_taps_2,
 	BANDPASS_TAP_NUM_2);
 
 	/**
 	 * Banda correspondiente a 600 Hz a 1200 Hz
 	 */
-	fir_q31_init(&filtro_fbp_b3, historyBanda3, bandpass_taps_3,
+	fir_q31_init(&filtro_fbp_b3, historyBand, bandpass_taps_3,
 	BANDPASS_TAP_NUM_3);
 
 	/**
 	 * Banda correspondiente a 1200 Hz a 2400 Hz
 	 */
-	fir_q31_init(&filtro_fbp_b4, historyBanda4, bandpass_taps_4,
+	fir_q31_init(&filtro_fbp_b4, historyBand, bandpass_taps_4,
 	BANDPASS_TAP_NUM_4);
 
 	/**
 	 * Banda correspondiente a 2400 Hz a 5000 Hz
 	 */
-	fir_q31_init(&filtro_fbp_b5, historyBanda5, bandpass_taps_5,
+	fir_q31_init(&filtro_fbp_b5, historyBand, bandpass_taps_5,
 	BANDPASS_TAP_NUM_5);
 
 	/**
 	 * Banda correspondiente a 5000 Hz a 10000 Hz
 	 */
-	fir_q31_init(&filtro_fbp_b6, historyBanda6, bandpass_taps_6,
+	fir_q31_init(&filtro_fbp_b6, historyBand, bandpass_taps_6,
 	BANDPASS_TAP_NUM_6);
 
 	/**
 	 * Banda correspondiente a 10000 Hz a 14000 Hz
 	 */
-	fir_q31_init(&filtro_fbp_b7, historyBanda7, bandpass_taps_7,
+	fir_q31_init(&filtro_fbp_b7, historyBand, bandpass_taps_7,
 	BANDPASS_TAP_NUM_7);
 
-	//unsigned char k;
-	for (k = 0; k < samples; k++) {
-		history[k] = buffer_1[k];
-		//fir_q31_put(&filtro_flp, buffer_1[k]);
-	}
+	/**
+	 * cargar la variable global externa history
+	 * con los datos del buffer
+	 */
+	load_history(history, buffer_1);
 
 	float r[samples];
 
@@ -215,6 +243,9 @@ int main(void) {
 		r[k] = 0;
 	}
 
+	/**
+	 * Inicializacion del hw
+	 */
 	initHardware();
 
 	unsigned int one_time = 1;
@@ -238,19 +269,29 @@ int main(void) {
 			i++;
 			if (i == samples) {
 				i = 0;
+
+				/**
+				 * Calculo de potencia
+				 */
 				float pot = 0;
 				int k;
 				float ipass;
-				for (k = 0; k < samples; k++) {
+				for (k = 0; k < LOWPASS_TAP_NUM; k++) {
 					ipass = r[k] * r[k];
 					pot += ipass;
 				}
 
-				pot = pot / samples;
+				/**
+				 * potencia sobre cantidad de muestras procesadas
+				 * LOWPASS_TAP_NUM = cantidad de coeficientes
+				 */
+				pot = pot / LOWPASS_TAP_NUM;
 
-				double pot_db = 10 * log(10, pot) / 10;
+				/**
+				 * Caluclo del logaritmo
+				 */
+				float pot_db = 10 * log(10, pot) / 10;
 
-				//unsigned char row, double value
 				uint8_t row = 0;
 				vumeter(row, pot_db);
 
@@ -271,16 +312,15 @@ int main(void) {
 				float pot = 0;
 				int k;
 				float ipass;
-				for (k = 0; k < samples; k++) {
+				for (k = 0; k < BANDPASS_TAP_NUM; k++) {
 					ipass = r[k] * r[k];
 					pot += ipass;
 				}
 
-				pot = pot / samples;
+				pot = pot / BANDPASS_TAP_NUM;
 
 				double pot_db = 10 * log(10, pot) / 10;
 
-				//unsigned char row, double value
 				uint8_t row = 1;
 				vumeter(row, pot_db);
 
@@ -301,16 +341,15 @@ int main(void) {
 				float pot = 0;
 				int k;
 				float ipass;
-				for (k = 0; k < samples; k++) {
+				for (k = 0; k < BANDPASS_TAP_NUM_2; k++) {
 					ipass = r[k] * r[k];
 					pot += ipass;
 				}
 
-				pot = pot / samples;
+				pot = pot / BANDPASS_TAP_NUM_2;
 
 				double pot_db = 10 * log(10, pot) / 10;
 
-				//unsigned char row, double value
 				uint8_t row = 2;
 				vumeter(row, pot_db);
 
@@ -332,16 +371,15 @@ int main(void) {
 				float pot = 0;
 				int k;
 				float ipass;
-				for (k = 0; k < samples; k++) {
+				for (k = 0; k < BANDPASS_TAP_NUM_3; k++) {
 					ipass = r[k] * r[k];
 					pot += ipass;
 				}
 
-				pot = pot / samples;
+				pot = pot / BANDPASS_TAP_NUM_3;
 
 				double pot_db = 10 * log(10, pot) / 10;
 
-				//unsigned char row, double value
 				uint8_t row = 3;
 				vumeter(row, pot_db);
 
@@ -363,16 +401,15 @@ int main(void) {
 				float pot = 0;
 				int k;
 				float ipass;
-				for (k = 0; k < samples; k++) {
+				for (k = 0; k < BANDPASS_TAP_NUM_4; k++) {
 					ipass = r[k] * r[k];
 					pot += ipass;
 				}
 
-				pot = pot / samples;
+				pot = pot / BANDPASS_TAP_NUM_4;
 
 				double pot_db = 10 * log(10, pot) / 10;
 
-				//unsigned char row, double value
 				uint8_t row = 4;
 				vumeter(row, pot_db);
 
@@ -394,16 +431,15 @@ int main(void) {
 				float pot = 0;
 				int k;
 				float ipass;
-				for (k = 0; k < samples; k++) {
+				for (k = 0; k < BANDPASS_TAP_NUM_5; k++) {
 					ipass = r[k] * r[k];
 					pot += ipass;
 				}
 
-				pot = pot / samples;
+				pot = pot / BANDPASS_TAP_NUM_5;
 
 				double pot_db = 10 * log(10, pot) / 10;
 
-				//unsigned char row, double value
 				uint8_t row = 5;
 				vumeter(row, pot_db);
 
@@ -425,16 +461,15 @@ int main(void) {
 				float pot = 0;
 				int k;
 				float ipass;
-				for (k = 0; k < samples; k++) {
+				for (k = 0; k < BANDPASS_TAP_NUM_6; k++) {
 					ipass = r[k] * r[k];
 					pot += ipass;
 				}
 
-				pot = pot / samples;
+				pot = pot / BANDPASS_TAP_NUM_6;
 
 				double pot_db = 10 * log(10, pot) / 10;
 
-				//unsigned char row, double value
 				uint8_t row = 6;
 				vumeter(row, pot_db);
 
@@ -456,16 +491,15 @@ int main(void) {
 				float pot = 0;
 				int k;
 				float ipass;
-				for (k = 0; k < samples; k++) {
+				for (k = 0; k < BANDPASS_TAP_NUM_7; k++) {
 					ipass = r[k] * r[k];
 					pot += ipass;
 				}
 
-				pot = pot / samples;
+				pot = pot / BANDPASS_TAP_NUM_7;
 
 				double pot_db = 10 * log(10, pot) / 10;
 
-				//unsigned char row, double value
 				uint8_t row = 7;
 				vumeter(row, pot_db);
 
@@ -475,7 +509,16 @@ int main(void) {
 		}
 
 		if (finally) {
-			finally = 1;
+			MAX7219_write_row(0, 0b00000000);
+			MAX7219_write_row(1, 0b00000000);
+			MAX7219_write_row(2, 0b00000000);
+			MAX7219_write_row(3, 0b00000000);
+			MAX7219_write_row(4, 0b00000000);
+			MAX7219_write_row(5, 0b00000000);
+			MAX7219_write_row(6, 0b00000000);
+			MAX7219_write_row(7, 0b00000000);
+			one_time = 1;
+			finally = 0;
 		}
 
 	}
