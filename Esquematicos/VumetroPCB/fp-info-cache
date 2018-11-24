@@ -1,0 +1,232 @@
+50901888932932
+Poncho_Esqueleto
+Conn_Poncho_Chico
+
+CONN Poncho
+0
+80
+80
+Poncho_Esqueleto
+Conn_Poncho_Completo
+
+CONN Poncho
+0
+84
+81
+Poncho_Esqueleto
+Conn_Poncho_Derecha
+
+CONN Poncho
+0
+40
+40
+Poncho_Esqueleto
+Conn_Poncho_Izquierdo
+
+CONN Poncho
+0
+40
+40
+Poncho_Esqueleto
+Conn_Poncho_Mediano
+
+CONN Poncho
+0
+84
+81
+Poncho_Esqueleto
+Conn_Poncho_SinBorde
+
+CONN Poncho
+0
+80
+80
+Poncho_Esqueleto
+Logo_EDU-CIAA
+
+
+0
+0
+0
+Poncho_Esqueleto
+Logo_OSHWA
+
+
+0
+0
+0
+Poncho_Esqueleto
+Logo_Poncho
+
+
+0
+0
+0
+Poncho_Esqueleto
+Plantilla_EDU-CIAA
+
+plantilla poncho EDU CIAA
+0
+0
+0
+Poncho_Esqueleto
+Plantilla_Pico
+
+
+0
+0
+0
+Poncho_Esqueleto
+Symbol_KiCAD-Logo_CopperAndSilkScreenTop
+Symbol, KiCAD-Logo, Silk & Copper Top,
+Symbol, KiCAD-Logo, Silk & Copper Top,
+0
+0
+0
+Poncho_Modelos
+bornier2
+Bornier d'alimentation 2 pins
+DEV
+0
+2
+2
+Poncho_Modelos
+bornier3
+Bornier d'alimentation 3 pins
+DEV
+0
+3
+3
+Poncho_Modelos
+bornier4
+Bornier d'alimentation 4 pins
+DEV
+0
+4
+4
+Poncho_Modelos
+bornier5
+Bornier d'alimentation 4 pins
+DEV
+0
+5
+5
+Poncho_Modelos
+bornier6
+Bornier d'alimentation 4 pins
+DEV
+0
+6
+6
+Poncho_Modelos
+Led_Hole
+
+
+0
+1
+1
+Poncho_Modelos
+Pin_Header_Straight_1x12
+Through hole pin header
+pin header
+0
+12
+12
+Poncho_Modelos
+Pin_Header_Straight_1x19
+Through hole pin header
+pin header
+0
+19
+19
+Poncho_Modelos
+Pin_Header_Straight_1x20
+Through hole pin header
+pin header
+0
+20
+20
+Poncho_Modelos
+Pin_Header_Straight_2x12
+Through hole pin header
+pin header
+0
+24
+24
+Poncho_Modelos
+Pin_Header_Straight_2x20
+Through hole pin header
+pin header
+0
+40
+40
+Projecto
+AudioJack
+
+
+0
+5
+5
+Projecto
+Capacitor
+
+
+0
+2
+2
+Projecto
+Conn_Poncho_Personalizado
+
+CONN Poncho
+0
+84
+81
+Projecto
+conn_teclado4x4
+
+
+0
+8
+8
+Projecto
+Matriz_8x8
+
+
+0
+16
+16
+Projecto
+MAX7219
+
+
+0
+24
+24
+Projecto
+OPA2350PA
+
+
+0
+8
+8
+Projecto
+Potentiometer
+
+
+0
+3
+3
+Projecto
+Potentiometer_Bourns
+Potentiometer, vertical, Bourns 3266W, https://www.bourns.com/docs/Product-Datasheets/3266.pdf
+Potentiometer vertical Bourns 3266W
+0
+3
+3
+Projecto
+Resistor
+
+
+0
+2
+2

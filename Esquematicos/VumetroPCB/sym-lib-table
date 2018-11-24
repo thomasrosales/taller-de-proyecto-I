@@ -1,0 +1,5 @@
+(sym_lib_table
+  (lib (name Misc_Poncho_Grande)(type Legacy)(uri ${KIPRJMOD}/librerías/libModelos/Misc_Poncho_Grande.lib)(options "")(descr ""))
+  (lib (name Poncho_Esqueleto)(type Legacy)(uri ${KIPRJMOD}/librerías/libPonchos/Poncho_Esqueleto.lib)(options "")(descr ""))
+  (lib (name vumetro)(type Legacy)(uri ${KIPRJMOD}/librerías/libProjecto/vumetro.lib)(options "")(descr ""))
+)

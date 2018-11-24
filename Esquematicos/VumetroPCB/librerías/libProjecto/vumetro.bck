@@ -1,0 +1,27 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP AudioJack
+D Audio Jack, 5 Poles (TRRRS), Grounded Sleeve
+K audio jack receptacle stereo headphones TRRRS connector
+F ~
+$ENDCMP
+#
+$CMP C
+D Unpolarized capacitor, small symbol
+K capacitor cap
+F ~
+$ENDCMP
+#
+$CMP C_Small
+D Unpolarized capacitor, small symbol
+K capacitor cap
+F ~
+$ENDCMP
+#
+$CMP R
+D Resistor
+K R res resistor
+F ~
+$ENDCMP
+#
+#End Doc Library
