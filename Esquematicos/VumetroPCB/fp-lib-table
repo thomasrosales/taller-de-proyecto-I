@@ -2,4 +2,5 @@
   (lib (name Poncho_Esqueleto)(type KiCad)(uri ${KIPRJMOD}/librerías/Poncho_Esqueleto.pretty)(options "")(descr ""))
   (lib (name Poncho_Modelos)(type KiCad)(uri ${KIPRJMOD}/librerías/Poncho_Modelos.pretty)(options "")(descr ""))
   (lib (name Projecto)(type KiCad)(uri ${KIPRJMOD}/librerías/Projecto.pretty)(options "")(descr ""))
+  (lib (name librerías)(type KiCad)(uri ${KIPRJMOD}/librerías.pretty)(options "")(descr ""))
 )
