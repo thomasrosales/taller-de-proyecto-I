@@ -1,0 +1,21 @@
+Source:	/home/emir/Documentos/Facultad/taller-de-proyecto-I/Esquematicos/VumetroPCB/VumetroPCB.sch
+Date:	jue 29 nov 2018 09:30:23 -03
+Tool:	Eeschema 6.0.0-rc1-unknown-82f657e~66~ubuntu16.04.1
+Component Count:	16
+Ref	Value	Part	Footprint	Description	Vendor
+C1	10uF	vumetro:C	Projecto:Capacitor	Unpolarized capacitor, small symbol	
+C2	0.1uF	vumetro:C	Projecto:Capacitor	Unpolarized capacitor, small symbol	
+C3	1uF	vumetro:C	Projecto:Capacitor	Unpolarized capacitor, small symbol	
+J1	AudioJack	vumetro:AudioJack	Projecto:AudioJack	Audio Jack, 5 Poles (TRRRS), Grounded Sleeve	
+R1	2.7K	vumetro:R	Projecto:Resistor	Resistor	
+R2	4.7K	vumetro:R	Projecto:Resistor	Resistor	
+R3	5.6K	vumetro:R	Projecto:Resistor	Resistor	
+R4	4.7K	vumetro:R	Projecto:Resistor	Resistor	
+R5	2.7K	vumetro:R	Projecto:Resistor	Resistor	
+R6	10K	vumetro:R	Projecto:Resistor	Resistor	
+RV1	10K	vumetro:R_POT	Projecto:Potentiometer_Bourns	Potentiometer	
+U1	conn_teclado_4x4	vumetro:conn_teclado_4x4	Projecto:conn_teclado4x4		
+U2	opa2350pa	vumetro:opa2350pa	Projecto:OPA2350PA		
+U3	MAX7219	vumetro:MAX7219	Projecto:MAX7219		
+U4	MatrixLed8x8	vumetro:MatrixLed8x8	Projecto:Matriz_8x8		
+XA1	Conn_Poncho2P_2x_20x2	Poncho_Esqueleto:Conn_Poncho2P_2x_20x2	Projecto:Conn_Poncho_Personalizado		

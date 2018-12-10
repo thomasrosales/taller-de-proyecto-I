@@ -12,15 +12,15 @@ K capacitor cap
 F ~
 $ENDCMP
 #
-$CMP C_Small
-D Unpolarized capacitor, small symbol
-K capacitor cap
-F ~
-$ENDCMP
-#
 $CMP R
 D Resistor
 K R res resistor
+F ~
+$ENDCMP
+#
+$CMP R_POT
+D Potentiometer
+K resistor variable
 F ~
 $ENDCMP
 #

@@ -15,17 +15,6 @@ Comment3 "Autor del poncho (COMPLETAR NOMBRE Y APELLIDO). Ver directorio \"doc\"
 Comment4 "CÓDIGO PONCHO:"
 $EndDescr
 $Comp
-L Poncho_Esqueleto:Conn_Poncho2P_2x_20x2 XA1
-U 2 1 5BF44F34
-P 7400 4050
-F 0 "XA1" H 7750 4597 60  0000 C CNN
-F 1 "Conn_Poncho2P_2x_20x2" H 7750 4491 60  0000 C CNN
-F 2 "Projecto:Conn_Poncho_Personalizado" H 7400 4050 60  0001 C CNN
-F 3 "" H 7400 4050 60  0000 C CNN
-	2    7400 4050
-	1    0    0    -1  
-$EndComp
-$Comp
 L vumetro:MatrixLed8x8 U4
 U 1 1 5BF4B00E
 P 4900 5000
@@ -59,55 +48,9 @@ F 3 "" H 5850 2200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 NoConn ~ 8350 3850
-NoConn ~ 8350 4450
-NoConn ~ 8350 4550
-NoConn ~ 8350 4750
-NoConn ~ 8350 5650
-NoConn ~ 8350 5550
-NoConn ~ 8350 5450
-NoConn ~ 8350 5350
-NoConn ~ 8350 5250
-NoConn ~ 8350 5150
-NoConn ~ 8350 5050
-NoConn ~ 8350 4950
-NoConn ~ 8350 4850
-NoConn ~ 8350 4350
-NoConn ~ 8350 4250
-NoConn ~ 8350 4150
-NoConn ~ 8350 4050
 NoConn ~ 8350 3950
-NoConn ~ 7150 4150
-NoConn ~ 7150 4450
-NoConn ~ 7150 4550
 NoConn ~ 7150 4850
-NoConn ~ 7150 5250
-NoConn ~ 7150 5350
-NoConn ~ 7150 5450
 NoConn ~ 9150 4450
-NoConn ~ 9150 4250
-NoConn ~ 9150 4150
-NoConn ~ 9150 3950
-NoConn ~ 9150 3850
-NoConn ~ 9150 4650
-NoConn ~ 9150 4750
-NoConn ~ 9150 4850
-NoConn ~ 9150 4550
-$Comp
-L Poncho_Esqueleto:Conn_Poncho2P_2x_20x2 XA1
-U 1 1 5BF4258E
-P 9400 4050
-F 0 "XA1" H 9750 4597 60  0000 C CNN
-F 1 "Conn_Poncho2P_2x_20x2" H 9750 4491 60  0000 C CNN
-F 2 "Projecto:Conn_Poncho_Personalizado" H 9400 4050 60  0001 C CNN
-F 3 "" H 9400 4050 60  0000 C CNN
-	1    9400 4050
-	1    0    0    -1  
-$EndComp
-NoConn ~ 10350 3950
-NoConn ~ 10350 5350
-NoConn ~ 10350 5450
-Wire Wire Line
-	8850 4050 9150 4050
 Wire Wire Line
 	8850 4350 9150 4350
 Wire Wire Line
@@ -126,32 +69,20 @@ Wire Wire Line
 	8850 5550 9150 5550
 Wire Wire Line
 	8850 5650 9150 5650
-Wire Wire Line
-	6850 4950 7150 4950
-Wire Wire Line
-	6850 5050 7150 5050
-Wire Wire Line
-	6850 4750 7150 4750
-Wire Wire Line
-	6850 5150 7150 5150
-Text Label 6850 5050 0    50   ~ 0
+Text Label 6600 5050 0    50   ~ 0
 GND
-Text Label 6850 4950 0    50   ~ 0
+Text Label 6600 4950 0    50   ~ 0
 GND
 Wire Wire Line
-	10350 4050 10500 4050
-Wire Wire Line
-	10350 3750 10500 3750
-Text Label 10500 3750 0    50   ~ 0
+	10350 4450 10500 4450
+Text Label 8500 3750 0    50   ~ 0
 +5V
-Text Label 10500 4050 0    50   ~ 0
+Text Label 10500 4450 0    50   ~ 0
 GNDA
-Text Label 8850 4050 0    50   ~ 0
-GNDA
-Text Label 6850 5150 0    50   ~ 0
-GPIO0
-Text Label 6850 4750 0    50   ~ 0
-SPI_MOSI
+Text Label 6600 5150 0    50   ~ 0
+GPIO0(CIAA)
+Text Label 6600 4750 0    50   ~ 0
+SPI_MOSI(CIAA)
 Wire Wire Line
 	8350 4650 8500 4650
 Text Label 8500 4650 0    50   ~ 0
@@ -289,11 +220,11 @@ Wire Wire Line
 Wire Wire Line
 	1900 5450 1400 5450
 Text Label 3050 4450 0    50   ~ 0
-COL2
+COL2(U3)
 Text Label 3050 4550 0    50   ~ 0
-COL3
+COL3(U3)
 Text Label 3050 4650 0    50   ~ 0
-COL5
+COL5(U3)
 Text Label 3050 4750 0    50   ~ 0
 COL4
 Text Label 3050 4850 0    50   ~ 0
@@ -311,7 +242,7 @@ COL8
 Text Label 3050 5450 0    50   ~ 0
 SPI_CLK
 Text Label 1400 4350 0    50   ~ 0
-SPI_MOSI
+SPI_MOSI(U3)
 Text Label 1400 4450 0    50   ~ 0
 ROW5
 Text Label 1400 4550 0    50   ~ 0
@@ -333,7 +264,7 @@ ROW4
 Text Label 1400 5350 0    50   ~ 0
 ROW2
 Text Label 1400 5450 0    50   ~ 0
-GPIO0
+GPIO0(U3)
 Text Label 3950 4700 0    50   ~ 0
 ROW5
 Text Label 3950 4800 0    50   ~ 0
@@ -341,15 +272,15 @@ ROW7
 Text Label 3950 5100 0    50   ~ 0
 ROW8
 Text Label 3950 5200 0    50   ~ 0
-COL5
+COL5(U4)
 Text Label 3950 5300 0    50   ~ 0
 ROW6
 Text Label 3950 5400 0    50   ~ 0
 ROW3
 Text Label 3950 5000 0    50   ~ 0
-COL3
+COL3(U4)
 Text Label 3950 4900 0    50   ~ 0
-COL2
+COL2(U4)
 Text Label 5500 4700 0    50   ~ 0
 COL8
 Text Label 5500 4800 0    50   ~ 0
@@ -455,7 +386,7 @@ Wire Wire Line
 Wire Wire Line
 	3450 3100 3450 2950
 Wire Wire Line
-	5450 2550 4000 2550
+	5450 2550 4350 2550
 Wire Wire Line
 	5450 2650 5100 2650
 Wire Wire Line
@@ -491,63 +422,63 @@ NoConn ~ 6250 2650
 $Comp
 L vumetro:R R6
 U 1 1 5C2B9D21
-P 2950 7200
-F 0 "R6" V 2743 7200 50  0000 C CNN
-F 1 "10K" V 2834 7200 50  0000 C CNN
-F 2 "Projecto:Resistor" V 2880 7200 50  0001 C CNN
-F 3 "~" H 2950 7200 50  0001 C CNN
-	1    2950 7200
+P 1650 6950
+F 0 "R6" V 1443 6950 50  0000 C CNN
+F 1 "10K" V 1534 6950 50  0000 C CNN
+F 2 "Projecto:Resistor" V 1580 6950 50  0001 C CNN
+F 3 "~" H 1650 6950 50  0001 C CNN
+	1    1650 6950
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	2800 7200 2550 7200
+	1500 6950 1250 6950
 Wire Wire Line
-	3100 7200 3200 7200
+	1800 6950 1900 6950
 Wire Wire Line
-	3200 7200 3200 6700
+	1900 6950 1900 6450
 Wire Wire Line
-	2550 6700 3200 6700
-Connection ~ 3200 6700
+	1250 6450 1900 6450
+Connection ~ 1900 6450
 $Comp
 L vumetro:C C2
 U 1 1 5C2EDC52
-P 3600 6900
-F 0 "C2" H 3350 6950 50  0000 L CNN
-F 1 "0.1uF" H 3300 6850 50  0000 L CNN
-F 2 "Projecto:Capacitor" H 3600 6900 50  0001 C CNN
-F 3 "~" H 3600 6900 50  0001 C CNN
-	1    3600 6900
+P 2300 6650
+F 0 "C2" H 2050 6700 50  0000 L CNN
+F 1 "0.1uF" H 2000 6600 50  0000 L CNN
+F 2 "Projecto:Capacitor_Disco" H 2300 6650 50  0001 C CNN
+F 3 "~" H 2300 6650 50  0001 C CNN
+	1    2300 6650
 	1    0    0    -1  
 $EndComp
 $Comp
 L vumetro:C C3
 U 1 1 5C2F59E3
-P 4100 6900
-F 0 "C3" H 3900 6950 50  0000 L CNN
-F 1 "1uF" H 3850 6850 50  0000 L CNN
-F 2 "Projecto:Capacitor" H 4100 6900 50  0001 C CNN
-F 3 "~" H 4100 6900 50  0001 C CNN
-	1    4100 6900
+P 2800 6650
+F 0 "C3" H 2600 6700 50  0000 L CNN
+F 1 "1uF" H 2550 6600 50  0000 L CNN
+F 2 "Projecto:Capacitor" H 2800 6650 50  0001 C CNN
+F 3 "~" H 2800 6650 50  0001 C CNN
+	1    2800 6650
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4100 6700 4100 6800
+	2800 6450 2800 6550
 Wire Wire Line
-	3200 6700 3400 6700
+	1900 6450 2100 6450
 Wire Wire Line
-	3600 6700 3600 6800
-Connection ~ 3600 6700
+	2300 6450 2300 6550
+Connection ~ 2300 6450
 Wire Wire Line
-	3600 6700 4100 6700
+	2300 6450 2800 6450
 Wire Wire Line
-	4100 7000 4100 7100
+	2800 6750 2800 6850
 Wire Wire Line
-	3600 7000 3600 7100
+	2300 6750 2300 6850
 Wire Wire Line
-	3600 7100 4100 7100
-Text Label 2550 6700 0    50   ~ 0
+	2300 6850 2800 6850
+Text Label 1250 6450 0    50   ~ 0
 V+
-Text Label 2550 7200 0    50   ~ 0
+Text Label 1250 6950 0    50   ~ 0
 ISET
 Wire Wire Line
 	5300 1250 6500 1250
@@ -596,10 +527,10 @@ Wire Wire Line
 Wire Wire Line
 	1950 1550 1700 1550
 Wire Wire Line
-	3400 6700 3400 6550
-Connection ~ 3400 6700
+	2100 6450 2100 6300
+Connection ~ 2100 6450
 Wire Wire Line
-	3400 6700 3600 6700
+	2100 6450 2300 6450
 Wire Wire Line
 	5100 2650 5100 2900
 $Comp
@@ -646,21 +577,20 @@ F 3 "" H 3450 3100 60  0000 C CNN
 	1    3450 3100
 	1    0    0    -1  
 $EndComp
-Connection ~ 4100 7100
+Connection ~ 2800 6850
 Wire Wire Line
-	4100 7100 4100 7200
+	2800 6850 2800 6950
 $Comp
 L Misc_Poncho_Grande:GNDA #PWR0107
 U 1 1 5C33AF3D
-P 4100 7200
-F 0 "#PWR0107" H 4100 7200 40  0001 C CNN
-F 1 "GNDA" H 4200 7150 40  0000 C CNN
-F 2 "" H 4100 7200 60  0000 C CNN
-F 3 "" H 4100 7200 60  0000 C CNN
-	1    4100 7200
+P 2800 6950
+F 0 "#PWR0107" H 2800 6950 40  0001 C CNN
+F 1 "GNDA" H 2900 6900 40  0000 C CNN
+F 2 "" H 2800 6950 60  0000 C CNN
+F 3 "" H 2800 6950 60  0000 C CNN
+	1    2800 6950
 	1    0    0    -1  
 $EndComp
-NoConn ~ 10350 3850
 Wire Wire Line
 	1400 2700 1400 2500
 $Comp
@@ -685,10 +615,6 @@ F 3 "" H 1400 2700 60  0000 C CNN
 	1    1400 2700
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	6850 3750 7150 3750
-Text Label 6850 3750 0    50   ~ 0
-+3.3V
 $Comp
 L Misc_Poncho_Grande:+3.3V #PWR0108
 U 1 1 5BFE2CAB
@@ -701,52 +627,249 @@ F 3 "" H 3450 2050 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Misc_Poncho_Grande:+3.3V #PWR0109
-U 1 1 5BFF2941
-P 6450 2150
-F 0 "#PWR0109" H 6450 2110 30  0001 C CNN
-F 1 "+3.3V" H 6459 2288 30  0000 C CNN
-F 2 "" H 6450 2150 60  0000 C CNN
-F 3 "" H 6450 2150 60  0000 C CNN
-	1    6450 2150
-	1    0    0    -1  
-$EndComp
-$Comp
 L Misc_Poncho_Grande:+5V #PWR0110
 U 1 1 5C002C2B
-P 3400 6550
-F 0 "#PWR0110" H 3400 6640 20  0001 C CNN
-F 1 "+5V" H 3397 6678 30  0000 C CNN
-F 2 "" H 3400 6550 60  0000 C CNN
-F 3 "" H 3400 6550 60  0000 C CNN
-	1    3400 6550
+P 2100 6300
+F 0 "#PWR0110" H 2100 6390 20  0001 C CNN
+F 1 "+5V" H 2097 6428 30  0000 C CNN
+F 2 "" H 2100 6300 60  0000 C CNN
+F 3 "" H 2100 6300 60  0000 C CNN
+	1    2100 6300
 	1    0    0    -1  
 $EndComp
-NoConn ~ 7150 5550
-NoConn ~ 7150 5650
-NoConn ~ 7150 4350
-NoConn ~ 7150 4250
-NoConn ~ 7150 4050
-NoConn ~ 10350 4650
-NoConn ~ 10350 4750
-NoConn ~ 10350 4850
-NoConn ~ 10350 4950
-NoConn ~ 10350 5050
-NoConn ~ 10350 5150
-NoConn ~ 10350 5250
-NoConn ~ 10350 5550
-NoConn ~ 10350 5650
 Wire Wire Line
 	10350 4350 10500 4350
 Text Label 10500 4350 0    50   ~ 0
 GNDA
-NoConn ~ 10350 4450
-NoConn ~ 10350 4550
-NoConn ~ 10350 4250
-NoConn ~ 9150 3750
-NoConn ~ 8350 3750
-NoConn ~ 10350 4150
-NoConn ~ 7150 3850
-NoConn ~ 7150 3950
 NoConn ~ 7150 4650
+$Comp
+L vumetro:Conn_Poncho2P_2x_20x2_personalizado XA1
+U 1 1 5C06DBD9
+P 9400 4050
+F 0 "XA1" H 9750 4597 60  0000 C CNN
+F 1 "Conn_Poncho2P_2x_20x2_personalizado" H 9750 4491 60  0000 C CNN
+F 2 "Projecto:Conn_Poncho_Personalizado" H 9400 4050 60  0001 C CNN
+F 3 "" H 9400 4050 60  0000 C CNN
+	1    9400 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L vumetro:Conn_Poncho2P_2x_20x2_personalizado XA1
+U 2 1 5C06BDFF
+P 7400 4050
+F 0 "XA1" H 7750 4597 60  0000 C CNN
+F 1 "Conn_Poncho2P_2x_20x2_personalizado" H 7750 4491 60  0000 C CNN
+F 2 "Projecto:Conn_Poncho_Personalizado" H 7400 4050 60  0001 C CNN
+F 3 "" H 7400 4050 60  0000 C CNN
+	2    7400 4050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7150 5150 6600 5150
+Wire Wire Line
+	7150 4950 6600 4950
+Wire Wire Line
+	7150 5050 6600 5050
+$Comp
+L Misc_Poncho_Grande:GNDA #PWR0102
+U 1 1 5C0DA997
+P 4350 3100
+F 0 "#PWR0102" H 4350 3100 40  0001 C CNN
+F 1 "GNDA" H 4350 3167 40  0000 C CNN
+F 2 "" H 4350 3100 60  0000 C CNN
+F 3 "" H 4350 3100 60  0000 C CNN
+	1    4350 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L vumetro:C C4
+U 1 1 5C0E684C
+P 4350 2800
+F 0 "C4" H 4100 2850 50  0000 L CNN
+F 1 "1.8nF" H 4050 2750 50  0000 L CNN
+F 2 "Projecto:Capacitor_Disco" H 4350 2800 50  0001 C CNN
+F 3 "~" H 4350 2800 50  0001 C CNN
+	1    4350 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4350 2550 4350 2700
+Wire Wire Line
+	4350 2900 4350 3100
+Connection ~ 4350 2550
+Wire Wire Line
+	4350 2550 4000 2550
+Text Label 10500 4550 0    50   ~ 0
+GNDA
+Wire Wire Line
+	10350 4550 10500 4550
+Wire Wire Line
+	8850 4550 9150 4550
+Text Label 8850 4550 0    50   ~ 0
+VDDA
+Text Label 6450 2150 0    50   ~ 0
+VDDA
+Wire Wire Line
+	7150 4750 6600 4750
+Wire Wire Line
+	8350 3750 8500 3750
+NoConn ~ 7150 3750
+Text Label 6600 3950 0    50   ~ 0
+GND
+Text Label 6600 3850 0    50   ~ 0
+GND
+Wire Wire Line
+	7150 3850 6600 3850
+Wire Wire Line
+	7150 3950 6600 3950
+$Comp
+L vumetro:Pin_Puente P1
+U 1 1 5C14675C
+P 4150 6150
+F 0 "P1" H 4278 6196 50  0000 L CNN
+F 1 "Pin_Puente" H 4278 6105 50  0000 L CNN
+F 2 "Projecto:Pin_Puente" H 4150 6400 50  0001 C CNN
+F 3 "" H 4150 6400 50  0001 C CNN
+	1    4150 6150
+	1    0    0    -1  
+$EndComp
+$Comp
+L vumetro:Pin_Puente P3
+U 1 1 5C14D1A1
+P 4150 6400
+F 0 "P3" H 4278 6446 50  0000 L CNN
+F 1 "Pin_Puente" H 4278 6355 50  0000 L CNN
+F 2 "Projecto:Pin_Puente" H 4150 6650 50  0001 C CNN
+F 3 "" H 4150 6650 50  0001 C CNN
+	1    4150 6400
+	1    0    0    -1  
+$EndComp
+$Comp
+L vumetro:Pin_Puente P5
+U 1 1 5C15251F
+P 4150 6650
+F 0 "P5" H 4278 6696 50  0000 L CNN
+F 1 "Pin_Puente" H 4278 6605 50  0000 L CNN
+F 2 "Projecto:Pin_Puente" H 4150 6900 50  0001 C CNN
+F 3 "" H 4150 6900 50  0001 C CNN
+	1    4150 6650
+	1    0    0    -1  
+$EndComp
+$Comp
+L vumetro:Pin_Puente P7
+U 1 1 5C157AD8
+P 4150 6900
+F 0 "P7" H 4278 6946 50  0000 L CNN
+F 1 "Pin_Puente" H 4278 6855 50  0000 L CNN
+F 2 "Projecto:Pin_Puente" H 4150 7150 50  0001 C CNN
+F 3 "" H 4150 7150 50  0001 C CNN
+	1    4150 6900
+	1    0    0    -1  
+$EndComp
+$Comp
+L vumetro:Pin_Puente P9
+U 1 1 5C15CF23
+P 4150 7150
+F 0 "P9" H 4278 7196 50  0000 L CNN
+F 1 "Pin_Puente" H 4278 7105 50  0000 L CNN
+F 2 "Projecto:Pin_Puente" H 4150 7400 50  0001 C CNN
+F 3 "" H 4150 7400 50  0001 C CNN
+	1    4150 7150
+	1    0    0    -1  
+$EndComp
+$Comp
+L vumetro:Pin_Puente P10
+U 1 1 5C163C16
+P 5500 7150
+F 0 "P10" H 5628 7196 50  0000 L CNN
+F 1 "Pin_Puente" H 5628 7105 50  0000 L CNN
+F 2 "Projecto:Pin_Puente" H 5500 7400 50  0001 C CNN
+F 3 "" H 5500 7400 50  0001 C CNN
+	1    5500 7150
+	-1   0    0    1   
+$EndComp
+$Comp
+L vumetro:Pin_Puente P8
+U 1 1 5C163C1C
+P 5500 6900
+F 0 "P8" H 5628 6946 50  0000 L CNN
+F 1 "Pin_Puente" H 5628 6855 50  0000 L CNN
+F 2 "Projecto:Pin_Puente" H 5500 7150 50  0001 C CNN
+F 3 "" H 5500 7150 50  0001 C CNN
+	1    5500 6900
+	-1   0    0    1   
+$EndComp
+$Comp
+L vumetro:Pin_Puente P6
+U 1 1 5C163C22
+P 5500 6650
+F 0 "P6" H 5628 6696 50  0000 L CNN
+F 1 "Pin_Puente" H 5628 6605 50  0000 L CNN
+F 2 "Projecto:Pin_Puente" H 5500 6900 50  0001 C CNN
+F 3 "" H 5500 6900 50  0001 C CNN
+	1    5500 6650
+	-1   0    0    1   
+$EndComp
+$Comp
+L vumetro:Pin_Puente P4
+U 1 1 5C163C28
+P 5500 6400
+F 0 "P4" H 5628 6446 50  0000 L CNN
+F 1 "Pin_Puente" H 5628 6355 50  0000 L CNN
+F 2 "Projecto:Pin_Puente" H 5500 6650 50  0001 C CNN
+F 3 "" H 5500 6650 50  0001 C CNN
+	1    5500 6400
+	-1   0    0    1   
+$EndComp
+$Comp
+L vumetro:Pin_Puente P2
+U 1 1 5C163C2E
+P 5500 6150
+F 0 "P2" H 5628 6196 50  0000 L CNN
+F 1 "Pin_Puente" H 5628 6105 50  0000 L CNN
+F 2 "Projecto:Pin_Puente" H 5500 6400 50  0001 C CNN
+F 3 "" H 5500 6400 50  0001 C CNN
+	1    5500 6150
+	-1   0    0    1   
+$EndComp
+Text Label 3450 6150 0    50   ~ 0
+COL2(U3)
+Wire Wire Line
+	3950 6150 3450 6150
+Text Label 3450 6400 0    50   ~ 0
+COL3(U3)
+Wire Wire Line
+	3950 6400 3450 6400
+Text Label 3450 6650 0    50   ~ 0
+COL5(U3)
+Wire Wire Line
+	3950 6650 3450 6650
+Text Label 3450 6900 0    50   ~ 0
+GPIO0(U3)
+Wire Wire Line
+	3950 6900 3450 6900
+Text Label 3450 7150 0    50   ~ 0
+SPI_MOSI(U3)
+Wire Wire Line
+	3950 7150 3450 7150
+Wire Wire Line
+	5700 6150 5850 6150
+Wire Wire Line
+	5700 6400 5850 6400
+Wire Wire Line
+	5700 6650 5850 6650
+Wire Wire Line
+	5700 6900 5850 6900
+Wire Wire Line
+	5700 7150 5850 7150
+Text Label 5850 6150 0    50   ~ 0
+COL2(U4)
+Text Label 5850 6400 0    50   ~ 0
+COL3(U4)
+Text Label 5850 6650 0    50   ~ 0
+COL5(U4)
+Text Label 5850 6900 0    50   ~ 0
+GPIO0(CIAA)
+Text Label 5850 7150 0    50   ~ 0
+SPI_MOSI(CIAA)
 $EndSCHEMATC

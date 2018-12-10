@@ -1,4 +1,4 @@
-15152824471543092
+15207662818089092
 Battery
 BatteryHolder_Bulgin_BX0036_1xC
 Bulgin Battery Holder, BX0036, Battery Type C (http://www.bulgin.com/media/bulgin/data/Battery_holders.pdf)
@@ -1968,7 +1968,7 @@ MagneticBuzzer Kobitone 254-EMB84Q-RO
 3
 Buzzer_Beeper
 MagneticBuzzer_ProjectsUnlimited_AI-4228-TWT-R
-Buzzer, Elektromagnetic Beeper, Summer, 3-28V-DC,
+Buzzer, Elektromagnetic Beeper, Summer, 3-28V-DC, https://www.kynix.com/uploadfiles/pdf/AI-4228-TWT-R.pdf
 Projects Unlimited AI-4228-TWT-R 
 0
 2
@@ -2003,7 +2003,7 @@ Star Micronics HMB-06 HMB-12
 2
 Buzzer_Beeper
 PUIAudio_SMT_0825_S_4_R
-SMD 8540
+SMD 8540, http://www.puiaudio.com/product-detail.aspx?partnumber=SMT-0825-S-4-R
 SMD 8540
 0
 4
@@ -5922,8 +5922,15 @@ TRS audio jack stereo horizontal circular
 3
 3
 Connector_Audio
-Jack_3.5mm_Neutric_NMJ6HCD2_Horizontal
-NMJ6HCD2, TRS 1/4\\\\\\\\ (http://www.neutrik.com/zoolu-website/media/download/2890/Drawing+NMJ6HCD2)
+Jack_3.5mm_Ledino_KB3SPRS_Horizontal
+https://www.reichelt.de/index.html?ACTION=7&LA=3&OPEN=0&INDEX=0&FILENAME=C160%252FKB3SPRS.pdf
+jack stereo TRS
+0
+5
+5
+Connector_Audio
+Jack_3.5mm_Neutrik_NMJ6HCD2_Horizontal
+NMJ6HCD2, TRS 1/4in (http://www.neutrik.com/en/audio/plugs-and-jacks/m-series/nmj6hcd2)
 NMJ6HCD2 TRS stereo jack connector
 0
 6
@@ -5937,21 +5944,21 @@ headphones jack plug stereo 3.5mm PJ311
 6
 Connector_Audio
 Jack_3.5mm_PJ320D_Horizontal
-Headphones with microphone connector, 3.5mm, 4 pins.
+Headphones with microphone connector, 3.5mm, 4 pins (http://www.qingpu-electronics.com/en/products/WQP-PJ320D-72.html)
 3.5mm jack mic microphone phones headphones 4pins audio plug
 0
 4
 4
 Connector_Audio
 Jack_3.5mm_PJ320E_Horizontal
-Headphones with microphone connector, 3.5mm, 4 pins.
+Headphones with microphone connector, 3.5mm, 4 pins (http://www.qingpu-electronics.com/en/products/WQP-PJ320E-177.html)
 3.5mm jack mic microphone phones headphones 4pins audio plug
 0
 5
-5
+4
 Connector_Audio
 Jack_3.5mm_PJ31060-I_Horizontal
-PJ31060-I 6pin SMD 3.5mm headphones jack.
+PJ31060-I 6pin SMD 3.5mm headphones jack (http://www.china-bsun.com/Product48/1577.html)
 headphones jack plug stereo 3.5mm PJ31060-I PJ31060
 0
 6
@@ -5963,20 +5970,6 @@ WQP-PJ398SM TRS 3.5mm mono vertical jack thonkiconn qingpu
 0
 3
 3
-Connector_Audio
-Jack_Horizontal
-module 1 pin (ou trou mecanique de percage)
-CONN JACK
-0
-3
-3
-Connector_Audio
-StereoJack_3.5mm_Switch_Ledino_KB3SPRS_Horizontal
-https://www.reichelt.de/index.html?ACTION=7&LA=3&OPEN=0&INDEX=0&FILENAME=C160%252FKB3SPRS.pdf
-jack stereo TRS
-0
-5
-5
 Connector_BarrelJack
 BarrelJack_CUI_PJ-036AH-SMT_Horizontal
 Surface-mount DC Barrel Jack, http://www.cui.com/product/resource/pj-036ah-smt.pdf
@@ -6172,6 +6165,20 @@ Molex SMA RF Connectors, Edge Mount, (http://www.molex.com/pdm_docs/sd/732511150
 sma edge
 0
 11
+2
+Connector_Coaxial
+SMA_Molex_73251-2200_Horizontal
+https://www.molex.com/webdocs/datasheets/pdf/en-us/0732512200_RF_COAX_CONNECTORS.pdf
+SMA THT Female Jack Horizontal
+0
+5
+2
+Connector_Coaxial
+SMA_Samtec_SMA-J-P-H-ST-EM1_EdgeMount
+http://suddendocs.samtec.com/prints/sma-j-p-x-st-em1-mkt.pdf
+SMA
+0
+5
 2
 Connector_Coaxial
 SMB_Jack_Vertical
@@ -8406,6 +8413,90 @@ connector Harwin M20-890 horizontal
 0
 21
 20
+Connector_Harwin
+Harwin_M20-7810245_2x02_P2.54mm_Vertical
+Harwin Female Vertical Surface Mount Double Row 2.54mm (0.1 inch) Pitch PCB Connector, M20-7810245, 2 Pins per row (https://cdn.harwin.com/pdfs/M20-781.pdf), generated with kicad-footprint-generator
+connector Harwin M20 side entry
+0
+4
+4
+Connector_Harwin
+Harwin_M20-7810345_2x03_P2.54mm_Vertical
+Harwin Female Vertical Surface Mount Double Row 2.54mm (0.1 inch) Pitch PCB Connector, M20-7810345, 3 Pins per row (https://cdn.harwin.com/pdfs/M20-781.pdf), generated with kicad-footprint-generator
+connector Harwin M20 side entry
+0
+6
+6
+Connector_Harwin
+Harwin_M20-7810445_2x04_P2.54mm_Vertical
+Harwin Female Vertical Surface Mount Double Row 2.54mm (0.1 inch) Pitch PCB Connector, M20-7810445, 4 Pins per row (https://cdn.harwin.com/pdfs/M20-781.pdf), generated with kicad-footprint-generator
+connector Harwin M20 side entry
+0
+8
+8
+Connector_Harwin
+Harwin_M20-7810545_2x05_P2.54mm_Vertical
+Harwin Female Vertical Surface Mount Double Row 2.54mm (0.1 inch) Pitch PCB Connector, M20-7810545, 5 Pins per row (https://cdn.harwin.com/pdfs/M20-781.pdf), generated with kicad-footprint-generator
+connector Harwin M20 side entry
+0
+10
+10
+Connector_Harwin
+Harwin_M20-7810645_2x06_P2.54mm_Vertical
+Harwin Female Vertical Surface Mount Double Row 2.54mm (0.1 inch) Pitch PCB Connector, M20-7810645, 6 Pins per row (https://cdn.harwin.com/pdfs/M20-781.pdf), generated with kicad-footprint-generator
+connector Harwin M20 side entry
+0
+12
+12
+Connector_Harwin
+Harwin_M20-7810745_2x07_P2.54mm_Vertical
+Harwin Female Vertical Surface Mount Double Row 2.54mm (0.1 inch) Pitch PCB Connector, M20-7810745, 7 Pins per row (https://cdn.harwin.com/pdfs/M20-781.pdf), generated with kicad-footprint-generator
+connector Harwin M20 side entry
+0
+14
+14
+Connector_Harwin
+Harwin_M20-7810845_2x08_P2.54mm_Vertical
+Harwin Female Vertical Surface Mount Double Row 2.54mm (0.1 inch) Pitch PCB Connector, M20-7810845, 8 Pins per row (https://cdn.harwin.com/pdfs/M20-781.pdf), generated with kicad-footprint-generator
+connector Harwin M20 side entry
+0
+16
+16
+Connector_Harwin
+Harwin_M20-7810945_2x09_P2.54mm_Vertical
+Harwin Female Vertical Surface Mount Double Row 2.54mm (0.1 inch) Pitch PCB Connector, M20-7810945, 9 Pins per row (https://cdn.harwin.com/pdfs/M20-781.pdf), generated with kicad-footprint-generator
+connector Harwin M20 side entry
+0
+18
+18
+Connector_Harwin
+Harwin_M20-7811045_2x10_P2.54mm_Vertical
+Harwin Female Vertical Surface Mount Double Row 2.54mm (0.1 inch) Pitch PCB Connector, M20-7811045, 10 Pins per row (https://cdn.harwin.com/pdfs/M20-781.pdf), generated with kicad-footprint-generator
+connector Harwin M20 side entry
+0
+20
+20
+Connector_Harwin
+Harwin_M20-7811245_2x12_P2.54mm_Vertical
+Harwin Female Vertical Surface Mount Double Row 2.54mm (0.1 inch) Pitch PCB Connector, M20-7811245, 12 Pins per row (https://cdn.harwin.com/pdfs/M20-781.pdf), generated with kicad-footprint-generator
+connector Harwin M20 side entry
+0
+24
+24
+Connector_Harwin
+Harwin_M20-7811545_2x15_P2.54mm_Vertical
+Harwin Female Vertical Surface Mount Double Row 2.54mm (0.1 inch) Pitch PCB Connector, M20-7811545, 15 Pins per row (https://cdn.harwin.com/pdfs/M20-781.pdf), generated with kicad-footprint-generator
+connector Harwin M20 side entry
+0
+30
+30
+Connector_Harwin
+Harwin_M20-7812045_2x20_P2.54mm_Vertical
+Harwin Female Vertical Surface Mount Double Row 2.54mm (0.1 inch) Pitch PCB Connector, M20-7812045, 20 Pins per row (https://cdn.harwin.com/pdfs/M20-781.pdf), generated with kicad-footprint-generator
+connector Harwin M20 side entry
+0
+40
+40
 Connector_HDMI
 HDMI_A_Contact_Technology_HDMI-19APL2_Horizontal
 HDMI Contact Technology Type A http://www.contactswitch.com/en/download.aspx?id=1449
@@ -39067,6 +39158,13 @@ USB C Type-C Receptacle SMD
 28
 25
 Connector_USB
+USB_C_Receptacle_GCT_USB4085
+USB 2.0 Type C Receptacle, https://gct.co/Files/Drawings/USB4085.pdf
+USB Type-C Receptacle Through-hole Right angle
+0
+20
+17
+Connector_USB
 USB_Micro-B_Amphenol_10103594-0001LF_Horizontal
 Micro USB Type B 10103594-0001LF, http://cdn.amphenol-icc.com/media/wysiwyg/files/drawing/10103594.pdf
 USB USB_B USB_micro USB_OTG
@@ -42722,14 +42820,14 @@ LCD 16x2 Alphanumeric 16pin
 16
 Display_7Segment
 7SEGMENT-LED__HDSM531_HDSM533_SMD
-7-Segment Display, HDSM53x
+7-Segment Display, HDSM53x, https://docs.broadcom.com/docs/AV02-0713EN
 7segment LED HDSM531 HDSM533
 0
 10
 10
 Display_7Segment
 7SegmentLED_LTS6760_LTS6780
-7-Segment Display, LTS67x0
+7-Segment Display, LTS67x0, http://optoelectronics.liteon.com/upload/download/DS30-2001-355/S6760jd.pdf
 7Segment LED LTS6760 LTS6780
 0
 10
@@ -43051,154 +43149,154 @@ single digit 7 segemnt red/green LED
 10
 Fiducial
 Fiducial_0.5mm_Dia_1mm_Outer
-Circular Fiducial, 0.5mm bare copper top; 1mm keepout (Level C)
-marker
+Circular Fiducial, 0.5mm bare copper top, 1mm keepout (Level C)
+fiducial
 0
 1
-1
+0
 Fiducial
 Fiducial_0.75mm_Dia_1.5mm_Outer
-Circular Fiducial, 0.75mm bare copper top; 1.5mm keepout (Level B)
-marker
+Circular Fiducial, 0.75mm bare copper top, 1.5mm keepout (Level B)
+fiducial
 0
 1
-1
+0
 Fiducial
 Fiducial_1mm_Dia_2.54mm_Outer_CopperBottom
-Circular Fiducial, 1mm bare copper bottom; 2.54mm keepout
-marker
+Circular Fiducial, 1mm bare copper bottom, 2.54mm keepout
+fiducial
 0
 1
-1
+0
 Fiducial
 Fiducial_1mm_Dia_2.54mm_Outer_CopperTop
-Circular Fiducial, 1mm bare copper top; 2.54mm keepout
-marker
+Circular Fiducial, 1mm bare copper top, 2.54mm keepout
+fiducial
 0
 1
-1
+0
 Fiducial
 Fiducial_1mm_Dia_2mm_Outer
-Circular Fiducial, 1mm bare copper top; 2mm keepout (Level A)
-marker
+Circular Fiducial, 1mm bare copper top, 2mm keepout (Level A)
+fiducial
 0
 1
-1
+0
 Fiducial
 Fiducial_classic_big_CopperBottom_Type1
-Fiducial, Classical, Big, Copper Bottom, Typ 1, Passermarke,
-Fiducial, Classical, Big, Copper Bottom, Typ 1, Passermarke, Passermarke,
+Fiducial, Classic, Big, Copper Bottom, Type 1
+fiducial
 0
 1
 0
 Fiducial
 Fiducial_classic_big_CopperBottom_Type2
-Fiducial, Classical, Big, Copper Bottom, Typ 2, Passermarke,
-Fiducial, Classical, Big, Copper Bottom, Typ 2, Passermarke, Passermarke,
+Fiducial, Classic, Big, Copper Bottom, Type 2
+fiducial
 0
 1
 0
 Fiducial
 Fiducial_classic_big_CopperTop_Type1
-Fiducial, Classical, Big, Copper Top, Typ 1, Passermarke,
-Fiducial, Classical, Big, Copper Top, Typ 1, Passermarke,
+Fiducial, Classic, Big, Copper Top, Type 1
+fiducial
 0
 1
 0
 Fiducial
 Fiducial_classic_big_CopperTop_Type2
-Fiducial, Classical, Big, Copper Top, Typ 2, Passermarke,
-Fiducial, Classical, Big, Copper Top, Typ 2, Passermarke,
+Fiducial, Classic, Big, Copper Top, Type 2
+fiducial
 0
 1
 0
 Fiducial
 Fiducial_classic_big_SilkscreenTop_Type1
-Fiducial, Classical, Big, Silkscreen Top, Typ 1, Passermarke,
-Fiducial, Classical, Big, Silkscreen Top, Typ 1, Passermarke,
+Fiducial, Classic, Big, Silkscreen Top, Type 1
+fiducial
 0
 1
 0
 Fiducial
 Fiducial_classic_big_SilkscreenTop_Type2
-Fiducial, Classical, Big, Silkscreen Top, Typ 2, Passermarke,
-Fiducial, Classical, Big, Silkscreen Top, Typ 2, Passermarke,
+Fiducial, Classic, Big, Silkscreen Top, Type 2
+fiducial
 0
 1
 0
 Fiducial
 Fiducial_classic_Small_CopperBottom_Type1
-Fiducial, Classical, Small, Copper Bottom, Typ 1, Passermarke,
-Fiducial, Classical, Small, Copper Bottom, Typ 1, Passermarke,
+Fiducial, Classic, Small, Copper Bottom, Type 1
+fiducial
 0
 1
 0
 Fiducial
 Fiducial_classic_Small_CopperBottom_Type2
-Fiducial, Classical, Small, Copper Bottom, Typ 2, Passermarke,
-Fiducial, Classical, Small, Copper Bottom, Typ 2, Passermarke,
+Fiducial, Classic, Small, Copper Bottom, Type 2
+fiducial
 0
 1
 0
 Fiducial
 Fiducial_classic_Small_CopperTop_Type1
-Fiducial, Classical, Small, Copper Top, Typ 1, Passermarke,
-Fiducial, Classical, Small, Copper Top, Typ 1, Passermarke,
+Fiducial, Classic, Small, Copper Top, Type 1
+fiducial
 0
 1
 0
 Fiducial
 Fiducial_classic_Small_CopperTop_Type2
-Fiducial, Classical, Small, Copper Top, Typ 2, Passermarke,
-Fiducial, Classical, Small, Copper Top, Typ 2, Passermarke,
+Fiducial, Classic, Small, Copper Top, Type 2
+fiducial
 0
 1
 0
 Fiducial
 Fiducial_classic_Small_SilkscreenTop_Type1
-Fiducial, Classical, Small, Copper Top, Typ 1, Passermarke,
-Fiducial, Classical, Small, Copper Top, Typ 1, Passermarke,
+Fiducial, Classic, Small, Copper Top, Type 1
+fiducial
 0
 1
 0
 Fiducial
 Fiducial_classic_Small_SilkscreenTop_Type2
-Fiducial, Classical, Small, Silkscreen Top, Typ 2, Passermarke,
-Fiducial, Classical, Small, Silkscreen Top, Typ 2, Passermarke,
+Fiducial, Classic, Small, Silkscreen Top, Type 2
+fiducial
 0
 1
 0
 Fiducial
 Fiducial_Modern_CopperBottom
-Fiducial, Modern, Copper Bottom, Passermarke,
-Fiducial, Modern, Copper Bottom, Passermarke,
+Fiducial, Modern, Copper Bottom
+fiducial
 0
 1
 0
 Fiducial
 Fiducial_Modern_CopperTop
-Fiducial, Modern, Copper Top, Passermarke,
-Fiducial, Modern, Copper Top, Passermarke,
+Fiducial, Modern, Copper Top
+fiducial
 0
 1
 0
 Fiducial
 Fiducial_Modern_SilkscreenTop
-Fiducial, Modern, Silkscreen Top, Passermarke,
-Fiducial, Modern, Silkscreen Top, Passermarke,
+Fiducial, Modern, Silkscreen Top
+fiducial
 0
 1
 0
 Filter
 Filter_1109-5_1.1x0.9mm
-5-pin SAW filter package - 1.1x0.9 mm Body; (see https://www.mouser.com/ds/2/281/p73e-522716.pdf)
+5-pin SAW filter package - 1.1x0.9 mm Body; (see https://www.murata.com/~/media/webrenewal/support/library/catalog/products/filter/rf/p73e.ashx?la=en-gb)
 Filter 5
 0
 5
 5
 Filter
 Filter_1411-5_1.4x1.1mm
-5-pin filter package - 1.4x1.1 mm Body; (see https://www.mouser.com/ds/2/40/AVX_140127%20Connectivity-1158389.pdf)
+5-pin filter package - 1.4x1.1 mm Body; (see https://global.kyocera.com/prdct/electro/product/pdf/sf14_tdlte.pdf)
 Filter 5
 0
 5
@@ -43814,14 +43912,14 @@ heatsink
 0
 Heatsink
 Heatsink_Aavid-TV5G_TO220_Horizontal
-http://www.aavid.eu/products/standard/tv5g
+Heatsink TV5G TO-220 Horizontal, https://www.shopaavid.com/Product/TV-5G
 Heatsink TV5G TO-220 Horizontal 
 0
 0
 0
 Heatsink
 Heatsink_AAVID_573300D00010G_TO-263
-Heatsink, 12.70mm x 26.16mm x 10.16, SMD, 18K/W, TO-263, D2 Pak, https://www.aavid.com/products/standard/573300d00010g
+Heatsink, 12.70mm x 26.16mm x 10.16, SMD, 18K/W, TO-263, D2 Pak, https://www.shopaavid.com/Product/573300D00000G
 Heatsink AAVID TO-263 D2 Pak
 0
 2
@@ -48062,6 +48160,13 @@ ST Morpho Connector 144 STLink
 148
 148
 MountingHole
+MountingHole_2.1mm
+Mounting Hole 2.1mm, no annular
+mounting hole 2.1mm no annular
+0
+0
+0
+MountingHole
 MountingHole_2.2mm_M2
 Mounting Hole 2.2mm, no annular, M2
 mounting hole 2.2mm no annular m2
@@ -48229,6 +48334,13 @@ mounting hole 2.7mm
 0
 9
 1
+MountingHole
+MountingHole_2mm
+Mounting Hole 2mm, no annular
+mounting hole 2mm no annular
+0
+0
+0
 MountingHole
 MountingHole_3.2mm_M3
 Mounting Hole 3.2mm, no annular, M3
@@ -49887,6 +49999,13 @@ Texas Instruments, DSBGA, 1.43x1.41mm, 8 bump 3x3 (perimeter) array, NSMD pad de
 Texas Instruments DSBGA BGA YZP R-XBGA-N8
 0
 16
+8
+Package_BGA
+Texas_DSBGA-8_1.5195x1.5195mm_Layout3x3_P0.5mm
+Texas Instruments, DSBGA, 1.5195x1.5195x0.600mm, 8 ball 3x3 area grid, YZR pad definition (http://www.ti.com/lit/ml/mxbg270/mxbg270.pdf)
+BGA 8 0.5
+0
+8
 8
 Package_BGA
 Texas_DSBGA-9_1.4715x1.4715mm_Layout3x3_P0.5mm
@@ -52500,6 +52619,20 @@ QFN 0.5
 21
 17
 Package_DFN_QFN
+UQFN-16-1EP_4x4mm_P0.65mm_EP2.6x2.6mm
+UQFN, 16 Pin (http://ww1.microchip.com/downloads/en/DeviceDoc/16L_UQFN_4x4x0_5mm_JQ_C04257A.pdf), generated with kicad-footprint-generator ipc_dfn_qfn_generator.py
+UQFN DFN_QFN
+0
+21
+17
+Package_DFN_QFN
+UQFN-16-1EP_4x4mm_P0.65mm_EP2.6x2.6mm_ThermalVias
+UQFN, 16 Pin (http://ww1.microchip.com/downloads/en/DeviceDoc/16L_UQFN_4x4x0_5mm_JQ_C04257A.pdf), generated with kicad-footprint-generator ipc_dfn_qfn_generator.py
+UQFN DFN_QFN
+0
+31
+17
+Package_DFN_QFN
 UQFN-16-1EP_4x4mm_P0.65mm_EP2.7x2.7mm
 16-Lead Ultra Thin Plastic Quad Flat, No Lead Package (JQ) - 4x4x0.5 mm Body [UQFN]; (see Microchip Packaging Specification 00000049BS.pdf)
 QFN 0.65
@@ -52548,6 +52681,20 @@ DFN 0.5
 0
 11
 9
+Package_DFN_QFN
+VQFN-20-1EP_3x3mm_P0.4mm_EP1.7x1.7mm
+VQFN, 20 Pin (http://ww1.microchip.com/downloads/en/DeviceDoc/20%20Lead%20VQFN%203x3x0_9mm_1_7EP%20U2B%20C04-21496a.pdf), generated with kicad-footprint-generator ipc_dfn_qfn_generator.py
+VQFN DFN_QFN
+0
+25
+21
+Package_DFN_QFN
+VQFN-20-1EP_3x3mm_P0.4mm_EP1.7x1.7mm_ThermalVias
+VQFN, 20 Pin (http://ww1.microchip.com/downloads/en/DeviceDoc/20%20Lead%20VQFN%203x3x0_9mm_1_7EP%20U2B%20C04-21496a.pdf), generated with kicad-footprint-generator ipc_dfn_qfn_generator.py
+VQFN DFN_QFN
+0
+30
+21
 Package_DFN_QFN
 VQFN-20-1EP_3x3mm_P0.45mm_EP1.55x1.55mm
 VQFN, 20 Pin (http://ww1.microchip.com/downloads/en/DeviceDoc/doc8246.pdf (page 264)), generated with kicad-footprint-generator ipc_dfn_qfn_generator.py
@@ -54768,6 +54915,13 @@ QFP 0.65
 52
 52
 Package_QFP
+LQFP-52_14x14mm_P1mm
+LQFP, 52 Pin (http://www.holtek.com/documents/10179/116711/HT1632Cv170.pdf), generated with kicad-footprint-generator ipc_gullwing_generator.py
+LQFP QFP
+0
+52
+52
+Package_QFP
 LQFP-64-1EP_10x10mm_P0.5mm_EP6.5x6.5mm
 64 LEAD LQFP 10x10mm (see MICREL LQFP10x10-64LD-PL-1.pdf and http://www.nxp.com/files/shared/doc/package_info/98ARH98426A.pdf for EP)
 QFP 0.5
@@ -55860,6 +56014,20 @@ S0-20
 20
 20
 Package_SO
+SOIC-4_4.55x2.6mm_P1.27mm
+SOIC, 4 Pin (https://toshiba.semicon-storage.com/info/docget.jsp?did=12884&prodName=TLP291), generated with kicad-footprint-generator ipc_gullwing_generator.py
+SOIC SO
+0
+4
+4
+Package_SO
+SOIC-4_4.55x3.7mm_P2.54mm
+SOIC, 6 Pin (https://toshiba.semicon-storage.com/info/docget.jsp?did=11791&prodName=TLP185), generated with kicad-footprint-generator ipc_gullwing_generator.py
+SOIC SO
+0
+4
+4
+Package_SO
 SOIC-8-1EP_3.9x4.9mm_P1.27mm_EP2.35x2.35mm
 8-Lead Thermally Enhanced Plastic Small Outline (SE) - Narrow, 3.90 mm Body [SOIC] (see Microchip Packaging Specification 00000049BS.pdf)
 SOIC 1.27
@@ -55926,6 +56094,13 @@ Package_SO
 SOIC-16_3.9x9.9mm_P1.27mm
 16-Lead Plastic Small Outline (SL) - Narrow, 3.90 mm Body [SOIC] (see Microchip Packaging Specification 00000049BS.pdf)
 SOIC 1.27
+0
+16
+16
+Package_SO
+SOIC-16_4.55x10.3mm_P1.27mm
+SOIC, 16 Pin (https://toshiba.semicon-storage.com/info/docget.jsp?did=12858&prodName=TLP291-4), generated with kicad-footprint-generator ipc_gullwing_generator.py
+SOIC SO
 0
 16
 16
@@ -60394,7 +60569,7 @@ AudioJack
 
 0
 5
-5
+4
 Projecto
 Capacitor
 
@@ -60403,12 +60578,19 @@ Capacitor
 2
 2
 Projecto
+Capacitor_Disco
+C, Disc series, Radial, pin pitch=5.00mm, , diameter*width=8*5.0mm^2, Capacitor, http://www.vishay.com/docs/28535/vy2series.pdf
+C Disc series Radial pin pitch 5.00mm  diameter 8mm width 5.0mm Capacitor
+0
+2
+2
+Projecto
 Conn_Poncho_Personalizado
 
 CONN Poncho
 0
-84
-81
+31
+28
 Projecto
 conn_teclado4x4
 
@@ -60437,6 +60619,13 @@ OPA2350PA
 0
 8
 8
+Projecto
+Pin_Puente
+
+
+0
+1
+1
 Projecto
 Potentiometer
 
@@ -65413,7 +65602,7 @@ PhoenixContact PTSM0,5 2 2,5mm vertical SMD spring clamp terminal block connecto
 PhoenixContact PTSM0.5 2 2.5mm vertical SMD spring clamp terminal block connector 
 0
 4
-2
+3
 TerminalBlock_Phoenix
 TerminalBlock_Phoenix_PTSM-0,5-2-2.5-H-THR_1x02_P2.50mm_Horizontal
 Terminal Block Phoenix PTSM-0,5-2-2.5-H-THR, 2 pins, pitch 2.5mm, size 7.2x10mm^2, drill diamater 1.2mm, pad diameter 3mm, see http://www.produktinfo.conrad.com/datenblaetter/550000-574999/556441-da-01-de-LEITERPLATTENKL__PTSM_0_5__8_2_5_H_THR.pdf, script-generated using https://github.com/pointhi/kicad-footprint-generator/scripts/TerminalBlock_Phoenix
@@ -65434,14 +65623,14 @@ PhoenixContact PTSM0,5 2 HV 2,5mm vertical SMD spring clamp terminal block conne
 2.5mm vertical SMD spring clamp terminal block connector 
 0
 4
-2
+3
 TerminalBlock_Phoenix
 TerminalBlock_Phoenix_PTSM-0,5-3-2,5-V-SMD_1x03_P2.50mm_Vertical
 PhoenixContact PTSM0,5 3 2,5mm vertical SMD spring clamp terminal block connector http://www.phoenixcontact.com/us/products/1814715/pdf
 PhoenixContact PTSM0.5 3 2.5mm vertical SMD spring clamp terminal block connector 
 0
 5
-3
+4
 TerminalBlock_Phoenix
 TerminalBlock_Phoenix_PTSM-0,5-3-2.5-H-THR_1x03_P2.50mm_Horizontal
 Terminal Block Phoenix PTSM-0,5-3-2.5-H-THR, 3 pins, pitch 2.5mm, size 9.7x10mm^2, drill diamater 1.2mm, pad diameter 3mm, see http://www.produktinfo.conrad.com/datenblaetter/550000-574999/556441-da-01-de-LEITERPLATTENKL__PTSM_0_5__8_2_5_H_THR.pdf, script-generated using https://github.com/pointhi/kicad-footprint-generator/scripts/TerminalBlock_Phoenix
@@ -65462,14 +65651,14 @@ PhoenixContact PTSM0,5 3 HV 2,5mm vertical SMD spring clamp terminal block conne
 2.5mm vertical SMD spring clamp terminal block connector 
 0
 5
-3
+4
 TerminalBlock_Phoenix
 TerminalBlock_Phoenix_PTSM-0,5-4-2,5-V-SMD_1x04_P2.50mm_Vertical
 PhoenixContact PTSM0,5 4 2,5mm vertical SMD spring clamp terminal block connector http://www.phoenixcontact.com/us/products/1814728/pdf
 PhoenixContact PTSM0.5 4 2.5mm vertical SMD spring clamp terminal block connector 
 0
 6
-4
+5
 TerminalBlock_Phoenix
 TerminalBlock_Phoenix_PTSM-0,5-4-2.5-H-THR_1x04_P2.50mm_Horizontal
 Terminal Block Phoenix PTSM-0,5-4-2.5-H-THR, 4 pins, pitch 2.5mm, size 12.2x10mm^2, drill diamater 1.2mm, pad diameter 3mm, see http://www.produktinfo.conrad.com/datenblaetter/550000-574999/556441-da-01-de-LEITERPLATTENKL__PTSM_0_5__8_2_5_H_THR.pdf, script-generated using https://github.com/pointhi/kicad-footprint-generator/scripts/TerminalBlock_Phoenix
@@ -65490,14 +65679,14 @@ PhoenixContact PTSM0,5 4 HV 2,5mm vertical SMD spring clamp terminal block conne
 2.5mm vertical SMD spring clamp terminal block connector 
 0
 4
-2
+3
 TerminalBlock_Phoenix
 TerminalBlock_Phoenix_PTSM-0,5-5-2,5-V-SMD_1x05_P2.50mm_Vertical
 PhoenixContact PTSM0,5 5 2,5mm vertical SMD spring clamp terminal block connector http://www.phoenixcontact.com/us/products/1814731/pdf
 PhoenixContact PTSM0.5 5 2.5mm vertical SMD spring clamp terminal block connector 
 0
 7
-5
+6
 TerminalBlock_Phoenix
 TerminalBlock_Phoenix_PTSM-0,5-5-2.5-H-THR_1x05_P2.50mm_Horizontal
 Terminal Block Phoenix PTSM-0,5-5-2.5-H-THR, 5 pins, pitch 2.5mm, size 14.7x10mm^2, drill diamater 1.2mm, pad diameter 3mm, see http://www.produktinfo.conrad.com/datenblaetter/550000-574999/556441-da-01-de-LEITERPLATTENKL__PTSM_0_5__8_2_5_H_THR.pdf, script-generated using https://github.com/pointhi/kicad-footprint-generator/scripts/TerminalBlock_Phoenix
@@ -65518,14 +65707,14 @@ PhoenixContact PTSM0,5 5 HV 2,5mm vertical SMD spring clamp terminal block conne
 2.5mm vertical SMD spring clamp terminal block connector 
 0
 7
-5
+6
 TerminalBlock_Phoenix
 TerminalBlock_Phoenix_PTSM-0,5-6-2,5-V-SMD_1x06_P2.50mm_Vertical
 PhoenixContact PTSM0,5 6 2,5mm vertical SMD spring clamp terminal block connector http://www.phoenixcontact.com/us/products/1814744/pdf
 PhoenixContact PTSM0.5 6 2.5mm vertical SMD spring clamp terminal block connector 
 0
 8
-6
+7
 TerminalBlock_Phoenix
 TerminalBlock_Phoenix_PTSM-0,5-6-2.5-H-THR_1x06_P2.50mm_Horizontal
 Terminal Block Phoenix PTSM-0,5-6-2.5-H-THR, 6 pins, pitch 2.5mm, size 17.2x10mm^2, drill diamater 1.2mm, pad diameter 3mm, see http://www.produktinfo.conrad.com/datenblaetter/550000-574999/556441-da-01-de-LEITERPLATTENKL__PTSM_0_5__8_2_5_H_THR.pdf, script-generated using https://github.com/pointhi/kicad-footprint-generator/scripts/TerminalBlock_Phoenix
@@ -65546,14 +65735,14 @@ PhoenixContact PTSM0,5 6 HV 2,5mm vertical SMD spring clamp terminal block conne
 2.5mm vertical SMD spring clamp terminal block connector 
 0
 8
-6
+7
 TerminalBlock_Phoenix
 TerminalBlock_Phoenix_PTSM-0,5-7-2,5-V-SMD_1x07_P2.50mm_Vertical
 PhoenixContact PTSM0,5 7 2,5mm vertical SMD spring clamp terminal block connector http://www.phoenixcontact.com/us/products/1814757/pdf
 PhoenixContact PTSM0.5 7 2.5mm vertical SMD spring clamp terminal block connector 
 0
 9
-7
+8
 TerminalBlock_Phoenix
 TerminalBlock_Phoenix_PTSM-0,5-7-2.5-H-THR_1x07_P2.50mm_Horizontal
 Terminal Block Phoenix PTSM-0,5-7-2.5-H-THR, 7 pins, pitch 2.5mm, size 19.7x10mm^2, drill diamater 1.2mm, pad diameter 3mm, see http://www.produktinfo.conrad.com/datenblaetter/550000-574999/556441-da-01-de-LEITERPLATTENKL__PTSM_0_5__8_2_5_H_THR.pdf, script-generated using https://github.com/pointhi/kicad-footprint-generator/scripts/TerminalBlock_Phoenix
@@ -65574,14 +65763,14 @@ PhoenixContact PTSM0,5 7 HV 2,5mm vertical SMD spring clamp terminal block conne
 2.5mm vertical SMD spring clamp terminal block connector 
 0
 9
-7
+8
 TerminalBlock_Phoenix
 TerminalBlock_Phoenix_PTSM-0,5-8-2,5-V-SMD_1x08_P2.50mm_Vertical
 PhoenixContact PTSM0,5 8 2,5mm vertical SMD spring clamp terminal block connector http://www.phoenixcontact.com/us/products/1814760/pdf
 PhoenixContact PTSM0.5 8 2.5mm vertical SMD spring clamp terminal block connector 
 0
 10
-8
+9
 TerminalBlock_Phoenix
 TerminalBlock_Phoenix_PTSM-0,5-8-2.5-H-THR_1x08_P2.50mm_Horizontal
 Terminal Block Phoenix PTSM-0,5-8-2.5-H-THR, 8 pins, pitch 2.5mm, size 22.2x10mm^2, drill diamater 1.2mm, pad diameter 3mm, see http://www.produktinfo.conrad.com/datenblaetter/550000-574999/556441-da-01-de-LEITERPLATTENKL__PTSM_0_5__8_2_5_H_THR.pdf, script-generated using https://github.com/pointhi/kicad-footprint-generator/scripts/TerminalBlock_Phoenix
@@ -65602,7 +65791,7 @@ PhoenixContact PTSM0,5 8 HV 2,5mm vertical SMD spring clamp terminal block conne
 2.5mm vertical SMD spring clamp terminal block connector 
 0
 10
-8
+9
 TerminalBlock_RND
 TerminalBlock_RND_205-00001_1x02_P5.00mm_Horizontal
 terminal block RND 205-00001, 2 pins, pitch 5mm, size 10x9mm^2, drill diamater 1.3mm, pad diameter 2.5mm, see http://cdn-reichelt.de/documents/datenblatt/C151/RND_205-00001_DB_EN.pdf, script-generated using https://github.com/pointhi/kicad-footprint-generator/scripts/TerminalBlock_RND
@@ -67536,6 +67725,13 @@ Transformer current sense SMD
 8
 8
 Transformer_SMD
+Transformer_Ethernet_Bel_S558-5999-T7-F
+Ethernet Transformer, Bel S558-5999-T7-F, https://www.belfuse.com/resources/ICMs/lan-/S558-5999-T7-F.pdf
+Ethernet Transformer
+0
+16
+16
+Transformer_SMD
 Transformer_Ethernet_HALO_TG111-MSC13
 Transformer Ethernet SMD, https://www.haloelectronics.com/pdf/discrete-genesus.pdf
 Transformer Ethernet SMD
@@ -67705,7 +67901,7 @@ TEZ PCB Transformer
 13
 Transformer_THT
 Transformer_CHK_EI30-2VA_1xSec
-Trafo, Printtrafo, CHK, EI30, 2VA, 1x Sec,
+Trafo, Printtrafo, CHK, EI30, 2VA, 1x Sec,http://www.eratransformers.com/downloads/030-7585.0.pdf
 Trafo Printtrafo CHK EI30 2VA 1x Sec 
 0
 10
@@ -67726,21 +67922,21 @@ Trafo Printtrafo CHK EI30 2VA neutral
 10
 Transformer_THT
 Transformer_CHK_EI38-3VA_1xSec
-Trafo, Printtrafo, CHK, EI38, 3VA, 1x Sec,
+Trafo, Printtrafo, CHK, EI38, 3VA, 1x Sec, http://www.eratransformers.com/product-detail/20
 Trafo Printtrafo CHK EI38 3VA 1x Sec 
 0
 10
 10
 Transformer_THT
 Transformer_CHK_EI38-3VA_2xSec
-Trafo, Printtrafo, CHK, EI38, 3VA, 2x Sec,
+Trafo, Printtrafo, CHK, EI38, 3VA, 2x Sec, http://www.eratransformers.com/product-detail/20
 Trafo Printtrafo CHK EI38 3VA 2x Sec 
 0
 10
 10
 Transformer_THT
 Transformer_CHK_EI38-3VA_Neutral
-Trafo, Printtrafo, CHK, EI38, 3VA, neutral,
+Trafo, Printtrafo, CHK, EI38, 3VA, neutral, http://www.eratransformers.com/product-detail/20
 Trafo Printtrafo CHK EI42 3VA neutral 
 0
 10
@@ -67768,21 +67964,21 @@ Trafo Printtrafo CHK EI42 5VA neutral
 10
 Transformer_THT
 Transformer_CHK_EI48-8VA_1xSec
-Trafo, Printtrafo, CHK, EI48, 8VA, 1x Sec,
+Trafo, Printtrafo, CHK, EI48, 8VA, 1x Sec, http://www.eratransformers.com/product-detail/18
 Trafo Printtrafo CHK EI48 8VA 1x Sec 
 0
 12
 12
 Transformer_THT
 Transformer_CHK_EI48-8VA_2xSec
-Trafo, Printtrafo, CHK, EI48, 8VA, 2x Sec,
+Trafo, Printtrafo, CHK, EI48, 8VA, 2x Sec, http://www.eratransformers.com/product-detail/18
 Trafo Printtrafo CHK EI48 8VA 2x Sec 
 0
 12
 12
 Transformer_THT
 Transformer_CHK_EI48-8VA_Neutral
-Trafo, Printtrafo, CHK, EI48, 8VA, neutral,
+Trafo, Printtrafo, CHK, EI48, 8VA, neutral, http://www.eratransformers.com/product-detail/18
 Trafo Printtrafo CHK EI48 8VA neutral 
 0
 12
@@ -67796,56 +67992,56 @@ Trafo Printtrafo CHK EI48 10VA 1x Sec
 12
 Transformer_THT
 Transformer_CHK_EI48-10VA_2xSec
-Trafo, Printtrafo, CHK, EI48, 10VA, 2x Sec,
+Trafo, Printtrafo, CHK, EI48, 10VA, 2x Sec, http://www.eratransformers.com/product-detail/18
 Trafo Printtrafo CHK EI48 10VA 2x Sec 
 0
 12
 12
 Transformer_THT
 Transformer_CHK_EI48-10VA_Neutral
-Trafo, Printtrafo, CHK, EI48, 10VA, neutral,
+Trafo, Printtrafo, CHK, EI48, 10VA, neutral, http://www.eratransformers.com/product-detail/18
 Trafo Printtrafo CHK EI48 10VA neutral 
 0
 12
 12
 Transformer_THT
 Transformer_CHK_EI54-12VA_1xSec
-Trafo, Printtrafo, CHK, EI54, 12VA, 1x Sec,
+Trafo, Printtrafo, CHK, EI54, 12VA, 1x Sec,http://www.eratransformers.com/product-detail/19
 Trafo Printtrafo CHK EI54 12VA 1x Sec 
 0
 14
 14
 Transformer_THT
 Transformer_CHK_EI54-12VA_2xSec
-Trafo, Printtrafo, CHK, EI54, 12VA, 2x Sec,
+Trafo, Printtrafo, CHK, EI54, 12VA, 2x Sec,http://www.eratransformers.com/product-detail/19
 Trafo Printtrafo CHK EI54 12VA 2x Sec 
 0
 14
 14
 Transformer_THT
 Transformer_CHK_EI54-12VA_Neutral
-Trafo, Printtrafo, CHK, EI54, 12VA, neutral,
+Trafo, Printtrafo, CHK, EI54, 12VA, neutral,http://www.eratransformers.com/product-detail/19
 Trafo Printtrafo CHK EI54 12VA neutral 
 0
 14
 14
 Transformer_THT
 Transformer_CHK_EI54-16VA_1xSec
-Trafo, Printtrafo, CHK, EI54, 16VA, 1x Sec,
+Trafo, Printtrafo, CHK, EI54, 16VA, 1x Sec,http://www.eratransformers.com/product-detail/19
 Trafo Printtrafo CHK EI54 16VA 1x Sec 
 0
 14
 14
 Transformer_THT
 Transformer_CHK_EI54-16VA_2xSec
-Trafo, Printtrafo, CHK, EI54, 16VA, 2x Sec,
+Trafo, Printtrafo, CHK, EI54, 16VA, 2x Sec,http://www.eratransformers.com/product-detail/19
 Trafo Printtrafo CHK EI54 16VA 2x Sec 
 0
 14
 14
 Transformer_THT
 Transformer_CHK_EI54-16VA_Neutral
-Trafo, Printtrafo, CHK, EI54, 16VA, neutral,
+Trafo, Printtrafo, CHK, EI54, 16VA, neutral,http://www.eratransformers.com/product-detail/19
 Trafo Printtrafo CHK EI54 16VA neutral 
 0
 14
@@ -67887,14 +68083,14 @@ Transformer Transformator ETD29 14 Pin Vertical EPCOS-B66359J1014T
 14
 Transformer_THT
 Transformer_Microphone_Lundahl_LL1538
-AUDIO TRAFO LUNDAHL
+AUDIO TRAFO LUNDAHL, https://www.lundahltransformers.com/wp-content/uploads/datasheets/1538_8xl.pdf
 AUDIO TRAFO LUNDAHL
 0
 7
 7
 Transformer_THT
 Transformer_Microphone_Lundahl_LL1587
-AUDIO TRAFO LUNDAHL
+AUDIO TRAFO LUNDAHL, https://www.lundahltransformers.com/wp-content/uploads/datasheets/1587.pdf
 AUDIO TRAFO LUNDAHL
 0
 7
@@ -67908,28 +68104,28 @@ Transformer Transformator ETD29 13 Pin Horizontal Myrra-74040
 13
 Transformer_THT
 Transformer_NF_ETAL_1-1_P1200
-NF-Transformer, 1:1, ETAL P1200,
+NF-Transformer, 1:1, ETAL P1200,http://www.etalgroup.com/sites/default/files/products/P1200_April_2005.pdf
 NF-Transformer 1to1 ETAL P1200 
 0
 4
 4
 Transformer_THT
 Transformer_NF_ETAL_P1165
-NF-Transformer,  ETAL, P1165,
+NF-Transformer,  ETAL, P1165,http://www.etalgroup.com/sites/default/files/products/P1165_February_2006.pdf
 NF-Transformer ETAL P1165 
 0
 4
 4
 Transformer_THT
 Transformer_NF_ETAL_P3324
-NF-Transformer, ETAL P3324,
+NF-Transformer, ETAL P3324,http://www.etalgroup.com/sites/default/files/products/P3324_April_2005.pdf
 NF-Transformer ETAL P3324 
 0
 4
 4
 Transformer_THT
 Transformer_NF_ETAL_P3356
-NF-Transformer, ETAL P3356,
+NF-Transformer, ETAL P3356, http://www.etalgroup.com/sites/default/files/products/P3356_December_2005.pdf
 NF-Transformer ETAL P3356 
 0
 4
