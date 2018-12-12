@@ -1,21 +1,6 @@
 EESchema-LIBRARY Version 2.4
 #encoding utf-8
 #
-# Misc_Poncho_Grande_+3.3V
-#
-DEF Misc_Poncho_Grande_+3.3V #PWR 0 0 Y Y 1 F P
-F0 "#PWR" 0 -40 30 H I C CNN
-F1 "Misc_Poncho_Grande_+3.3V" 0 110 30 H V C CNN
-F2 "" 0 0 60 H V C CNN
-F3 "" 0 0 60 H V C CNN
-ALIAS +3,3V
-DRAW
-C 0 60 20 0 1 0 N
-P 3 0 1 0 0 0 0 40 0 40 N
-X +3.3V 1 0 0 0 U 30 30 0 0 W N
-ENDDRAW
-ENDDEF
-#
 # Misc_Poncho_Grande_+5V
 #
 DEF Misc_Poncho_Grande_+5V #PWR 0 40 Y Y 1 F P
