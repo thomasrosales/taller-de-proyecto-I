@@ -113,7 +113,7 @@ bool_t keypadRead( keypad_t* keypad, uint16_t* key ){
       // If reads a LOW state in a column then that key may be pressed
       if( !gpioRead( keypad->keypadColPins[c] ) ){
 
-         delay( 50 ); // Debounce 50 ms
+         //delay( 50 ); // Debounce 50 ms
 
          // Put all Rows in HIGH state except first one
          for( r=1; r<keypad->keypadRowSize; r++ ){

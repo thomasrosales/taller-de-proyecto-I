@@ -26,16 +26,23 @@
    		'*', '0', '#','D'
    };
 
-   uint16_t tecla=0;
+   static uint16_t tecla=0;
+   static unsigned char key='\0';
 
    void KEYPAD_init(){
       keypadConfig( &keypad, keypadRowPins1, 4, keypadColPins1, 4 );
    }
 
-   void KEYPAD_get_key(unsigned char *key){
+   unsigned char KEYPAD_get_key(){
 
-	   if (keypadRead(&keypad, &tecla))
-		   *key=teclado[tecla];
+	   return key;
 
    }
+   void KEYPAD_update(){
+
+	   if (keypadRead(&keypad, &tecla))
+		   key=teclado[tecla];
+
+   }
+
 

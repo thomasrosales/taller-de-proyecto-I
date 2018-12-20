@@ -40,6 +40,7 @@
 #include "sapi.h"                // <= sAPI header
 #include "KEYPAD.h"
 #include "MAX7219.h"
+#include "adc.h"
 
 /*==================[macros and definitions]=================================*/
 
@@ -55,23 +56,39 @@
 
 /*==================[external functions definition]==========================*/
 
+/* FUNCION que se ejecuta cada vez que ocurre un Tick. */
+void myTickHook( void *ptr ){
+
+   KEYPAD_update();
+}
+
+unsigned char tecla='0';
 
 /* FUNCION PRINCIPAL, PUNTO DE ENTRADA AL PROGRAMA LUEGO DE RESET. */
 int main(void){
-
+	uint8_t rows[8]={ROW1, ROW2, ROW3, ROW4, ROW5, ROW6, ROW7, ROW8};
    /* ------------- INICIALIZACIONES ------------- */
-   int i=0;
+	//uint16_t muestra = 0;
    /* Inicializar la placa */
    boardConfig();
+   KEYPAD_init();
    MAX7219_init();
+   int i=0;
+   /*adcInit();
+   tickConfig( 1 );
 
-   /* ------------- REPETIR POR SIEMPRE ------------- */
+   tickCallbackSet( myTickHook, NULL );
+	*/
+   //MAX7219_displaytest_mode(1);
    while(1) {
-
-	   MAX7219_displaytest_mode(1);
+	   MAX7219_write_row(ROW1, COL1|COL2);
+	   /*for(i=0;i<0xffffff;i++);
+	   MAX7219_clear_display();
 	   for(i=0;i<0xffffff;i++);
-	   MAX7219_displaytest_mode(0);
-	   for(i=0;i<0xffffff;i++);
+	   /*if (adcFlag) {
+		   muestra=ADC_get_data();
+	   	   adcFlag=0;
+	   }*/
    }
 
    /* NO DEBE LLEGAR NUNCA AQUI, debido a que a este programa no es llamado

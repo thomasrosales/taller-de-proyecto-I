@@ -10,7 +10,23 @@ extern "C" {
 #endif
 
 /*==================[macros]=================================================*/
+#define ROW1 7
+#define ROW2 1
+#define ROW3 3
+#define ROW4 5
+#define ROW5 0
+#define ROW6 2
+#define ROW7 4
+#define ROW8 6
 
+#define COL1 (1 << 5)
+#define COL2 (1 << 3)
+#define COL3 (1 << 7)
+#define COL4 (1 << 4)
+#define COL5 (1 << 2)
+#define COL6 (1 << 0)
+#define COL7 (1 << 1)
+#define COL8 (1 << 6)
 /*==================[typedef]================================================*/
 
 /*==================[external data declaration]==============================*/
