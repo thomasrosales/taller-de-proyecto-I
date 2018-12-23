@@ -7,9 +7,12 @@
 
 #include "board.h"
 #include "fir_q31.h"
+#include "fir.h"
 #include "main.h"
 
-int adcFlag=0;
+int adcFlag = 0;
+uint16_t data;
+uint32_t cont = 0;
 
 #ifdef lpc4337_m4
 #define LPC_ADC LPC_ADC0
@@ -17,12 +20,11 @@ int adcFlag=0;
 #endif
 
 /* P0.23 -> AD0 */
-void adcInit(void)
-{
+void adcInit(void) {
 	ADC_CLOCK_SETUP_T adc;
 
 	Chip_ADC_Init(LPC_ADC, &adc);
-	Chip_ADC_SetSampleRate(LPC_ADC, &adc, 88000);
+	Chip_ADC_SetSampleRate(LPC_ADC, &adc, 32000);
 
 	Chip_ADC_EnableChannel(LPC_ADC, ADC_CH1, ENABLE);
 	Chip_ADC_Int_SetChannelCmd(LPC_ADC, ADC_CH1, ENABLE);
@@ -37,26 +39,27 @@ void ADC0_IRQHandler(void)
 void ADC_IRQHandler(void)
 #endif
 {
-	static uint16_t data;
+
 	Chip_ADC_ReadValue(LPC_ADC, ADC_CH1, &data);
 
-#ifdef lpc4337_m4
-	static uint32_t cont;
-	cont++;
-	if (cont == 4) {
-		cont = 0;
-#if(USAR_FUNCIONES_ASSEMBLER)
-		//asm_fir_q31_put(&filtro, data);
-#else
-		//fir_q31_put(&filtro, data);
-#endif
+	if (cont < 512) {
+
+		cont++;
+
+		fir_q31_put(&filtro_flp, data);
+		fir_q31_put(&filtro_fbp_b1, data);
+		fir_q31_put(&filtro_fbp_b2, data);
+		fir_q31_put(&filtro_fbp_b3, data);
+		fir_q31_put(&filtro_fbp_b4, data);
+		fir_q31_put(&filtro_fbp_b5, data);
+		fir_q31_put(&filtro_fbp_b6, data);
+		fir_q31_put(&filtro_fbp_b7, data);
+
+	} else {
+		if (adcStop) {
+			cont = 0;
+		}
+		adcFlag = 1;
 	}
-#else
-#if(USAR_FUNCIONES_ASSEMBLER)
-//asm_fir_q31_put(&filtro, data>>2);
-#else
-	//fir_q31_put(&filtro, data>>2);
-#endif
-#endif
-	adcFlag=1;
+
 }

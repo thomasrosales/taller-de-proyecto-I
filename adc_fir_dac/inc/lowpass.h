@@ -10,7 +10,7 @@
 
 //195 origin
 
-#define LOWPASS_TAP_NUM 200
-extern const float lowpass_taps[];
+#define LOWPASS_TAP_NUM 195
+extern const int lowpass_taps[];
 
 #endif /* LOWPASS_H_ */

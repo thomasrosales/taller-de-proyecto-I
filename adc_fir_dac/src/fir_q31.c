@@ -1,8 +1,6 @@
 #include "fir_q31.h"
 
-extern float * history;
-
-void fir_q31_init(fir_q31_t * f, float * history, const int * kernel, int num_taps)
+void fir_q31_init(fir_q31_t * f, int * history, const int * kernel, int num_taps)
 {
 	int i;
 
@@ -25,23 +23,20 @@ void fir_q31_put(fir_q31_t * f, int input)
 int fir_q31_get(fir_q31_t * f)
 {
 	long long acc = 0;
-	//float acc = 0;
 	int index = f->last_index, i;
 	for(i = 0; i < f->num_taps; ++i)
 	{
 		index = index != 0 ? index-1 : f->num_taps-1;
-		//acc += (long long)f->history[index] * f->kernel[i];
-		acc += (long long)history[index] * f->kernel[i];
+		acc += (long long)f->history[index] * f->kernel[i];
 	};
 	return acc >> 31;
-	//return acc;
 }
 
-void set_history(fir_q31_t * f,float * history){
+void set_history(fir_q31_t * f, int * history){
 	f->history = history;
 }
 
-float get_history(fir_q31_t * f){
+int get_history(fir_q31_t * f){
 	return *f->history;
 }
 

@@ -35,7 +35,7 @@ fixed point precision: 31 bits
 #define BANDPASS2_H_
 
 //num taps 141
-#define BANDPASS_TAP_NUM_2 200
+#define BANDPASS_TAP_NUM_2 141
 extern const int bandpass_taps_2[BANDPASS_TAP_NUM_2];
 
 #endif /* BANDPASS_H_ */

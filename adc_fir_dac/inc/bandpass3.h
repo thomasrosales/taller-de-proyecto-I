@@ -9,7 +9,7 @@
 #define BANDPASS3_H_
 
 //num taps 107
-#define BANDPASS_TAP_NUM_3 200
+#define BANDPASS_TAP_NUM_3 107
 extern const int bandpass_taps_3[BANDPASS_TAP_NUM_3];
 
 #endif /* BANDPASS3_H_ */

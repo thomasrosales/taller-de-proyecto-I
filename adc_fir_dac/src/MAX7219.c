@@ -58,7 +58,7 @@ void MAX7219_init(){
 	  /*
 	   * Set intensity 8
 	  */
-	  transfer_data(OP_INTENSITY, 8);
+	  transfer_data(OP_INTENSITY, 15);
 }
 void MAX7219_shutdown_mode(bool_t state){
 	if (state)

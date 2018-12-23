@@ -1,4 +1,6 @@
 /* Copyright 2015, Pablo Ridolfi
+
+
  * All rights reserved.
  *
  * This file is part of lpc1769_template.
@@ -53,7 +55,7 @@ extern "C" {
 
 /*==================[external data declaration]==============================*/
 
-extern fir_q31_t filtro;
+extern char adcStop;
 
 /*==================[external functions declaration]=========================*/
 
