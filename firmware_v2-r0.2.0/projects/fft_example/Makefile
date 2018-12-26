@@ -37,14 +37,14 @@ PROJECT_NAME := $(notdir $(PROJECT))
 PROJECT_MODULES := modules/$(TARGET)/sapi \
                    modules/$(TARGET)/base \
                    modules/$(TARGET)/board \
-                   modules/$(TARGET)/chip
+                   modules/$(TARGET)/chip \
+                   modules/$(TARGET)/dsp
 
 # source files folder
 PROJECT_SRC_FOLDERS := $(PROJECT)/src
 
 # header files folder
 PROJECT_INC_FOLDERS := $(PROJECT)/inc
-
 # source files
-PROJECT_C_FILES := $(wildcard $(PROJECT)/src/*.c)
+PROJECT_C_FILES := $(wildcard $(PROJECT)/src/*.c) 
 PROJECT_ASM_FILES := $(wildcard $(PROJECT)/src/*.S)
