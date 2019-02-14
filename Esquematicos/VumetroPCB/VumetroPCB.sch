@@ -311,12 +311,12 @@ $EndComp
 $Comp
 L vumetro:R R1
 U 1 1 5C141C3A
-P 4850 1650
-F 0 "R1" V 4643 1650 50  0000 C CNN
-F 1 "2.7K" V 4734 1650 50  0000 C CNN
-F 2 "Projecto:Resistor" V 4780 1650 50  0001 C CNN
-F 3 "~" H 4850 1650 50  0001 C CNN
-	1    4850 1650
+P 4850 1250
+F 0 "R1" V 4643 1250 50  0000 C CNN
+F 1 "2.7K" V 4734 1250 50  0000 C CNN
+F 2 "Projecto:Resistor" V 4780 1250 50  0001 C CNN
+F 3 "~" H 4850 1250 50  0001 C CNN
+	1    4850 1250
 	0    1    1    0   
 $EndComp
 $Comp
@@ -404,14 +404,10 @@ Wire Wire Line
 Wire Wire Line
 	4500 1800 4500 1650
 Wire Wire Line
-	4500 1250 5300 1250
-Wire Wire Line
-	4700 1650 4500 1650
+	4500 1250 4700 1250
 Connection ~ 4500 1650
 Wire Wire Line
 	4500 1650 4500 1250
-Wire Wire Line
-	5000 1650 5150 1650
 Wire Wire Line
 	4500 2100 4500 2250
 Text Label 6500 1250 0    50   ~ 0
@@ -863,4 +859,8 @@ Text Label 5850 7150 0    50   ~ 0
 SPI_MOSI(CIAA)
 Text Label 3450 2050 0    50   ~ 0
 VDDA
+Wire Wire Line
+	5000 1250 5300 1250
+Wire Wire Line
+	4500 1650 5150 1650
 $EndSCHEMATC
