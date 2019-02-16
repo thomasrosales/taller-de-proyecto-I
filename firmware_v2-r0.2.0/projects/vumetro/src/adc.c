@@ -1,27 +1,27 @@
-
-
 #include "board.h"
-
-int adcFlag=0;
+#include "DSP.h"
+#include "arm_math.h"
 
 #ifdef lpc4337_m4
 #define LPC_ADC LPC_ADC0
 #define ADC_IRQn ADC0_IRQn
 #endif
 
-uint16_t data;
 
+uint32_t fs=32000; //frecuencia de muestreo
+static flag = 1;
 /* P0.23 -> AD0 */
-void adcInit(void)
+void adc_Init(void)
 {
 	ADC_CLOCK_SETUP_T adc;
 
 	Chip_ADC_Init(LPC_ADC, &adc);
-	Chip_ADC_SetSampleRate(LPC_ADC, &adc, 32000);
+	Chip_ADC_SetBurstCmd(LPC_ADC, DISABLE);
+	Chip_ADC_SetSampleRate(LPC_ADC, &adc, fs);
 
 	Chip_ADC_EnableChannel(LPC_ADC, ADC_CH1, ENABLE);
 	Chip_ADC_Int_SetChannelCmd(LPC_ADC, ADC_CH1, ENABLE);
-	Chip_ADC_SetBurstCmd(LPC_ADC, ENABLE);
+
 
 	NVIC_EnableIRQ(ADC_IRQn);
 }
@@ -32,10 +32,16 @@ void ADC0_IRQHandler(void)
 void ADC_IRQHandler(void)
 #endif
 {
-	Chip_ADC_ReadValue(LPC_ADC, ADC_CH1, &data);
-	adcFlag=1;
+	uint16_t sample;
+	float32_t data;
+	float32_t vcc=3.3;
+	Chip_ADC_ReadValue(LPC_ADC, ADC_CH1, &sample);
+	/*
+	 * almacena la muestra en el buffer
+	 */
+	//data=(sample*vcc)/1024;
+	//DSP_put_sample(data);
+	DSP_put_sample(sample);
 }
 
-uint16_t ADC_get_data(){
-	return data;
-}
+

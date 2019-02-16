@@ -10,9 +10,8 @@
 
 #include "board.h"
 
-extern int adcFlag;
-uint16_t ADC_get_data();
-void adcInit(void);
+
+void adc_Init(void);
 
 
 #endif /* ADC_H_ */
