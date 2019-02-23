@@ -7,23 +7,88 @@
 #define ADC_IRQn ADC0_IRQn
 #endif
 
+/************ TIMER setup ************/
+#define TICKRATE_HZ                     65536   //La Frecuencia de muestreo será = TICKRATE_HZ/2
 
-uint32_t fs=32000; //frecuencia de muestreo
-static flag = 1;
-/* P0.23 -> AD0 */
-void adc_Init(void)
-{
-	ADC_CLOCK_SETUP_T adc;
+#define LPC_TIMER                       LPC_TIMER3
+#define NVIC_TIMER_IRQ                  TIMER3_IRQn
+#define TIMER_IRQHandler                void TIMER3_IRQHandler(void)
 
-	Chip_ADC_Init(LPC_ADC, &adc);
-	Chip_ADC_SetBurstCmd(LPC_ADC, DISABLE);
-	Chip_ADC_SetSampleRate(LPC_ADC, &adc, fs);
+#define CHIP_RGU_TIMER_RST              RGU_TIMER3_RST
+#define CHIP_CLK_TIMER                  CLK_MX_TIMER3
 
-	Chip_ADC_EnableChannel(LPC_ADC, ADC_CH1, ENABLE);
-	Chip_ADC_Int_SetChannelCmd(LPC_ADC, ADC_CH1, ENABLE);
+#define LPC_TIMER_MATCH_INT_NUM      3
 
+void TIMER_setup() {
 
-	NVIC_EnableIRQ(ADC_IRQn);
+	Chip_TIMER_Init(LPC_TIMER);
+
+	Chip_RGU_TriggerReset(CHIP_RGU_TIMER_RST);
+
+	while (Chip_RGU_InReset(CHIP_RGU_TIMER_RST)) {
+	}
+
+	uint32_t timerFreq = Chip_Clock_GetRate(CHIP_CLK_TIMER);
+
+	Chip_TIMER_Reset(LPC_TIMER);
+
+	Chip_TIMER_MatchEnableInt(LPC_TIMER, LPC_TIMER_MATCH_INT_NUM);
+
+	Chip_TIMER_SetMatch(LPC_TIMER, LPC_TIMER_MATCH_INT_NUM,
+			(timerFreq / TICKRATE_HZ));
+
+	Chip_TIMER_ResetOnMatchEnable(LPC_TIMER, LPC_TIMER_MATCH_INT_NUM);
+
+	Chip_TIMER_ExtMatchControlSet(LPC_TIMER, 1, TIMER_EXTMATCH_TOGGLE,
+			LPC_TIMER_MATCH_INT_NUM);
+
+	Chip_TIMER_Enable(LPC_TIMER);
+
+	LPC_GIMA->ADCSTART0_IN = 0x4;
+
+}
+TIMER_IRQHandler {
+
+	if (Chip_TIMER_MatchPending(LPC_TIMER, LPC_TIMER_MATCH_INT_NUM)) {
+
+		Chip_TIMER_ClearMatch(LPC_TIMER, LPC_TIMER_MATCH_INT_NUM);
+
+	}
+
+}
+
+/************ ADC setup ************/
+
+void adc_Init(void) {
+	TIMER_setup();
+
+	Chip_SCU_ADC_Channel_Config(0, ADC_CH1);
+
+	static ADC_CLOCK_SETUP_T ADCSetup;
+
+	Chip_ADC_Init(LPC_ADC0, &ADCSetup);
+
+	Chip_ADC_EnableChannel(LPC_ADC0, ADC_CH1, ENABLE);
+
+	Chip_ADC_SetSampleRate(LPC_ADC0, &ADCSetup, ADC_MAX_SAMPLE_RATE);
+
+	Chip_ADC_SetResolution(LPC_ADC0, &ADCSetup, ADC_10BITS);
+
+	Chip_ADC_SetStartMode(LPC_ADC0, ADC_START_ON_CTOUT15,
+			ADC_TRIGGERMODE_RISING);
+
+	Chip_ADC_SetBurstCmd(LPC_ADC0, DISABLE);
+
+	Chip_ADC_Int_SetChannelCmd(LPC_ADC0, ADC_CH1, ENABLE);
+
+	Chip_ADC_SetStartMode(LPC_ADC0, ADC_START_ON_CTOUT15,
+			ADC_TRIGGERMODE_RISING);
+
+	NVIC_EnableIRQ(ADC0_IRQn);
+	NVIC_ClearPendingIRQ(ADC0_IRQn);
+
+	//NVIC_EnableIRQ(NVIC_TIMER_IRQ);
+	//NVIC_ClearPendingIRQ(NVIC_TIMER_IRQ);
 }
 
 #ifdef lpc4337_m4
@@ -34,14 +99,12 @@ void ADC_IRQHandler(void)
 {
 	uint16_t sample;
 	float32_t data;
-	float32_t vcc=3.3;
+	float32_t vcc = 3.3;
 	Chip_ADC_ReadValue(LPC_ADC, ADC_CH1, &sample);
 	/*
 	 * almacena la muestra en el buffer
 	 */
-	//data=(sample*vcc)/1024;
-	//DSP_put_sample(data);
-	DSP_put_sample(sample);
+	data=((float32_t)sample*vcc)/1024;
+	DSP_put_sample(data);
 }
-
 

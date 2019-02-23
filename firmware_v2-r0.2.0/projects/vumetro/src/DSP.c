@@ -8,17 +8,16 @@
 #define ADC_IRQn ADC0_IRQn
 #endif
 
-#define T_BUFFER 128
-#define FFT_SIZE 128
+#define T_BUFFER 2048
+#define FFT_SIZE 2048
 
-static uint16_t buffer[T_BUFFER];
+static float32_t buffer[T_BUFFER];
 static int indice;
 static bool_t buffer_lleno;
 
 static float32_t modulo_fft[(T_BUFFER/2)+1];
 static float32_t fft_buffer[T_BUFFER];
 
-static float32_t potencia;
 static float32_t potencia_band1;
 static float32_t potencia_band2;
 static float32_t potencia_band3;
@@ -33,7 +32,6 @@ void DSP_init(){
 	//el indice del buffer comienza en cero
 	indice=0;
 	buffer_lleno=0;
-	potencia=0;
 	potencia_band1=0;
 	potencia_band2=0;
 	potencia_band3=0;
@@ -59,7 +57,6 @@ void DSP_put_sample(float32_t sample){
 	}
 }
 
-
 /*
  * Calcula la potencia de la banda 1
  * 20 hz a 160 hz
@@ -68,7 +65,7 @@ float32_t DSP_get_potencia_band1(){
 	//la resolucion es de 16 hz
 	//se calcula la potencia desde el elemento 1*16=16 hz hasta 10*16=160 hz
     arm_power_f32(modulo_fft+1, 10, &potencia_band1);
-    potencia_band1=2*potencia_band1/100;
+    potencia_band1=10*log10(2*potencia_band1/(T_BUFFER*T_BUFFER));
 	return potencia_band1;
 };
 
@@ -80,7 +77,7 @@ float32_t DSP_get_potencia_band2(){
 	//la resolucion es de 16 hz
 	//se calcula la potencia desde el elemento 10*16=160 hz hasta 19*16=304 hz
     arm_power_f32(modulo_fft+10, 10, &potencia_band2);
-    potencia_band2=2*potencia_band2/100;
+    potencia_band2=10*log10(2*potencia_band2/(T_BUFFER*T_BUFFER));
 	return potencia_band2;
 };
 
@@ -92,7 +89,7 @@ float32_t DSP_get_potencia_band3(){
 	//la resolucion es de 16 hz
 	//se calcula la potencia desde el elemento 19*16=304 hz hasta 38*16=608 hz
     arm_power_f32(modulo_fft+19, 20, &potencia_band3);
-    potencia_band3=2*potencia_band3/400;
+    potencia_band3=10*log10(2*potencia_band3/(T_BUFFER*T_BUFFER));
 	return potencia_band3;
 };
 /*
@@ -103,7 +100,7 @@ float32_t DSP_get_potencia_band4(){
 	//la resolucion es de 16 hz
 	//se calcula la potencia desde el elemento 38*16=608 hz hasta 75*16=1200 hz
     arm_power_f32(modulo_fft+38, 38, &potencia_band4);
-    potencia_band4=2*potencia_band4/1444;
+    potencia_band4=10*log10(2*potencia_band4/(T_BUFFER*T_BUFFER));
 	return potencia_band4;
 };
 
@@ -115,7 +112,7 @@ float32_t DSP_get_potencia_band5(){
 	//la resolucion es de 16 hz
 	//se calcula la potencia desde el elemento 75*16=1200 hz hasta 150*16=2400 hz
     arm_power_f32(modulo_fft+75, 76, &potencia_band5);
-    potencia_band5=2*potencia_band5/5776;
+    potencia_band5=10*log10(2*potencia_band5/(T_BUFFER*T_BUFFER));
 	return potencia_band5;
 };
 
@@ -127,7 +124,7 @@ float32_t DSP_get_potencia_band6(){
 	//la resolucion es de 16 hz
 	//se calcula la potencia desde el elemento 150*16=2400 hz hasta 313*16=5008 hz
     arm_power_f32(modulo_fft+150, 164, &potencia_band6);
-    potencia_band6=2*potencia_band6/26896;
+    potencia_band6=10*log10(2*potencia_band6/(T_BUFFER*T_BUFFER));
 	return potencia_band6;
 };
 
@@ -139,7 +136,7 @@ float32_t DSP_get_potencia_band7(){
 	//la resolucion es de 16 hz
 	//se calcula la potencia desde el elemento 313*16=5008 hz hasta 625*16=10000 hz
     arm_power_f32(modulo_fft+313, 313, &potencia_band7);
-    potencia_band7=2*potencia_band7/97969;
+    potencia_band7=10*log10(2*potencia_band7/(T_BUFFER*T_BUFFER));
 	return potencia_band7;
 };
 
@@ -151,39 +148,45 @@ float32_t DSP_get_potencia_band8(){
 	//la resolucion es de 16 hz
 	//se calcula la potencia desde el elemento 625*16=10000 hz hasta 1000*16=16000 hz
     arm_power_f32(modulo_fft+625, 375, &potencia_band8);
-    potencia_band8=2*potencia_band8/140625;
+    potencia_band8=10*log10(2*potencia_band8/(T_BUFFER*T_BUFFER));
 	return potencia_band8;
 };
 
-float32_t DSP_get_potencia(){
-
-	arm_power_f32(modulo_fft+1, (T_BUFFER/2)-1, &potencia);
-    potencia=(modulo_fft[0]*modulo_fft[0]+modulo_fft[T_BUFFER/2]*modulo_fft[T_BUFFER/2]+2*potencia)/(T_BUFFER*T_BUFFER);
-	return potencia;
-};
-
+/*
+ * Realiza el calculo de la fft de la señal
+ * almacenada en el buffer
+ */
+void DSP_fft(){
+	//calculo de la fft
+	arm_rfft_fast_instance_f32 s;
+	arm_rfft_fast_init_f32(&s, FFT_SIZE);
+	arm_rfft_fast_f32(&s, buffer, fft_buffer, 0);
+	//se calcula el modulo de la fft
+	arm_cmplx_mag_f32(fft_buffer+2, modulo_fft+1, (T_BUFFER/2)-1);
+	//el primer elemento de la fft es real
+	arm_abs_f32(fft_buffer, modulo_fft, 1);
+	//el segundo elemento tambien es real y representa el elemento N/2 de la fft
+	arm_abs_f32(fft_buffer+1, modulo_fft+T_BUFFER/2, 1);
+}
 /*
  * si el buffer esta lleno, calcula la fft
  * y vuelve a activar el adc para que tome nuevas muestras
  */
 void DSP_update(){
-	float32_t p=0;
+	float32_t p1=0, p2=0, p3=0, p4=0, p5=0, p6=0, p7=0, p8=0;
 	if(buffer_lleno){
-		//calculo de la fft
-		/*arm_rfft_fast_instance_f32 s;
-		arm_rfft_fast_init_f32(&s, FFT_SIZE);
-		arm_rfft_fast_f32(&s, buffer, fft_buffer, 0);
-		//se calcula el modulo de la fft
-		arm_cmplx_mag_f32(fft_buffer+2, modulo_fft+1, (T_BUFFER/2)-1);
-		//el primer elemento de la fft es real
-		arm_abs_f32(fft_buffer, modulo_fft, 1);
-		//el segundo elemento tambien es real y representa el elemento N/2 de la fft
-		arm_abs_f32(fft_buffer+1, modulo_fft+T_BUFFER/2, 1);
-		p=DSP_get_potencia();
-		*/
-		//habilito adc
-		Chip_ADC_Int_SetChannelCmd(LPC_ADC, ADC_CH1, ENABLE);
+		DSP_fft();
+		p1=DSP_get_potencia_band1();
+		p2=DSP_get_potencia_band2();
+		p3=DSP_get_potencia_band3();
+		p4=DSP_get_potencia_band4();
+		p5=DSP_get_potencia_band5();
+		p6=DSP_get_potencia_band6();
+		p7=DSP_get_potencia_band7();
+		p8=DSP_get_potencia_band8();
 		//indico que el buffer esta vacio
 		buffer_lleno=0;
+		//habilito adc
+		Chip_ADC_Int_SetChannelCmd(LPC_ADC, ADC_CH1, ENABLE);
 	}
 };

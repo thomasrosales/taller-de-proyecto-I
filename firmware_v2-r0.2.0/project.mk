@@ -38,7 +38,7 @@
 # current project
 
 PROJECT = projects/vumetro
-
+#PROJECT = projects/fft_example
 #-------------------------------------------------------------------------------
 
 #------------ examples -----------------------------------------
