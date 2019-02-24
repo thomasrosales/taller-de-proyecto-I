@@ -1,9 +1,3 @@
-/*
- * adc.h
- *
- *  Created on: Sep 4, 2013
- *      Author: Pablo
- */
 
 #ifndef ADC_H_
 #define ADC_H_

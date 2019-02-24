@@ -56,6 +56,10 @@ uint8_t get_level(int potencia){
 	}
 }
 
+void VIEW_clear(){
+	MAX7219_clear_display();
+}
+
 void VIEW_band1(int potencia){
 	MAX7219_write_row(BAND1, get_level(potencia));
 }

@@ -48,10 +48,6 @@ void MAX7219_init(){
 	  */
 	  transfer_data(OP_DECODEMODE, 0);
 	  /*
-	   * Clear display
-	  */
-	  MAX7219_clear_display();
-	  /*
 	   * No shutdown mode
 	  */
 	  transfer_data(OP_SHUTDOWN, 1);

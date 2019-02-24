@@ -1,5 +1,4 @@
 #include "mef.h"
-#include "MAX7219.h"
 #include "DSP.h"
 #include "view.h"
 #include "KEYPAD.h"
@@ -15,39 +14,39 @@ void MEF_next_state(){
 	switch(key){
 	case '1':
 		estado = BAND1;
-		MAX7219_clear_display();
+		VIEW_clear();
 		break;
 	case '2':
 		estado = BAND2;
-		MAX7219_clear_display();
+		VIEW_clear();
 		break;
 	case '3':
 		estado = BAND3;
-		MAX7219_clear_display();
+		VIEW_clear();
 		break;
 	case '4':
 		estado = BAND4;
-		MAX7219_clear_display();
+		VIEW_clear();
 		break;
 	case '5':
 		estado = BAND5;
-		MAX7219_clear_display();
+		VIEW_clear();
 		break;
 	case '6':
 		estado = BAND6;
-		MAX7219_clear_display();
+		VIEW_clear();
 		break;
 	case '7':
 		estado = BAND7;
-		MAX7219_clear_display();
+		VIEW_clear();
 		break;
 	case '8':
 		estado = BAND8;
-		MAX7219_clear_display();
+		VIEW_clear();
 		break;
 	case '*':
 		estado = ALL;
-		MAX7219_clear_display();
+		VIEW_clear();
 		break;
 	}
 }
