@@ -7,11 +7,6 @@ void DSP_init();
  * almacena la muestra en el buffer
  */
 void DSP_put_sample(float32_t sample);
-/*
- * si el buffer esta lleno, calcula la fft
- * y vuelve a activar el adc para que tome nuevas muestras
- */
-void DSP_update();
 
 /*
  * Calcula la potencia de la banda 1
@@ -59,3 +54,10 @@ float32_t DSP_get_potencia_band7();
  * 10000 hz a 16000 hz
  */
 float32_t DSP_get_potencia_band8();
+
+/*
+ * si el buffer esta lleno, calcula la fft,
+ * calcula la potencia de cada banda
+ * y vuelve a activar el adc para que tome nuevas muestras
+ */
+void DSP_update();

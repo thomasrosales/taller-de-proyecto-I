@@ -43,6 +43,7 @@
 #include "adc.h"
 #include "DSP.h"
 #include "arm_math.h"
+#include "mef.h"
 /*==================[macros and definitions]=================================*/
 
 /*==================[internal data declaration]==============================*/
@@ -56,7 +57,19 @@
 /*==================[internal functions definition]==========================*/
 
 /*==================[external functions definition]==========================*/
+
+//int32_t mef_count=0;
 /* FUNCION que se ejecuta cada vez que ocurre un Tick. */
+/*
+ void myTickHook( void *ptr ){
+	DSP_update();
+	if (++mef_count==32){
+		MEF_update();
+		mef_count=0;
+	}
+
+}
+*/
 
 
 
@@ -70,12 +83,26 @@ int main(void){
    KEYPAD_init();
    MAX7219_init();
    DSP_init();
+   MEF_init();
    adc_Init();
 
+   /* Inicializar el conteo de Ticks con resolucion de 50ms (se ejecuta
+      periodicamente una interrupcion cada 1 ms que incrementa un contador de
+      Ticks obteniendose una base de tiempos). */
+   //tickConfig( 2 );
+
+   /* Se agrega ademas un "tick hook" nombrado myTickHook. El tick hook es
+      simplemente una funcion que se ejecutara peri�odicamente con cada
+      interrupcion de Tick, este nombre se refiere a una funcion "enganchada"
+      a una interrupcion.
+   */
+   //tickCallbackSet( myTickHook, NULL);
 
 
    while(1) {
 	   DSP_update();
+	   MEF_update();
+	   KEYPAD_update();
    }
 
    /* NO DEBE LLEGAR NUNCA AQUI, debido a que a este programa no es llamado

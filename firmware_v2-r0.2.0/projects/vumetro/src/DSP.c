@@ -51,7 +51,7 @@ void DSP_put_sample(float32_t sample){
 		//Reinicio el indice a cero
 		indice=0;
 		//deshabilito el adc
-		Chip_ADC_Int_SetChannelCmd(LPC_ADC, ADC_CH1, DISABLE);;
+		Chip_ADC_Int_SetChannelCmd(LPC_ADC, ADC_CH1, DISABLE);
 		//indico que el buffer esta lleno
 		buffer_lleno=1;
 	}
@@ -169,21 +169,21 @@ void DSP_fft(){
 	arm_abs_f32(fft_buffer+1, modulo_fft+T_BUFFER/2, 1);
 }
 /*
- * si el buffer esta lleno, calcula la fft
+ * si el buffer esta lleno, calcula la fft,
+ * calcula la potencia de cada banda
  * y vuelve a activar el adc para que tome nuevas muestras
  */
 void DSP_update(){
-	float32_t p1=0, p2=0, p3=0, p4=0, p5=0, p6=0, p7=0, p8=0;
 	if(buffer_lleno){
 		DSP_fft();
-		p1=DSP_get_potencia_band1();
-		p2=DSP_get_potencia_band2();
-		p3=DSP_get_potencia_band3();
-		p4=DSP_get_potencia_band4();
-		p5=DSP_get_potencia_band5();
-		p6=DSP_get_potencia_band6();
-		p7=DSP_get_potencia_band7();
-		p8=DSP_get_potencia_band8();
+		DSP_get_potencia_band1();
+		DSP_get_potencia_band2();
+		DSP_get_potencia_band3();
+		DSP_get_potencia_band4();
+		DSP_get_potencia_band5();
+		DSP_get_potencia_band6();
+		DSP_get_potencia_band7();
+		DSP_get_potencia_band8();
 		//indico que el buffer esta vacio
 		buffer_lleno=0;
 		//habilito adc

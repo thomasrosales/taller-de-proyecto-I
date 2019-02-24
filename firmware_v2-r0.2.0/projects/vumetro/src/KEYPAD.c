@@ -42,6 +42,8 @@
 
 	   if (keypadRead(&keypad, &tecla))
 		   key=teclado[tecla];
+	   else
+		   key=0;
 
    }
 

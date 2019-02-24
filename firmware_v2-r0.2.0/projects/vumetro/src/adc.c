@@ -66,22 +66,22 @@ void adc_Init(void) {
 
 	static ADC_CLOCK_SETUP_T ADCSetup;
 
-	Chip_ADC_Init(LPC_ADC0, &ADCSetup);
+	Chip_ADC_Init(LPC_ADC, &ADCSetup);
 
-	Chip_ADC_EnableChannel(LPC_ADC0, ADC_CH1, ENABLE);
+	Chip_ADC_EnableChannel(LPC_ADC, ADC_CH1, ENABLE);
 
-	Chip_ADC_SetSampleRate(LPC_ADC0, &ADCSetup, ADC_MAX_SAMPLE_RATE);
+	Chip_ADC_SetSampleRate(LPC_ADC, &ADCSetup, ADC_MAX_SAMPLE_RATE);
 
-	Chip_ADC_SetResolution(LPC_ADC0, &ADCSetup, ADC_10BITS);
+	Chip_ADC_SetResolution(LPC_ADC, &ADCSetup, ADC_10BITS);
 
-	Chip_ADC_SetStartMode(LPC_ADC0, ADC_START_ON_CTOUT15,
+	Chip_ADC_SetStartMode(LPC_ADC, ADC_START_ON_CTOUT15,
 			ADC_TRIGGERMODE_RISING);
 
-	Chip_ADC_SetBurstCmd(LPC_ADC0, DISABLE);
+	Chip_ADC_SetBurstCmd(LPC_ADC, DISABLE);
 
-	Chip_ADC_Int_SetChannelCmd(LPC_ADC0, ADC_CH1, ENABLE);
+	Chip_ADC_Int_SetChannelCmd(LPC_ADC, ADC_CH1, ENABLE);
 
-	Chip_ADC_SetStartMode(LPC_ADC0, ADC_START_ON_CTOUT15,
+	Chip_ADC_SetStartMode(LPC_ADC, ADC_START_ON_CTOUT15,
 			ADC_TRIGGERMODE_RISING);
 
 	NVIC_EnableIRQ(ADC0_IRQn);
